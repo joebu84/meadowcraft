@@ -102,7 +102,7 @@ function welcome(m) {
   S.tiles = Uint8Array.from(atob(w.tiles), c => c.charCodeAt(0));
   S.blocked = new Set(); for (const b of w.buildings) if (!b.noBlock) for (let y = b.ty; y < b.ty + b.h; y++) for (let x = b.tx; x < b.tx + b.w; x++) if (!(b.door && b.door.tx === x && b.door.ty === y)) S.blocked.add(y * S.W + x);
   S.mainH = w.mainH || w.H; S.interiors = w.interiors || {}; S.maze = w.maze; S.lair = w.lair;
-  S.nodes = []; S.nodeAt.clear(); for (const [id, type, tx, ty, on] of w.nodes) { const n = { id, type, tx, ty, on }; S.nodes[id] = n; S.nodeAt.set(K(tx, ty), n); }
+  S.nodes = []; S.nodeAt.clear(); for (const [id, type, tx, ty, on, spr] of w.nodes) { const n = { id, type, tx, ty, on, spr }; S.nodes[id] = n; S.nodeAt.set(K(tx, ty), n); }
   S.houses = w.houses || []; S.structs.clear(); S.objAt.clear(); S.floorAt.clear(); for (const s of w.structures) addStruct(s);
   buildMinimap();
   S.joined = true; NET.retries = 0; netBanner(''); $('join').classList.add('hidden');
@@ -394,7 +394,7 @@ function interpEntities() {
   }
   return out;
 }
-const NODE_FRAME_OFF = { tree: 1, apple_tree: 2, boulder: 1, iron_node: 1, briar: 2, loot_chest: 1 };
+const NODE_FRAME_OFF = { tree: 1, apple_tree: 2, boulder: 1, iron_node: 1, crystal_node: 1, briar: 2, loot_chest: 1 };
 // nodes can list several sprite variants (tree families, ruin pieces, thickets); pick one per tile, stable across clients
 const hash2 = (x, y) => { let h = Math.imul(x, 374761393) + Math.imul(y, 668265263) | 0; h = Math.imul(h ^ h >>> 13, 1274126177); return (h ^ h >>> 16) >>> 0; };
 function playerSprite(heldId) {

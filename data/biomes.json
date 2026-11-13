@@ -2,7 +2,6 @@
  "_doc": "Procedural regions outside the fixed town. Densities are per-tile chances. dens: black holes that spawn `spawns` (weighted) up to `max` alive each, every `interval` ms; building anything on the den tile seals it. chests: world loot chests using loot table. zones: hidden spawners (camps, patrols). Iron is scarce: only rare iron_node deposits (quarry/gangs/briar), 3% from boulders, chests, fishing, melting gear.",
  "meadow": {
   "nodes": {
-   "boulder": 0.004,
    "pebble": 0.012,
    "loot_chest": 0.0012
   },
@@ -169,7 +168,6 @@
    18
   ],
   "nodes": {
-   "boulder": 0.1,
    "pebble": 0.03,
    "iron_node": 0.006
   },
@@ -252,7 +250,6 @@
  "badlands": {
   "_doc": "Belt between the forest groves and the river. Cracked dirt, scattered rocks, stationary snakes.",
   "nodes": {
-   "boulder": 0.03,
    "pebble": 0.01,
    "loot_chest": 0.0015
   },

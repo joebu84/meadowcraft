@@ -39,6 +39,18 @@
     "iron_ore",
     0.03
    ]
+  ],
+  "sprites": [
+   "rock_mossy",
+   "rock_meadow_pale",
+   "rock_meadow_khaki",
+   "rock_river_cobble",
+   "rock_river_crystal",
+   "rock_badlands_tan",
+   "rock_badlands_rust",
+   "rock_badlands_deep",
+   "rock_briar_dark",
+   "rock_briar_geode"
   ]
  },
  "briar": {
@@ -60,7 +72,15 @@
   "max": 2,
   "solid": false,
   "respawn": 45000,
-  "use": "pickup"
+  "use": "pickup",
+  "sprites": [
+   "rock_mossy",
+   "rock_meadow_pale",
+   "rock_meadow_khaki",
+   "rock_river_cobble",
+   "rock_badlands_tan",
+   "rock_briar_dark"
+  ]
  },
  "fallen_apple": {
   "hp": 1,
@@ -95,6 +115,13 @@
   "alt": [
    "stone",
    0.25
+  ],
+  "sprites": [
+   "rock_iron_vein",
+   "rock_iron_silver",
+   "rock_iron_gold",
+   "rock_iron_copper",
+   "rock_iron_dark"
   ]
  },
  "tree_oak": {
@@ -541,5 +568,24 @@
    "tinker_table"
   ],
   "interior": true
+ },
+ "crystal_node": {
+  "hp": 2,
+  "harvest": "ore",
+  "item": "crystal",
+  "min": 1,
+  "max": 2,
+  "solid": true,
+  "respawn": 900000,
+  "sprites": [
+   "rock_crystal"
+  ],
+  "mapColor": "#9b6dff",
+  "rare": [
+   [
+    "crystal",
+    0.4
+   ]
+  ]
  }
 }

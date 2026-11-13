@@ -548,5 +548,12 @@
   "kind": "placeable",
   "stack": 5,
   "buy": 11
+ },
+ "crystal": {
+  "name": "Crystal",
+  "kind": "resource",
+  "stack": 99,
+  "sell": 28,
+  "desc": "A faceted purple crystal pried from a rare briar geode."
  }
 }

@@ -376,27 +376,31 @@
   },
   "boulder": {
    "file": "sprites/boulder.png",
-   "fw": 32,
-   "fh": 32,
-   "cols": 2,
+   "fw": 48,
+   "fh": 48,
+   "cols": 10,
    "rows": 1,
    "anchor": [
-    16,
-    29
+    24,
+    44
    ],
-   "scale": 1
+   "scale": 1,
+   "top": 40,
+   "source": "drive-rocks-bundle:boulder"
   },
   "iron_node": {
    "file": "sprites/iron_node.png",
-   "fw": 32,
-   "fh": 32,
-   "cols": 2,
+   "fw": 48,
+   "fh": 48,
+   "cols": 5,
    "rows": 1,
    "anchor": [
-    16,
-    29
+    24,
+    44
    ],
-   "scale": 1
+   "scale": 1,
+   "top": 40,
+   "source": "drive-rocks-bundle:iron_node"
   },
   "briar": {
    "file": "sprites/briar.png",
@@ -412,15 +416,17 @@
   },
   "pebble": {
    "file": "sprites/pebble.png",
-   "fw": 32,
-   "fh": 32,
-   "cols": 2,
+   "fw": 48,
+   "fh": 48,
+   "cols": 6,
    "rows": 1,
    "anchor": [
-    16,
-    28
+    24,
+    44
    ],
-   "scale": 1
+   "scale": 0.7,
+   "top": 40,
+   "source": "drive-rocks-bundle:pebble"
   },
   "fallen_apple": {
    "file": "sprites/fallen_apple.png",
@@ -3010,37 +3016,249 @@
     0
    ],
    "scale": 1,
-   "source": "placeholder-badlands"
+   "source": "pixellab-tiles:badlands.png"
   },
   "snake": {
    "file": "sprites/snake.png",
    "fw": 48,
    "fh": 48,
-   "cols": 3,
+   "cols": 1,
    "rows": 8,
+   "anchor": [
+    24,
+    40
+   ],
+   "top": 32,
+   "scale": 1,
+   "character": true,
+   "dirs8": true,
+   "walkFrames": 1,
+   "anims": {},
+   "source": "drive:a_red_black_and_white_snake_curled_up"
+  },
+  "rock_mossy": {
+   "file": "sprites/rock_mossy.png",
+   "fw": 48,
+   "fh": 48,
+   "cols": 2,
+   "rows": 1,
+   "anchor": [
+    24,
+    45
+   ],
+   "scale": 1,
+   "top": 40,
+   "source": "drive-rocks:rock_mossy"
+  },
+  "rock_meadow_pale": {
+   "file": "sprites/rock_meadow_pale.png",
+   "fw": 48,
+   "fh": 48,
+   "cols": 2,
+   "rows": 1,
    "anchor": [
     24,
     44
    ],
-   "top": 28,
    "scale": 1,
-   "character": true,
-   "dirs8": false,
-   "walkFrames": 1,
-   "anims": {
-    "attack": {
-     "row": 4,
-     "frames": 3,
-     "name": "strike",
-     "dirs": [
-      "south",
-      "west",
-      "east",
-      "north"
-     ]
-    }
-   },
-   "source": "placeholder-snake"
+   "top": 40,
+   "source": "drive-rocks:rock_meadow_pale"
+  },
+  "rock_meadow_khaki": {
+   "file": "sprites/rock_meadow_khaki.png",
+   "fw": 48,
+   "fh": 48,
+   "cols": 2,
+   "rows": 1,
+   "anchor": [
+    24,
+    46
+   ],
+   "scale": 1,
+   "top": 41,
+   "source": "drive-rocks:rock_meadow_khaki"
+  },
+  "rock_river_cobble": {
+   "file": "sprites/rock_river_cobble.png",
+   "fw": 48,
+   "fh": 48,
+   "cols": 2,
+   "rows": 1,
+   "anchor": [
+    24,
+    44
+   ],
+   "scale": 1,
+   "top": 39,
+   "source": "drive-rocks:rock_river_cobble"
+  },
+  "rock_river_crystal": {
+   "file": "sprites/rock_river_crystal.png",
+   "fw": 48,
+   "fh": 48,
+   "cols": 2,
+   "rows": 1,
+   "anchor": [
+    24,
+    46
+   ],
+   "scale": 1,
+   "top": 40,
+   "source": "drive-rocks:rock_river_crystal"
+  },
+  "rock_badlands_tan": {
+   "file": "sprites/rock_badlands_tan.png",
+   "fw": 48,
+   "fh": 48,
+   "cols": 2,
+   "rows": 1,
+   "anchor": [
+    24,
+    45
+   ],
+   "scale": 1,
+   "top": 40,
+   "source": "drive-rocks:rock_badlands_tan"
+  },
+  "rock_badlands_rust": {
+   "file": "sprites/rock_badlands_rust.png",
+   "fw": 48,
+   "fh": 48,
+   "cols": 2,
+   "rows": 1,
+   "anchor": [
+    24,
+    45
+   ],
+   "scale": 1,
+   "top": 40,
+   "source": "drive-rocks:rock_badlands_rust"
+  },
+  "rock_badlands_deep": {
+   "file": "sprites/rock_badlands_deep.png",
+   "fw": 48,
+   "fh": 48,
+   "cols": 2,
+   "rows": 1,
+   "anchor": [
+    24,
+    45
+   ],
+   "scale": 1,
+   "top": 40,
+   "source": "drive-rocks:rock_badlands_deep"
+  },
+  "rock_briar_dark": {
+   "file": "sprites/rock_briar_dark.png",
+   "fw": 48,
+   "fh": 48,
+   "cols": 2,
+   "rows": 1,
+   "anchor": [
+    24,
+    46
+   ],
+   "scale": 1,
+   "top": 42,
+   "source": "drive-rocks:rock_briar_dark"
+  },
+  "rock_briar_geode": {
+   "file": "sprites/rock_briar_geode.png",
+   "fw": 48,
+   "fh": 48,
+   "cols": 2,
+   "rows": 1,
+   "anchor": [
+    24,
+    45
+   ],
+   "scale": 1,
+   "top": 40,
+   "source": "drive-rocks:rock_briar_geode"
+  },
+  "rock_crystal": {
+   "file": "sprites/rock_crystal.png",
+   "fw": 48,
+   "fh": 48,
+   "cols": 2,
+   "rows": 1,
+   "anchor": [
+    24,
+    45
+   ],
+   "scale": 1,
+   "top": 41,
+   "source": "drive-rocks:rock_crystal"
+  },
+  "rock_iron_vein": {
+   "file": "sprites/rock_iron_vein.png",
+   "fw": 48,
+   "fh": 48,
+   "cols": 2,
+   "rows": 1,
+   "anchor": [
+    24,
+    45
+   ],
+   "scale": 1,
+   "top": 40,
+   "source": "drive-rocks:rock_iron_vein"
+  },
+  "rock_iron_silver": {
+   "file": "sprites/rock_iron_silver.png",
+   "fw": 48,
+   "fh": 48,
+   "cols": 2,
+   "rows": 1,
+   "anchor": [
+    24,
+    45
+   ],
+   "scale": 1,
+   "top": 40,
+   "source": "drive-rocks:rock_iron_silver"
+  },
+  "rock_iron_gold": {
+   "file": "sprites/rock_iron_gold.png",
+   "fw": 48,
+   "fh": 48,
+   "cols": 2,
+   "rows": 1,
+   "anchor": [
+    24,
+    43
+   ],
+   "scale": 1,
+   "top": 37,
+   "source": "drive-rocks:rock_iron_gold"
+  },
+  "rock_iron_copper": {
+   "file": "sprites/rock_iron_copper.png",
+   "fw": 48,
+   "fh": 48,
+   "cols": 2,
+   "rows": 1,
+   "anchor": [
+    24,
+    44
+   ],
+   "scale": 1,
+   "top": 38,
+   "source": "drive-rocks:rock_iron_copper"
+  },
+  "rock_iron_dark": {
+   "file": "sprites/rock_iron_dark.png",
+   "fw": 48,
+   "fh": 48,
+   "cols": 2,
+   "rows": 1,
+   "anchor": [
+    24,
+    45
+   ],
+   "scale": 1,
+   "top": 39,
+   "source": "drive-rocks:rock_iron_dark"
   }
  },
  "items": {
@@ -3113,7 +3331,8 @@
   "campfire": "items/campfire.png",
   "door_stone": "items/door_stone.png",
   "floor_castle": "items/floor_castle.png",
-  "workbench": "items/workbench.png"
+  "workbench": "items/workbench.png",
+  "crystal": "items/crystal.png"
  },
  "custom": "List files in assets/custom.txt to stop this generator overwriting them.",
  "ground": {
