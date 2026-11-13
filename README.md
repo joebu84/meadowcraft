@@ -1,6 +1,6 @@
 # Meadowcraft
 
-A pastoral pixel-art multiplayer sandbox (sheep people, goblin gangs, very angry geese). Static build: the world runs in the host's browser tab.
+A pastoral pixel-art multiplayer sandbox (Sheeple, goblin gangs, very angry geese). Static build: the world runs in the host's browser tab.
 
 ## Play online (GitHub Pages, peer-to-peer)
 

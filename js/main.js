@@ -7,7 +7,17 @@ const cv = $('game'), ctx = cv.getContext('2d');
 const T = 32, SPEED = 130, PR = 9, INTERP = 110;
 const TILE = { WATER: 4, BRIDGE: 10, FENCE: 11, FOUNTAIN: 13 };
 const SOLID_TILES = new Set([4, 11, 13, 16, 17]);
-const S = { mobSt: {}, mobBite: {}, me: null, nodes: [], nodeAt: new Map(), structs: new Map(), objAt: new Map(), floorAt: new Map(), snaps: [], fx: [], pos: { x: 0, y: 0, a: Math.PI / 2, s: 0 }, keys: {}, joy: { x: 0, y: 0 }, build: { on: false, item: null, tx: 0, ty: 0, manual: false }, panel: null, chest: null, lastAtk: 0, lastSend: 0, dens: [], sealed: new Set() };
+const S = { mobSt: {}, mobBite: {}, me: null, nodes: [], nodeAt: new Map(), structs: new Map(), objAt: new Map(), floorAt: new Map(), houses: [], snaps: [], fx: [], pos: { x: 0, y: 0, a: Math.PI / 2, s: 0 }, keys: {}, joy: { x: 0, y: 0 }, build: { on: false, item: null, tx: 0, ty: 0, manual: false }, panel: null, chest: null, lastAtk: 0, lastSend: 0, dens: [], sealed: new Set() };
+const myFl = () => S.me?.fl || 0;
+const SK = (fl, x, y) => (fl || 0) + ':' + x + ',' + y;
+const objGet = (tx, ty, fl = myFl()) => S.objAt.get(SK(fl, tx, ty));
+const floorGet = (tx, ty, fl = myFl()) => S.floorAt.get(SK(fl, tx, ty));
+function inFootprint(fl, tx, ty) {
+  if (!fl) return true;
+  const k = K(tx, ty);
+  for (const h of S.houses) if ((h.floors[fl] || h.floors[String(fl)] || []).includes(k)) return true;
+  return false;
+}
 window.__sheeple = S;
 S.send = m => send(m);
 const K = (x, y) => x + ',' + y;
@@ -71,7 +81,8 @@ function onMsg(m) {
     case 'err': $('joinErr').textContent = m.msg; ws.onclose = null; ws.close(); setLobbyBusy(false); break;
     case 'welcome': return welcome(m);
     case 'me': S.me = m.me; refreshHud(); refreshPanel(); break;
-    case 'pos': S.pos.x = m.x; S.pos.y = m.y; S.pos.s = m.s; if (m.anim === 'hook') S.fx.push({ k: 'zip', t: performance.now(), x: m.x, y: m.y }); break;
+    case 'pos': S.pos.x = m.x; S.pos.y = m.y; S.pos.s = m.s; if (m.fl != null && S.me) S.me.fl = m.fl; if (m.anim === 'hook') S.fx.push({ k: 'zip', t: performance.now(), x: m.x, y: m.y }); break;
+    case 'houses': S.houses = m.houses || []; break;
     case 's': S.snaps.push({ t: performance.now(), p: new Map(m.p.map(r => [r[0], r])), e: new Map(m.e.map(r => [r[0], r])), b: m.b }); if (S.snaps.length > 30) S.snaps.shift(); break;
     case 'n': { const n = S.nodes[m.id]; if (n) n.on = m.on; break; }
     case 'st': addStruct(m.s); break;
@@ -92,15 +103,15 @@ function welcome(m) {
   S.blocked = new Set(); for (const b of w.buildings) if (!b.noBlock) for (let y = b.ty; y < b.ty + b.h; y++) for (let x = b.tx; x < b.tx + b.w; x++) if (!(b.door && b.door.tx === x && b.door.ty === y)) S.blocked.add(y * S.W + x);
   S.mainH = w.mainH || w.H; S.interiors = w.interiors || {}; S.maze = w.maze; S.lair = w.lair;
   S.nodes = []; S.nodeAt.clear(); for (const [id, type, tx, ty, on] of w.nodes) { const n = { id, type, tx, ty, on }; S.nodes[id] = n; S.nodeAt.set(K(tx, ty), n); }
-  S.structs.clear(); S.objAt.clear(); S.floorAt.clear(); for (const s of w.structures) addStruct(s);
+  S.houses = w.houses || []; S.structs.clear(); S.objAt.clear(); S.floorAt.clear(); for (const s of w.structures) addStruct(s);
   buildMinimap();
   S.joined = true; NET.retries = 0; netBanner(''); $('join').classList.add('hidden');
   for (const id of ['hud', 'hotbar', 'minimap']) $(id).classList.remove('hidden');
   if (isTouch) $('touch').classList.remove('hidden');
   refreshHud(); toast('Welcome to Woolhaven! Punch trees (⚔) for wood, pick up loose rocks (✋).');
 }
-function addStruct(s) { const old = S.structs.get(s.id); if (old) unindex(old); S.structs.set(s.id, s); (D.structures[s.type].layer === 'floor' ? S.floorAt : S.objAt).set(K(s.tx, s.ty), s); }
-function unindex(s) { const m = D.structures[s.type].layer === 'floor' ? S.floorAt : S.objAt; if (m.get(K(s.tx, s.ty))?.id === s.id) m.delete(K(s.tx, s.ty)); }
+function addStruct(s) { const old = S.structs.get(s.id); if (old) unindex(old); s.fl = s.fl || 0; S.structs.set(s.id, s); (D.structures[s.type].layer === 'floor' ? S.floorAt : S.objAt).set(SK(s.fl, s.tx, s.ty), s); }
+function unindex(s) { const m = D.structures[s.type].layer === 'floor' ? S.floorAt : S.objAt; if (m.get(SK(s.fl, s.tx, s.ty))?.id === s.id) m.delete(SK(s.fl, s.tx, s.ty)); }
 function delStruct(id) { const s = S.structs.get(id); if (s) { unindex(s); S.structs.delete(id); } }
 function onFx(m) {
   const t = performance.now();
@@ -121,9 +132,14 @@ function toast(text) { const d = document.createElement('div'); d.className = 't
 // ---------------- collision (mirror of server rules for players)
 function tileSolid(tx, ty) {
   if (tx < 0 || ty < 0 || tx >= S.W || ty >= S.H) return true;
+  const fl = myFl();
+  if (fl > 0) {
+    if (!inFootprint(fl, tx, ty)) return true;
+    const s = objGet(tx, ty, fl); return !!(s && D.structures[s.type].solid);
+  }
   const i = ty * S.W + tx; if (SOLID_TILES.has(S.tiles[i]) || S.blocked.has(i)) return true;
   const n = S.nodeAt.get(K(tx, ty)); if (n && n.on && D.nodes?.[n.type]?.solid) return true;
-  const s = S.objAt.get(K(tx, ty)); if (s && D.structures[s.type].solid) return true;
+  const s = objGet(tx, ty, 0); if (s && D.structures[s.type].solid) return true;
   return false;
 }
 function blockedAt(x, y, r) { const x0 = Math.floor((x - r) / T), x1 = Math.floor((x + r) / T), y0 = Math.floor((y - r) / T), y1 = Math.floor((y + r) / T); for (let ty = y0; ty <= y1; ty++) for (let tx = x0; tx <= x1; tx++) if (tileSolid(tx, ty)) return true; return false; }
@@ -189,19 +205,21 @@ function doAttack() {
 }
 function nearestInteract() {
   const p = S.pos, opts = [];
-  for (const n of S.npcs) { const d = Math.hypot(n.x - p.x, n.y - p.y); if (d < 56) opts.push({ d, label: n.shop ? `Shop: ${D.shops[n.shop].name}` : `Talk to ${n.name}`, go: () => n.shop ? openPanel('shop', n.shop) : (toast(`${n.name}: "${n.line}"`)) }); }
+  if (!myFl()) for (const n of S.npcs) { const d = Math.hypot(n.x - p.x, n.y - p.y); if (d < 56) opts.push({ d, label: n.shop ? `Shop: ${D.shops[n.shop].name}` : `Talk to ${n.name}`, go: () => n.shop ? openPanel('shop', n.shop) : (toast(`${n.name}: "${n.line}"`)) }); }
   const ptx = Math.floor(p.x / T), pty = Math.floor(p.y / T);
   for (let y = pty - 2; y <= pty + 2; y++) for (let x = ptx - 2; x <= ptx + 2; x++) {
     const c = { x: (x + 0.5) * T, y: (y + 0.5) * T }, d = Math.hypot(c.x - p.x, c.y - p.y);
-    const n = S.nodeAt.get(K(x, y));
+    const n = myFl() ? null : S.nodeAt.get(K(x, y));
     if (n && n.on && d < 52) {
       const lbl = { pebble: 'Pick up loose rock', fallen_apple: 'Pick up apple (risky!)', loot_chest: 'Open chest', apple_tree: 'Pick an apple', briar: 'Pick red berries (thorny)' }[n.type];
       if (lbl) opts.push({ d, label: lbl, go: () => send({ t: 'use', id: n.id }) });
     }
-    const s = S.objAt.get(K(x, y));
+    const s = objGet(x, y);
     if (s && d < 60) {
       const st = D.structures[s.type];
-      if (s.type === 'chest') opts.push({ d, label: 'Open chest', go: () => send({ t: 'chest', sid: s.id }) });
+      if (s.stair === 'up') opts.push({ d, label: 'Climb the stairs', go: () => send({ t: 'stair', sid: s.id }) });
+      else if (s.stair === 'down') opts.push({ d, label: 'Go downstairs', go: () => send({ t: 'stair', sid: s.id }) });
+      else if (s.type === 'chest') opts.push({ d, label: 'Open chest', go: () => send({ t: 'chest', sid: s.id }) });
       else if (s.type === 'bed') opts.push({ d, label: 'Set respawn at bed', go: () => send({ t: 'bed', sid: s.id }) });
       else if (st.stations) opts.push({ d, label: `Use ${D.items[s.type].name}`, go: () => openPanel('craft') });
     }
@@ -234,7 +252,7 @@ function renderBuildbar() {
 }
 function buildTarget() { if (!S.build.manual) { S.build.tx = Math.floor((S.pos.x + Math.cos(S.pos.a) * 30) / T); S.build.ty = Math.floor((S.pos.y - 4 + Math.sin(S.pos.a) * 30) / T); } return { tx: S.build.tx, ty: S.build.ty }; }
 function placeBuild() { if (!S.build.item || count(S.build.item) < 1) { S.build.item = placeables()[0] || null; renderBuildbar(); if (!S.build.item) return toast('Nothing to place'); } const { tx, ty } = buildTarget(); send({ t: 'place', id: S.build.item, tx, ty }); }
-function buildAction(act) { const { tx, ty } = buildTarget(); const s = S.objAt.get(K(tx, ty)) || S.floorAt.get(K(tx, ty)); if (!s) return toast('Aim at one of your builds first'); send({ t: act, sid: s.id }); }
+function buildAction(act) { const { tx, ty } = buildTarget(); const s = objGet(tx, ty) || floorGet(tx, ty); if (!s) return toast('Aim at one of your builds first'); send({ t: act, sid: s.id }); }
 
 // ---------------- HUD + panels
 const count = id => S.me.inv.reduce((a, s) => a + (s && s.id === id ? s.n : 0), 0);
@@ -245,6 +263,7 @@ function refreshHud() {
   $('coins').textContent = me.coins;
   $('status').innerHTML = Object.keys(me.status || {}).map(s => `<span class="${s}">${D.status[s]?.name || s}</span>`).join('');
   $('armor').textContent = (me.armor ? '🛡 ' + D.items[me.armor].name : '') + (count('shield') ? '  + Shield' : '');
+  const flEl = $('floorLbl'); if (flEl) { const fl = me.fl || 0; flEl.textContent = fl ? `Floor ${fl + 1}` : ''; flEl.classList.toggle('hidden', !fl); }
   $('hotbar').innerHTML = me.inv.slice(0, 6).map((s, i) => slotHtml(s, i, i === me.sel ? 'sel' : '').replace('</div>', `<span class="k">${i + 1}</span></div>`)).join('');
   for (const el of $('hotbar').children) el.onclick = () => selectSlot(+el.dataset.i);
   renderBuildbar();
@@ -252,7 +271,7 @@ function refreshHud() {
 function togglePanel(type) { if (S.panel?.type === type) closePanel(); else openPanel(type); }
 function openPanel(type, arg) { S.panel = { type, arg, pick: null }; $('panel').classList.remove('hidden'); refreshPanel(); }
 function closePanel() { if (S.panel?.type === 'chest') send({ t: 'cclose' }); S.panel = null; $('panel').classList.add('hidden'); }
-function nearStation(st) { for (const s of S.structs.values()) { const d = D.structures[s.type]; if (d.stations?.includes(st) && Math.hypot((s.tx + 0.5) * T - S.pos.x, (s.ty + 0.5) * T - S.pos.y) < 2.8 * T) return true; } return false; }
+function nearStation(st) { for (const s of S.structs.values()) { if ((s.fl || 0) !== myFl()) continue; const d = D.structures[s.type]; if (d.stations?.includes(st) && Math.hypot((s.tx + 0.5) * T - S.pos.x, (s.ty + 0.5) * T - S.pos.y) < 2.8 * T) return true; } return false; }
 const STN = { null: 'By hand', table: 'Workbench Table', furnace: 'Furnace / Forge', forge: 'Forge', tinker: "Tinker's Table" };
 function refreshPanel() {
   const P = S.panel; if (!P || !S.me) return;
@@ -326,8 +345,15 @@ function buildMinimap() {
 }
 function drawMinimap(players) {
   const g = $('minimap').getContext('2d'); g.drawImage(mini, 0, 0);
-  g.fillStyle = '#000'; for (const d of S.dens) if (!S.sealed.has(d.id) && !S.objAt.has(K(d.tx, d.ty)) && !S.floorAt.has(K(d.tx, d.ty))) g.fillRect(d.tx - 1, d.ty - 1, 2, 2);
-  g.fillStyle = '#c08040'; for (const s of S.structs.values()) g.fillRect(s.tx, s.ty, 1, 1);
+  const fl = myFl();
+  if (fl) {
+    g.fillStyle = '#1a1520'; g.fillRect(0, 0, S.W, S.mainH);
+    g.fillStyle = '#3a3048';
+    for (const h of S.houses) for (const k of (h.floors[fl] || h.floors[String(fl)] || [])) { const [x, y] = k.split(',').map(Number); g.fillRect(x, y, 1, 1); }
+  } else {
+    g.fillStyle = '#000'; for (const d of S.dens) if (!S.sealed.has(d.id) && !objGet(d.tx, d.ty, 0) && !floorGet(d.tx, d.ty, 0)) g.fillRect(d.tx - 1, d.ty - 1, 2, 2);
+  }
+  g.fillStyle = '#c08040'; for (const s of S.structs.values()) if ((s.fl || 0) === fl) g.fillRect(s.tx, s.ty, 1, 1);
   g.fillStyle = '#fff'; for (const p of players) g.fillRect(Math.floor(p.x / T) - 1, Math.floor(p.y / T) - 1, 3, 3);
   g.fillStyle = '#ffd84a'; g.fillRect(Math.floor(S.pos.x / T) - 1, Math.floor(S.pos.y / T) - 1, 3, 3);
 }
@@ -360,9 +386,12 @@ function interpEntities() {
   for (let i = sn.length - 1; i > 0; i--) if (sn[i - 1].t <= rt) { a = sn[i - 1]; b = sn[i]; break; }
   const f = b.t > a.t ? Math.max(0, Math.min(1, (rt - a.t) / (b.t - a.t))) : 1;
   const lerp = (ra, rb, o) => ra ? { x: ra[o] + (rb[o] - ra[o]) * f, y: ra[o + 1] + (rb[o + 1] - ra[o + 1]) * f } : { x: rb[o], y: rb[o + 1] };
-  for (const [id, r] of b.p) { if (id === S.id) { out.me = r; continue; } const q = lerp(a.p.get(id), r, 1); out.p.push({ id, x: q.x, y: q.y, ang: r[3] / 100, hp: r[4], held: r[5], name: r[6], armor: r[7], st: r[8], mv: r[9] }); }
-  for (const [id, r] of b.e) { const q = lerp(a.e.get(id), r, 2); out.e.push({ id, type: r[1], x: q.x, y: q.y, ang: r[4] / 100, hp: r[5], state: r[6], mv: r[7] }); }
-  out.b = sn[sn.length - 1].b;
+  const fl = myFl();
+  for (const [id, r] of b.p) { if (id === S.id) { out.me = r; continue; } if ((r[10] || 0) !== fl) continue; const q = lerp(a.p.get(id), r, 1); out.p.push({ id, x: q.x, y: q.y, ang: r[3] / 100, hp: r[4], held: r[5], name: r[6], armor: r[7], st: r[8], mv: r[9] }); }
+  if (!fl) {
+    for (const [id, r] of b.e) { const q = lerp(a.e.get(id), r, 2); out.e.push({ id, type: r[1], x: q.x, y: q.y, ang: r[4] / 100, hp: r[5], state: r[6], mv: r[7] }); }
+    out.b = sn[sn.length - 1].b;
+  }
   return out;
 }
 const NODE_FRAME_OFF = { tree: 1, apple_tree: 2, boulder: 1, iron_node: 1, briar: 2, loot_chest: 1 };
@@ -395,21 +424,36 @@ function render() {
   S.cam = { x: Math.round((S.pos.x - vw / 2) * sc) / sc, y: Math.round((S.pos.y - 12 - vh / 2) * sc) / sc };
   ctx.setTransform(sc, 0, 0, sc, -S.cam.x * sc, -S.cam.y * sc);
   const x0 = Math.max(0, Math.floor(S.cam.x / T)), y0 = Math.max(0, Math.floor(S.cam.y / T)), x1 = Math.min(S.W - 1, Math.ceil((S.cam.x + vw) / T)), y1 = Math.min(S.H - 1, Math.ceil((S.cam.y + vh) / T));
-  const tsI = IMG.tiles, now = performance.now();
-  for (let y = y0; y <= y1; y++) for (let x = x0; x <= x1; x++) {
-    const t = S.tiles[y * S.W + x], gk = MAN.ground?.[t];   // imported ground sheets: 16 variants, picked per tile
-    if (gk && MAN.sprites[gk]) spr(gk, hash2(x, y) % MAN.sprites[gk].cols, 0, x * T, y * T); else ctx.drawImage(tsI, t * T, 0, T, T, x * T, y * T, T, T);
+  const tsI = IMG.tiles, now = performance.now(), fl = myFl();
+  if (fl) {
+    ctx.fillStyle = '#14101c';
+    for (let y = y0; y <= y1; y++) for (let x = x0; x <= x1; x++) ctx.fillRect(x * T, y * T, T, T);
+    ctx.fillStyle = '#2a2436';
+    for (const h of S.houses) for (const k of (h.floors[fl] || h.floors[String(fl)] || [])) {
+      const [x, y] = k.split(',').map(Number);
+      if (x >= x0 && x <= x1 && y >= y0 && y <= y1) {
+        if (MAN.sprites.floor_wood) spr('floor_wood', 0, 0, x * T, y * T, 0.45);
+        else ctx.fillRect(x * T, y * T, T, T);
+      }
+    }
+  } else {
+    for (let y = y0; y <= y1; y++) for (let x = x0; x <= x1; x++) {
+      const t = S.tiles[y * S.W + x], gk = MAN.ground?.[t];   // imported ground sheets: 16 variants, picked per tile
+      if (gk && MAN.sprites[gk]) spr(gk, hash2(x, y) % MAN.sprites[gk].cols, 0, x * T, y * T); else ctx.drawImage(tsI, t * T, 0, T, T, x * T, y * T, T, T);
+    }
+    for (const d of S.dens) if (d.tx >= x0 - 1 && d.tx <= x1 + 1 && d.ty >= y0 - 1 && d.ty <= y1 + 1) spr(denSprite(d), 0, 0, (d.tx + 0.5) * T, (d.ty + 0.5) * T);
+    for (let y = y0; y <= y1; y++) for (let x = x0; x <= x1; x++) { const n = S.nodeAt.get(K(x, y)); if (n && n.on && D.nodes?.[n.type]?.floor) spr(nodeSprite(n), 0, 0, x * T, y * T); }
   }
-  for (const d of S.dens) if (d.tx >= x0 - 1 && d.tx <= x1 + 1 && d.ty >= y0 - 1 && d.ty <= y1 + 1) spr(denSprite(d), 0, 0, (d.tx + 0.5) * T, (d.ty + 0.5) * T);
-  for (let y = y0; y <= y1; y++) for (let x = x0; x <= x1; x++) { const n = S.nodeAt.get(K(x, y)); if (n && n.on && D.nodes?.[n.type]?.floor) spr(nodeSprite(n), 0, 0, x * T, y * T); }
-  for (const s of S.floorAt.values()) if (s.tx >= x0 && s.tx <= x1 && s.ty >= y0 && s.ty <= y1) spr(s.type, 0, 0, s.tx * T, s.ty * T);
+  for (const s of S.floorAt.values()) if ((s.fl || 0) === fl && s.tx >= x0 && s.tx <= x1 && s.ty >= y0 && s.ty <= y1) spr(s.type, 0, 0, s.tx * T, s.ty * T);
   const E = interpEntities(), list = [];
   for (let y = y0 - 1; y <= y1 + 2; y++) for (let x = x0 - 1; x <= x1 + 1; x++) {
-    const n = S.nodeAt.get(K(x, y)); if (n && !D.nodes?.[n.type]?.floor) list.push({ y: (y + 1) * T - 3, d: () => drawNode(n, x, y) });
-    const s = S.objAt.get(K(x, y)); if (s) list.push({ y: (y + 1) * T - 1, d: () => { spr(s.type, 0, 0, (x + 0.5) * T, (y + 1) * T - 1); const mx = D.structures[s.type].hp; if (s.hp < mx) bar((x + 0.5) * T, y * T - 10, s.hp / mx, '#e0a040'); } });
+    if (!fl) { const n = S.nodeAt.get(K(x, y)); if (n && !D.nodes?.[n.type]?.floor) list.push({ y: (y + 1) * T - 3, d: () => drawNode(n, x, y) }); }
+    const s = objGet(x, y, fl); if (s) list.push({ y: (y + 1) * T - 1, d: () => { spr(s.type, 0, 0, (x + 0.5) * T, (y + 1) * T - 1); const mx = D.structures[s.type].hp; if (s.hp < mx) bar((x + 0.5) * T, y * T - 10, s.hp / mx, '#e0a040'); } });
   }
-  for (const b of S.buildings) list.push({ y: (b.ty + b.h) * T, d: () => { const s = MAN.sprites[b.sprite]; spr(b.sprite, 0, 0, s && s.anchor[0] ? (b.tx + b.w / 2) * T : b.tx * T, (b.ty + b.h) * T); } });   // imported art is bottom-centred on its footprint
-  for (const n of S.npcs) list.push({ y: n.y, d: () => { const ph = ((now + n.x * 7) % 9000) / 1500; drawChar(n.sprite, n.x, n.y, Math.PI / 2, false, 0, ph < 1 ? 'emote' : null, ph); label(n.x, n.y - spriteTop(n.sprite) - 6, n.name, n.shop ? '#ffd84a' : '#ddf'); } });
+  if (!fl) {
+    for (const b of S.buildings) list.push({ y: (b.ty + b.h) * T, d: () => { const s = MAN.sprites[b.sprite]; spr(b.sprite, 0, 0, s && s.anchor[0] ? (b.tx + b.w / 2) * T : b.tx * T, (b.ty + b.h) * T); } });   // imported art is bottom-centred on its footprint
+    for (const n of S.npcs) list.push({ y: n.y, d: () => { const ph = ((now + n.x * 7) % 9000) / 1500; drawChar(n.sprite, n.x, n.y, Math.PI / 2, false, 0, ph < 1 ? 'emote' : null, ph); label(n.x, n.y - spriteTop(n.sprite) - 6, n.name, n.shop ? '#ffd84a' : '#ddf'); } });
+  }
   const frame = (mv, id) => mv ? 1 + ((now / 140 + id) | 0) % 3 : 0;
   const drawPlayer = (x, y, ang, mv, name, hp, held, id, st, isMe) => {
     drawChar('player', x, y, ang, mv, id);
@@ -455,7 +499,9 @@ function render() {
   // build ghost
   if (S.build.on && S.build.item) {
     const { tx, ty } = buildTarget(); const near = Math.hypot((tx + 0.5) * T - S.pos.x, (ty + 0.5) * T - S.pos.y) < 3.6 * T;
-    const lay = D.structures[S.build.item].layer, ok = near && !S.nodeAt.has(K(tx, ty)) && !tileSolid(tx, ty) && !(lay === 'floor' ? S.floorAt : S.objAt).has(K(tx, ty)) && !(tx >= S.town.x0 && tx <= S.town.x1 && ty >= S.town.y0 && ty <= S.town.y1);
+    const lay = D.structures[S.build.item].layer;
+    const occupied = !!(lay === 'floor' ? floorGet(tx, ty) : objGet(tx, ty));
+    const ok = near && !occupied && (fl ? inFootprint(fl, tx, ty) && !tileSolid(tx, ty) : !S.nodeAt.has(K(tx, ty)) && !tileSolid(tx, ty) && !(tx >= S.town.x0 && tx <= S.town.x1 && ty >= S.town.y0 && ty <= S.town.y1));
     if (lay === 'floor') spr(S.build.item, 0, 0, tx * T, ty * T, 0.55); else spr(S.build.item, 0, 0, (tx + 0.5) * T, (ty + 1) * T - 1, 0.55);
     ctx.strokeStyle = ok ? '#7f7' : '#f55'; ctx.lineWidth = 1; ctx.strokeRect(tx * T + 0.5, ty * T + 0.5, T - 1, T - 1);
   }

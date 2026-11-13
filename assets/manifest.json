@@ -1646,6 +1646,20 @@
    "scale": 1,
    "top": 112,
    "source": "pixellab:ee6cda8404"
+  },
+  "stairs_wood": {
+   "file": "sprites/ruin_stairs_wood.png",
+   "fw": 36,
+   "fh": 44,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    18,
+    43
+   ],
+   "scale": 1,
+   "top": 44,
+   "source": "pixellab:7927626cfc"
   }
  },
  "items": {
@@ -1706,7 +1720,8 @@
   "forge": "items/forge.png",
   "rat_tail": "items/rat_tail.png",
   "golden_egg": "items/golden_egg.png",
-  "thornfeather_mantle": "items/thornfeather_mantle.png"
+  "thornfeather_mantle": "items/thornfeather_mantle.png",
+  "stairs_wood": "items/stairs_wood.png"
  },
  "custom": "List files in assets/custom.txt to stop this generator overwriting them."
 }

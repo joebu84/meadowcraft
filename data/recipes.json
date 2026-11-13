@@ -105,6 +105,18 @@
    "station": null
   },
   {
+   "id": "stairs_wood",
+   "out": [
+    "stairs_wood",
+    1
+   ],
+   "in": {
+    "wood": 8
+   },
+   "station": null,
+   "_doc": "Place only inside a fully walled and floored room; using it climbs to a new empty floor (max 3)."
+  },
+  {
    "id": "chest",
    "out": [
     "chest",

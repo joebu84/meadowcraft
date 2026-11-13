@@ -9,6 +9,7 @@ html,body{margin:0;height:100%;overflow:hidden;background:#1d2618;font-family:ui
 #coins{font-size:13px;text-shadow:1px 1px #000}#coins:before{content:"● ";color:#f5c842}
 #status span{display:inline-block;font-size:11px;padding:1px 5px;margin-right:3px;border-radius:3px;background:#6a2a8a}
 #status span.poison{background:#2e8a3a}#armor{font-size:11px;text-shadow:1px 1px #000;color:#cde}
+#floorLbl{font-size:12px;text-shadow:1px 1px #000;color:#ffe7a0;font-weight:bold}
 #minimap{position:fixed;right:calc(8px + env(safe-area-inset-right));top:calc(8px + env(safe-area-inset-top));width:120px;height:96px;border:2px solid #111;image-rendering:pixelated;opacity:.9;z-index:5;pointer-events:none}
 #hotbar{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(8px + env(safe-area-inset-bottom));display:flex;gap:4px;z-index:6}
 .slot{width:44px;height:44px;background:rgba(20,20,28,.75);border:2px solid #555;border-radius:4px;position:relative;display:flex;align-items:center;justify-content:center;cursor:pointer}

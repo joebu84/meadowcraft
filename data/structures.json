@@ -85,5 +85,11 @@
   "stations": [
    "tinker"
   ]
+ },
+ "stairs_wood": {
+  "layer": "object",
+  "hp": 100,
+  "solid": false,
+  "stair": true
  }
 }

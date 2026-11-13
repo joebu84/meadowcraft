@@ -471,5 +471,12 @@
   "tier": 3,
   "sell": 60,
   "_doc": "specialty boss armor between wood and iron"
+ },
+ "stairs_wood": {
+  "name": "Wood Staircase",
+  "kind": "placeable",
+  "stack": 10,
+  "buy": 12,
+  "_doc": "Place inside a fully enclosed, floored room to add a floor above (max 3 floors)."
  }
 }
