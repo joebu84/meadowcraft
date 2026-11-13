@@ -1,0 +1,26 @@
+{
+ "id": "2b12002aaa",
+ "zips": [
+  "9df6bc2749b2ad1d1a38451d53b6e12f82919a9021f3f595b46f8480b3bdc9e4"
+ ],
+ "kind": "object",
+ "name": "base",
+ "prompt": "a cozy chunky wood bed",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "unknown"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   48,
+   48
+  ]
+ ],
+ "suggest": "bed",
+ "sure": true,
+ "entry": 0
+}

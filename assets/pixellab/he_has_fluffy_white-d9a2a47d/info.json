@@ -1,0 +1,33 @@
+{
+ "id": "d9a2a47d44_1",
+ "zips": [
+  "699ab38802e87490e045e53f11d396f36d8db8e17edf3bb2100cbc0396b8384c"
+ ],
+ "kind": "character",
+ "name": "he has fluffy white",
+ "prompt": "old man bald",
+ "size": {
+  "width": 44,
+  "height": 44
+ },
+ "directions": [
+  "east",
+  "north",
+  "north-east",
+  "north-west",
+  "south",
+  "south-east",
+  "south-west",
+  "west"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   44,
+   44
+  ]
+ ],
+ "suggest": null,
+ "sure": false,
+ "entry": 1
+}

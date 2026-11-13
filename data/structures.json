@@ -1,0 +1,89 @@
+{
+ "_doc": "Placeable structures. layer: floor|object. solid blocks everyone, enemySolid only mobs (doors). stations: crafting station ids it provides. upgradeTo: next tier (cost = that item's recipe inputs). STATION CHAIN: Workbench Table -> Stone Furnace (smelts ore, cooks) -> upgrade furnace in place into a Forge (does everything a furnace does + iron smithing + melting metal gear) -> Tinker's Table (needs you to have built a Table AND a Forge; crafts advanced gear). Building anything on a den tile seals it.",
+ "wall_wood": {
+  "layer": "object",
+  "hp": 120,
+  "solid": true,
+  "tier": 1,
+  "upgradeTo": "wall_stone"
+ },
+ "wall_stone": {
+  "layer": "object",
+  "hp": 300,
+  "solid": true,
+  "tier": 2,
+  "upgradeTo": "wall_iron"
+ },
+ "wall_iron": {
+  "layer": "object",
+  "hp": 700,
+  "solid": true,
+  "tier": 3
+ },
+ "door_wood": {
+  "layer": "object",
+  "hp": 100,
+  "solid": false,
+  "enemySolid": true,
+  "tier": 1
+ },
+ "floor_wood": {
+  "layer": "floor",
+  "hp": 50,
+  "solid": false,
+  "tier": 1,
+  "upgradeTo": "floor_stone"
+ },
+ "floor_stone": {
+  "layer": "floor",
+  "hp": 120,
+  "solid": false,
+  "tier": 2
+ },
+ "bed": {
+  "layer": "object",
+  "hp": 80,
+  "solid": false,
+  "spawn": true
+ },
+ "chest": {
+  "layer": "object",
+  "hp": 120,
+  "solid": true,
+  "storage": 16
+ },
+ "table": {
+  "layer": "object",
+  "hp": 100,
+  "solid": true,
+  "stations": [
+   "table"
+  ]
+ },
+ "furnace": {
+  "layer": "object",
+  "hp": 250,
+  "solid": true,
+  "stations": [
+   "furnace"
+  ],
+  "upgradeTo": "forge"
+ },
+ "forge": {
+  "layer": "object",
+  "hp": 400,
+  "solid": true,
+  "stations": [
+   "furnace",
+   "forge"
+  ]
+ },
+ "tinker_table": {
+  "layer": "object",
+  "hp": 200,
+  "solid": true,
+  "stations": [
+   "tinker"
+  ]
+ }
+}

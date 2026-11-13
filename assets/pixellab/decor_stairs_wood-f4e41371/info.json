@@ -1,0 +1,26 @@
+{
+ "id": "f4e41371ef",
+ "zips": [
+  "287660f4728a800e42a1b701bb248be3064f87d5e45c409390c63de198b45608"
+ ],
+ "kind": "object",
+ "name": "base",
+ "prompt": "a simple wood staircase facing the player",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "unknown"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   48,
+   48
+  ]
+ ],
+ "suggest": "decor_stairs_wood",
+ "sure": true,
+ "entry": 0
+}

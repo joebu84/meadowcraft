@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#2b3a24">
+<link rel="icon" href="assets/items/wool.png">
+<title>Meadowcraft</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="game"></canvas>
+<div id="hud" class="hidden">
+  <div id="hpwrap"><div id="hpbar"></div><span id="hptext"></span></div>
+  <div id="coins">0</div>
+  <div id="status"></div>
+  <div id="armor"></div>
+</div>
+<canvas id="minimap" class="hidden" width="120" height="96"></canvas>
+<div id="hotbar" class="hidden"></div>
+<div id="prompt" class="hidden"></div>
+<div id="toasts"></div>
+<div id="buildbar" class="hidden"></div>
+<div id="touch" class="hidden">
+  <div id="stick"><div id="knob"></div></div>
+  <div id="btns">
+    <button id="bAtk" class="tb big">⚔</button>
+    <button id="bUse" class="tb">✋</button>
+    <button id="bBag" class="tb">🎒</button>
+    <button id="bBuild" class="tb">🔨</button>
+  </div>
+</div>
+<div id="hostBadge" class="hidden"><span id="hostTxt"></span><button id="shareBtn">Share link</button></div>
+<div id="netBanner" class="hidden"></div>
+<div id="panel" class="hidden"><div id="panelHead"></div><div id="panelBody"></div></div>
+<div id="join">
+  <div class="joinbox">
+    <h1>MEADOWCRAFT</h1>
+    <p class="sub">a land of sheep people, goblin gangs &amp; very angry geese</p>
+    <input id="name" maxlength="16" placeholder="Your name" autocomplete="off">
+    <button id="joinBtn">Join world</button>
+    <div id="p2p" class="hidden">
+      <div id="joinSec" class="lsec"><h3>Join a friend</h3>
+        <input id="roomCode" maxlength="40" placeholder="Room code" autocomplete="off" autocapitalize="characters"> <button id="roomBtn">Join</button></div>
+      <div id="hostSec" class="lsec"><h3>Host a world in this tab</h3>
+        <select id="slot"></select>
+        <div id="newWorld"><input id="worldName" maxlength="24" placeholder="World name"> <input id="worldSeed" type="number" placeholder="Seed (optional)"></div>
+        <button id="hostBtn">Host world</button>
+        <div class="tools"><button id="exportBtn" class="sm">Export save</button> <label class="sm btnlike">Import save<input id="importFile" type="file" accept=".json,application/json" hidden></label> <button id="delBtn" class="sm">Delete</button></div>
+        <p class="fine">Worlds are saved in this browser. Friends can play only while your tab is open.</p></div>
+      <button id="showHost" class="sm linkish hidden">...or host your own world</button>
+    </div>
+    <p id="joinErr"></p>
+    <p class="keys">Phone: left thumb moves, ⚔ attack/harvest, ✋ use, 🎒 bag &amp; crafting, 🔨 build.<br>
+    Keyboard: WASD/arrows move · Space/click attack · E use · I bag · C craft · B build · 1-6 hotbar · Esc close</p>
+  </div>
+</div>
+<script>window.MEADOW_STATIC=1</script>
+<script src="js/vendor/peerjs.min.js"></script>
+<script src="js/game.bundle.js"></script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

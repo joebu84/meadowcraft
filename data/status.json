@@ -1,0 +1,5 @@
+{
+  "_doc": "Status effects. Every `tick` ms deal `dmg`. noRegen blocks natural regen. Cured by food items whose `cures` list includes the id.",
+  "poison":    { "name": "Poisoned", "dur": 20000, "tick": 1500, "dmg": 2 },
+  "parasites": { "name": "Parasites", "dur": 150000, "tick": 6000, "dmg": 1, "noRegen": true }
+}

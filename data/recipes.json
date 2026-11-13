@@ -1,0 +1,439 @@
+{
+ "_doc": "Crafting recipes - add a line to add a recipe. station: null = by hand, 'table' | 'furnace' (a Forge also counts) | 'forge' | 'tinker'. requiresBuilt: structure types you must have built before. Melt recipes (forge) are auto-generated from items[].melt. out: [itemId, qty]. in: {itemId: qty}.",
+ "recipes": [
+  {
+   "id": "stone_axe",
+   "out": [
+    "stone_axe",
+    1
+   ],
+   "in": {
+    "wood": 3,
+    "loose_rock": 2
+   },
+   "station": null
+  },
+  {
+   "id": "stone_pick",
+   "out": [
+    "stone_pick",
+    1
+   ],
+   "in": {
+    "wood": 3,
+    "loose_rock": 3
+   },
+   "station": null
+  },
+  {
+   "id": "wooden_spear",
+   "out": [
+    "wooden_spear",
+    1
+   ],
+   "in": {
+    "wood": 5,
+    "loose_rock": 1
+   },
+   "station": null
+  },
+  {
+   "id": "fishing_rod",
+   "out": [
+    "fishing_rod",
+    1
+   ],
+   "in": {
+    "wood": 3,
+    "wool": 1
+   },
+   "station": null
+  },
+  {
+   "id": "bandage",
+   "out": [
+    "bandage",
+    1
+   ],
+   "in": {
+    "wool": 2
+   },
+   "station": null
+  },
+  {
+   "id": "wool_armor",
+   "out": [
+    "wool_armor",
+    1
+   ],
+   "in": {
+    "wool": 6
+   },
+   "station": null
+  },
+  {
+   "id": "wall_wood",
+   "out": [
+    "wall_wood",
+    1
+   ],
+   "in": {
+    "wood": 4
+   },
+   "station": null
+  },
+  {
+   "id": "door_wood",
+   "out": [
+    "door_wood",
+    1
+   ],
+   "in": {
+    "wood": 6
+   },
+   "station": null
+  },
+  {
+   "id": "floor_wood",
+   "out": [
+    "floor_wood",
+    2
+   ],
+   "in": {
+    "wood": 2
+   },
+   "station": null
+  },
+  {
+   "id": "chest",
+   "out": [
+    "chest",
+    1
+   ],
+   "in": {
+    "wood": 8
+   },
+   "station": null
+  },
+  {
+   "id": "table",
+   "out": [
+    "table",
+    1
+   ],
+   "in": {
+    "wood": 6
+   },
+   "station": null
+  },
+  {
+   "id": "bed",
+   "out": [
+    "bed",
+    1
+   ],
+   "in": {
+    "wood": 6,
+    "wool": 2
+   },
+   "station": null
+  },
+  {
+   "id": "furnace",
+   "out": [
+    "furnace",
+    1
+   ],
+   "in": {
+    "stone": 10
+   },
+   "station": null
+  },
+  {
+   "id": "wood_armor",
+   "out": [
+    "wood_armor",
+    1
+   ],
+   "in": {
+    "wood": 10,
+    "wool": 2
+   },
+   "station": "table"
+  },
+  {
+   "id": "wall_stone",
+   "out": [
+    "wall_stone",
+    1
+   ],
+   "in": {
+    "stone": 4
+   },
+   "station": "table"
+  },
+  {
+   "id": "floor_stone",
+   "out": [
+    "floor_stone",
+    2
+   ],
+   "in": {
+    "stone": 2
+   },
+   "station": "table"
+  },
+  {
+   "id": "iron_bar",
+   "out": [
+    "iron_bar",
+    1
+   ],
+   "in": {
+    "iron_ore": 2,
+    "wood": 1
+   },
+   "station": "furnace"
+  },
+  {
+   "id": "cooked_meat",
+   "out": [
+    "cooked_meat",
+    1
+   ],
+   "in": {
+    "raw_meat": 1,
+    "wood": 1
+   },
+   "station": "furnace"
+  },
+  {
+   "id": "cooked_fish",
+   "out": [
+    "cooked_fish",
+    1
+   ],
+   "in": {
+    "fish": 1,
+    "wood": 1
+   },
+   "station": "furnace"
+  },
+  {
+   "id": "iron_sword",
+   "out": [
+    "iron_sword",
+    1
+   ],
+   "in": {
+    "iron_bar": 3,
+    "wood": 1
+   },
+   "station": "forge"
+  },
+  {
+   "id": "iron_axe",
+   "out": [
+    "iron_axe",
+    1
+   ],
+   "in": {
+    "iron_bar": 2,
+    "wood": 2
+   },
+   "station": "forge"
+  },
+  {
+   "id": "iron_pick",
+   "out": [
+    "iron_pick",
+    1
+   ],
+   "in": {
+    "iron_bar": 3,
+    "wood": 2
+   },
+   "station": "forge"
+  },
+  {
+   "id": "iron_flower",
+   "out": [
+    "iron_flower",
+    1
+   ],
+   "in": {
+    "iron_bar": 3,
+    "apple": 1
+   },
+   "station": "forge"
+  },
+  {
+   "id": "iron_armor",
+   "out": [
+    "iron_armor",
+    1
+   ],
+   "in": {
+    "iron_bar": 6,
+    "wool": 2
+   },
+   "station": "forge"
+  },
+  {
+   "id": "wall_iron",
+   "out": [
+    "wall_iron",
+    1
+   ],
+   "in": {
+    "iron_bar": 2,
+    "stone": 2
+   },
+   "station": "forge"
+  },
+  {
+   "id": "bow",
+   "out": [
+    "bow",
+    1
+   ],
+   "in": {
+    "wood": 4,
+    "rat_tail": 2
+   },
+   "station": "table"
+  },
+  {
+   "id": "bow_wool",
+   "out": [
+    "bow",
+    1
+   ],
+   "in": {
+    "wood": 4,
+    "wool": 3
+   },
+   "station": "table",
+   "_doc": "alternative: wool string (weaker-feeling but same bow)"
+  },
+  {
+   "id": "stone_arrow",
+   "out": [
+    "stone_arrow",
+    5
+   ],
+   "in": {
+    "stone": 1,
+    "wood": 1,
+    "feather": 1
+   },
+   "station": "table"
+  },
+  {
+   "id": "iron_arrow",
+   "out": [
+    "iron_arrow",
+    5
+   ],
+   "in": {
+    "iron_bar": 1,
+    "wood": 1,
+    "feather": 1
+   },
+   "station": "table"
+  },
+  {
+   "id": "forge",
+   "out": [
+    "forge",
+    1
+   ],
+   "in": {
+    "stone": 15,
+    "iron_bar": 2
+   },
+   "station": "table",
+   "_doc": "or upgrade a placed furnace in build mode for the same cost"
+  },
+  {
+   "id": "tinker_table",
+   "out": [
+    "tinker_table",
+    1
+   ],
+   "in": {
+    "iron_bar": 8,
+    "wood": 10,
+    "stone": 6
+   },
+   "station": "forge",
+   "requiresBuilt": [
+    "table",
+    "forge"
+   ]
+  },
+  {
+   "id": "iron_crossbow",
+   "out": [
+    "iron_crossbow",
+    1
+   ],
+   "in": {
+    "iron_bar": 4,
+    "wood": 4,
+    "wool": 2
+   },
+   "station": "tinker"
+  },
+  {
+   "id": "iron_bolt",
+   "out": [
+    "iron_bolt",
+    6
+   ],
+   "in": {
+    "iron_bar": 1,
+    "wood": 2
+   },
+   "station": "tinker"
+  },
+  {
+   "id": "musket",
+   "out": [
+    "musket",
+    1
+   ],
+   "in": {
+    "iron_bar": 5,
+    "wood": 4,
+    "thorn": 2
+   },
+   "station": "tinker"
+  },
+  {
+   "id": "musket_ball",
+   "out": [
+    "musket_ball",
+    6
+   ],
+   "in": {
+    "iron_bar": 1,
+    "stone": 1
+   },
+   "station": "tinker"
+  },
+  {
+   "id": "hookshot",
+   "out": [
+    "hookshot",
+    1
+   ],
+   "in": {
+    "iron_bar": 4,
+    "wool": 3,
+    "wood": 2
+   },
+   "station": "tinker"
+  }
+ ]
+}

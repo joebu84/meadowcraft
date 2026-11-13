@@ -1,0 +1,26 @@
+{
+ "id": "80cb29efd3",
+ "zips": [
+  "fd02df8170f2338e60502bd375350c615ef318ca3149090de9a8404d7426d920"
+ ],
+ "kind": "object",
+ "name": "base",
+ "prompt": "a simple wood floor square",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "unknown"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   48,
+   48
+  ]
+ ],
+ "suggest": "floor_wood",
+ "sure": true,
+ "entry": 0
+}

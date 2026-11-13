@@ -1,0 +1,26 @@
+{
+ "id": "938e84f238",
+ "zips": [
+  "0f2d0488ab1527e1ec7281ff88f6034a6c8775cc2d88d7fdecaaf5e35a1b5a92"
+ ],
+ "kind": "object",
+ "name": "base",
+ "prompt": "a wooden mug with pink foamy beer",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "unknown"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   48,
+   48
+  ]
+ ],
+ "suggest": null,
+ "sure": false,
+ "entry": 0
+}

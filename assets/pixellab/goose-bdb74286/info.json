@@ -1,0 +1,33 @@
+{
+ "id": "bdb74286f0",
+ "zips": [
+  "0825cb2006ef5cdd9d038ab1041e0b3fd36b8755adf3ea6d5e198f7cfcb236c0"
+ ],
+ "kind": "character",
+ "name": "Idle",
+ "prompt": "a huge goose boss with a collar of thorns and thorn bangles on his feet   his feathers are white but they are hackled up on the back of his head and neck in a mowhawk ",
+ "size": {
+  "width": 64,
+  "height": 64
+ },
+ "directions": [
+  "east",
+  "north",
+  "north-east",
+  "north-west",
+  "south",
+  "south-east",
+  "south-west",
+  "west"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   64,
+   64
+  ]
+ ],
+ "suggest": "goose",
+ "sure": true,
+ "entry": 0
+}

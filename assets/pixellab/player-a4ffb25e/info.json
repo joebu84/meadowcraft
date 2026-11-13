@@ -1,0 +1,34 @@
+{
+ "id": "a4ffb25eb9",
+ "zips": [
+  "64968c31211f4a304ae5e2bd13a6a3761ad2dfdfdd1d8b2a111df4b865eff203",
+  "e50b121d939a309d74ef5924957a374232ccd6839363e1bc8c51b6c5b2867bef"
+ ],
+ "kind": "character",
+ "name": "white cloak, brown f",
+ "prompt": "a person in a blue tunic and grey cloak  they have sheep fleece for hair and small rams horns and sheep ears, they have a human torso but sheep arms below the elbow and a sheep lower half",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "east",
+  "north",
+  "north-east",
+  "north-west",
+  "south",
+  "south-east",
+  "south-west",
+  "west"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   48,
+   48
+  ]
+ ],
+ "suggest": "player",
+ "sure": false,
+ "entry": 0
+}

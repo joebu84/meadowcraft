@@ -1,0 +1,26 @@
+{
+ "id": "a3a3dc9a90",
+ "zips": [
+  "7567c98d569e42f8c5c7ba716b937fde13a74077a41c8abe7d8582fef57731cf"
+ ],
+ "kind": "object",
+ "name": "base",
+ "prompt": "small village carpenter's workshop, wooden plank walls, shingle roof, open front with workbench, stacked logs and a saw sign, top-down view",
+ "size": {
+  "width": 96,
+  "height": 96
+ },
+ "directions": [
+  "unknown"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   96,
+   96
+  ]
+ ],
+ "suggest": "table",
+ "sure": true,
+ "entry": 0
+}

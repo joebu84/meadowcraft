@@ -1,0 +1,26 @@
+{
+ "id": "d21f0b3bf8",
+ "zips": [
+  "d98e39d0ff79cc1a98c6d18b877ccafd6a7bea2a16247a0f72edfd5e25f4db5a"
+ ],
+ "kind": "object",
+ "name": "base",
+ "prompt": "a round chunky wooden medieval tavern table",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "unknown"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   48,
+   48
+  ]
+ ],
+ "suggest": null,
+ "sure": false,
+ "entry": 0
+}

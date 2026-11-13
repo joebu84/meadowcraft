@@ -1,0 +1,89 @@
+{
+ "_doc": "Town shops. sells: items for sale (price = item.buy unless overridden in prices). buys: items the keeper will buy (pays item.sell), or '*' for anything with a sell price.",
+ "tavern": {
+  "name": "The Woolly Tankard",
+  "keeper": "Old Mutton (Tavern)",
+  "sells": [
+   "bread",
+   "bandage",
+   "antidote",
+   "healing_tonic",
+   "cooked_meat"
+  ],
+  "prices": {
+   "cooked_meat": 6
+  },
+  "buys": [
+   "fish",
+   "cooked_fish",
+   "raw_meat",
+   "cooked_meat",
+   "apple",
+   "feather"
+  ]
+ },
+ "carpenter": {
+  "name": "Ewe-nique Carpentry",
+  "keeper": "Hazel (Carpenter)",
+  "sells": [
+   "wall_wood",
+   "door_wood",
+   "floor_wood",
+   "chest",
+   "table",
+   "bed",
+   "bow"
+  ],
+  "buys": [
+   "rat_tail",
+   "thorn",
+   "wood"
+  ]
+ },
+ "blacksmith": {
+  "name": "Ramsforge Smithy",
+  "keeper": "Big Ram (Blacksmith)",
+  "sells": [
+   "sword",
+   "spear",
+   "shield",
+   "iron_axe",
+   "iron_pick",
+   "iron_sword",
+   "iron_flower",
+   "war_bell",
+   "iron_armor"
+  ],
+  "buys": [
+   "iron_ore",
+   "iron_bar",
+   "stone",
+   "sword",
+   "spear",
+   "shield",
+   "iron_sword",
+   "iron_axe",
+   "iron_pick",
+   "wool_armor",
+   "wood_armor",
+   "iron_armor",
+   "iron_flower",
+   "war_bell",
+   "iron_crossbow",
+   "musket",
+   "hookshot",
+   "bow"
+  ]
+ },
+ "trader": {
+  "name": "Baa-rbara's Stall",
+  "keeper": "Baa-rbara (Trader)",
+  "sells": [
+   "sword",
+   "spear",
+   "shield",
+   "bandage"
+  ],
+  "buys": "*"
+ }
+}

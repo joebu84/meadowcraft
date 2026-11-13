@@ -1,0 +1,34 @@
+{
+ "id": "20748271ba",
+ "zips": [
+  "4b75676e1e4a44a93b7a76a445a94d9aa7ed7ee308b88e1008de0d3caa81e24a",
+  "fefee3b6b0c2e65ca257504aaca87341ea1fc70fcb05477a8c18815fe8af232f"
+ ],
+ "kind": "object",
+ "name": "base",
+ "prompt": "a simple wooden fence",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "east",
+  "north",
+  "north-east",
+  "north-west",
+  "south",
+  "south-east",
+  "south-west",
+  "west"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   48,
+   48
+  ]
+ ],
+ "suggest": "decor_fence",
+ "sure": true,
+ "entry": 0
+}

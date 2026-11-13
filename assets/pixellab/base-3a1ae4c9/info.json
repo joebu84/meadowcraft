@@ -1,0 +1,26 @@
+{
+ "id": "3a1ae4c9d6",
+ "zips": [
+  "8d603f7d24866488a5d8f526274f762b3592a2b694a4521c700d452c27841a57"
+ ],
+ "kind": "object",
+ "name": "base",
+ "prompt": "a cute simple thick tree",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "unknown"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   48,
+   48
+  ]
+ ],
+ "suggest": null,
+ "sure": false,
+ "entry": 0
+}

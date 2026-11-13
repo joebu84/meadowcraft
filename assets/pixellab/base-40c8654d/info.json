@@ -1,0 +1,26 @@
+{
+ "id": "40c8654d75",
+ "zips": [
+  "3a65fcc25ce9f547be9bb4e69f4201ba54712404a06276d541033a3ec68a044c"
+ ],
+ "kind": "object",
+ "name": "base",
+ "prompt": "cute small cottage, thatched straw roof, cream plaster walls, round wooden door, flower boxes, top-down view",
+ "size": {
+  "width": 96,
+  "height": 96
+ },
+ "directions": [
+  "unknown"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   96,
+   96
+  ]
+ ],
+ "suggest": null,
+ "sure": false,
+ "entry": 0
+}

@@ -1,0 +1,34 @@
+{
+ "id": "0fc1db6149",
+ "zips": [
+  "0029a9d4884726894abac733afe1e92590f64fd4bdb94d563d5d111852b8a56e",
+  "73a8cf2c7d55c52e89286df396e7db6a29c53d344af0245b980b4639489f05b0"
+ ],
+ "kind": "character",
+ "name": "no cloak hes wearing",
+ "prompt": "a person in a blue tunic and grey cloak  they have sheep fleece for hair and small rams horns and sheep ears, they have a human torso but sheep arms below the elbow and a sheep lower half",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "east",
+  "north",
+  "north-east",
+  "north-west",
+  "south",
+  "south-east",
+  "south-west",
+  "west"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   48,
+   48
+  ]
+ ],
+ "suggest": "player",
+ "sure": false,
+ "entry": 0
+}

@@ -1,0 +1,26 @@
+{
+ "id": "4f5f79d58e",
+ "zips": [
+  "7cc9dd39858d76b62e6f9d07dc838f74e3895a6bf790dd4f02214d9fc51d6062"
+ ],
+ "kind": "object",
+ "name": "base",
+ "prompt": "a stone forge   castle brick  in a short silo shape with an open front where coal and metal go",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "unknown"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   48,
+   48
+  ]
+ ],
+ "suggest": "forge",
+ "sure": true,
+ "entry": 0
+}

@@ -1,0 +1,26 @@
+{
+ "id": "a501f3ae2b",
+ "zips": [
+  "681bf86dda145643b44450f512b5ac847b090e58501575823ee593e3264806a2"
+ ],
+ "kind": "object",
+ "name": "base",
+ "prompt": "round stone town-square fountain with a small ram statue, water, top-down view",
+ "size": {
+  "width": 64,
+  "height": 64
+ },
+ "directions": [
+  "unknown"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   64,
+   64
+  ]
+ ],
+ "suggest": null,
+ "sure": false,
+ "entry": 0
+}

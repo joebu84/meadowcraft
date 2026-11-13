@@ -1,0 +1,33 @@
+{
+ "id": "042314689f_1",
+ "zips": [
+  "5f7b576c6c6073bed203a94b20a7f1c578f3d9c899ad5f32aa0598fec11be568"
+ ],
+ "kind": "character",
+ "name": "a tight green tech s",
+ "prompt": "a dancer girl with a tight body and short spikey black hair with very long side bangs her dress is red and her heels are black",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "east",
+  "north",
+  "north-east",
+  "north-west",
+  "south",
+  "south-east",
+  "south-west",
+  "west"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   48,
+   48
+  ]
+ ],
+ "suggest": null,
+ "sure": false,
+ "entry": 1
+}

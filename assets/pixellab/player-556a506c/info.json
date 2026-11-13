@@ -1,0 +1,34 @@
+{
+ "id": "556a506c2f",
+ "zips": [
+  "001eb43d15bfeca3d258a0b96d7d1616c419298cbe6491bf04fdc4cbb3b1ceb9",
+  "ab3769e83c8927e7256192482f70a4184edfe0f842dc8b151c1f60c5c42f0afe"
+ ],
+ "kind": "character",
+ "name": "girl version pretty",
+ "prompt": "a person in a blue tunic and grey cloak  they have sheep fleece for hair and small rams horns and sheep ears, they have a human torso but sheep arms below the elbow and a sheep lower half",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "east",
+  "north",
+  "north-east",
+  "north-west",
+  "south",
+  "south-east",
+  "south-west",
+  "west"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   48,
+   48
+  ]
+ ],
+ "suggest": "player",
+ "sure": false,
+ "entry": 0
+}

@@ -1,0 +1,310 @@
+{
+ "_doc": "Hand-authored town (always identical). Legend: F fence, ',' grass, '.' cobble, ':' road, '~' fountain (solid), 'r' flowers, 'B' building footprint (solid; must match buildings[]). NPC/spawn coords are in town tiles (fractions ok). Placed at the centre of the world.",
+ "name": "Woolhaven",
+ "map": [
+  "FFFFFFFFFFFF::FFFFFFFFFFFF",
+  "F,,,,,,,,,,,::,,,,,,,,,,,F",
+  "F,BBBBBB,,,,::,,,,BBBBBB,F",
+  "F,BBBBBB,,,,::,,,,BBBBBB,F",
+  "F,BBBBBB,,,,::,,,,BBBBBB,F",
+  "F,BBBBBB,,,,::,,,,BBBBBB,F",
+  "F,,,,..,,,,,::,,,,,,..,,,F",
+  "F,,,,,,,,........,,,,,,,,F",
+  "Fr,,,,,,,........,,,,,,,rF",
+  "::::::::::::~~::::::::::::",
+  "::::::::::::~~::::::::::::",
+  "Fr,,,,,,,........,,,,,,,rF",
+  "F,,,,,,,,........,,,,,,,,F",
+  "F,BBBBBB,,,,::,,,,BBBBB,,F",
+  "F,BBBBBB,,,,::,,,,BBBBB,,F",
+  "F,BBBBBB,,,,::,,,,BBBBB,,F",
+  "F,BBBBBB,,,,::,,,,,,,,,,,F",
+  "F,,,..,,,,,,::,,,,,,,,,,,F",
+  "F,,,,,,,,,,,::,,,,,,,,,,,F",
+  "FFFFFFFFFFFF::FFFFFFFFFFFF"
+ ],
+ "buildings": [
+  {
+   "id": "tavern",
+   "name": "The Woolly Tankard",
+   "x": 2,
+   "y": 2,
+   "w": 6,
+   "h": 4,
+   "sprite": "bld_tavern"
+  },
+  {
+   "id": "blacksmith",
+   "name": "Ramsforge Smithy",
+   "x": 18,
+   "y": 2,
+   "w": 6,
+   "h": 4,
+   "sprite": "bld_blacksmith"
+  },
+  {
+   "id": "carpenter",
+   "name": "Ewe-nique Carpentry",
+   "x": 2,
+   "y": 13,
+   "w": 6,
+   "h": 4,
+   "sprite": "bld_carpenter"
+  },
+  {
+   "id": "trader",
+   "name": "Baa-rbara's Stall",
+   "x": 18,
+   "y": 13,
+   "w": 5,
+   "h": 3,
+   "sprite": "bld_stall"
+  },
+  {
+   "id": "fountain",
+   "name": "Ram Fountain",
+   "x": 12,
+   "y": 9,
+   "w": 2,
+   "h": 2,
+   "sprite": "bld_fountain",
+   "noBlock": true
+  },
+  {
+   "id": "home1",
+   "name": "Cottage",
+   "x": 1,
+   "y": -4,
+   "w": 4,
+   "h": 3,
+   "sprite": "bld_home_1",
+   "outskirts": true
+  },
+  {
+   "id": "home2",
+   "name": "Cottage",
+   "x": 5,
+   "y": -4,
+   "w": 4,
+   "h": 3,
+   "sprite": "bld_home_2",
+   "outskirts": true
+  },
+  {
+   "id": "home3",
+   "name": "Cottage",
+   "x": 17,
+   "y": -4,
+   "w": 4,
+   "h": 3,
+   "sprite": "bld_home_3",
+   "outskirts": true
+  },
+  {
+   "id": "home4",
+   "name": "Cottage",
+   "x": 21,
+   "y": -4,
+   "w": 4,
+   "h": 3,
+   "sprite": "bld_home_4",
+   "outskirts": true
+  },
+  {
+   "id": "home5",
+   "name": "Cottage",
+   "x": 1,
+   "y": 21,
+   "w": 4,
+   "h": 3,
+   "sprite": "bld_home_5",
+   "outskirts": true
+  },
+  {
+   "id": "home6",
+   "name": "Cottage",
+   "x": 5,
+   "y": 21,
+   "w": 4,
+   "h": 3,
+   "sprite": "bld_home_6",
+   "outskirts": true
+  },
+  {
+   "id": "home7",
+   "name": "Cottage",
+   "x": 17,
+   "y": 21,
+   "w": 4,
+   "h": 3,
+   "sprite": "bld_home_7",
+   "outskirts": true
+  },
+  {
+   "id": "home8",
+   "name": "Cottage",
+   "x": 21,
+   "y": 21,
+   "w": 4,
+   "h": 3,
+   "sprite": "bld_home_8",
+   "outskirts": true
+  }
+ ],
+ "npcs": [
+  {
+   "id": "tavern_keeper",
+   "name": "Old Mutton",
+   "sprite": "sheeple_npc",
+   "x": 6,
+   "y": 6.8,
+   "shop": "tavern"
+  },
+  {
+   "id": "smith",
+   "name": "Big Ram",
+   "sprite": "sheeple_smith",
+   "x": 21,
+   "y": 6.8,
+   "shop": "blacksmith"
+  },
+  {
+   "id": "carpenter",
+   "name": "Hazel",
+   "sprite": "sheeple_npc",
+   "x": 5,
+   "y": 17.8,
+   "shop": "carpenter"
+  },
+  {
+   "id": "trader",
+   "name": "Baa-rbara",
+   "sprite": "trader",
+   "x": 20.5,
+   "y": 16.8,
+   "shop": "trader"
+  },
+  {
+   "id": "elder",
+   "name": "Elder Woolsworth",
+   "sprite": "sheeple_npc",
+   "x": 10,
+   "y": 12.5,
+   "line": "Baa! Welcome to Woolhaven. Punch trees for wood, grab loose rocks, and craft a stone pick."
+  },
+  {
+   "id": "guard",
+   "name": "Guard Fleece",
+   "sprite": "sheeple_soldier",
+   "x": 14.5,
+   "y": 1.6,
+   "line": "Dens are black holes in the meadow. Build anything over one and it stops spawning."
+  },
+  {
+   "id": "kid",
+   "name": "Lamb Pip",
+   "sprite": "sheeple_npc",
+   "x": 16,
+   "y": 8,
+   "line": "The red and blue goblin gangs shoot each other all day. Let them!"
+  }
+ ],
+ "spawn": {
+  "x": 13,
+  "y": 12.6
+ },
+ "_buildings_doc": "buildings with outskirts:true sit just outside the fence (homes); their footprint is blocked + kept clear of trees. noBlock: purely visual (fountain tiles are already solid).",
+ "_interiors_doc": "Enterable buildings. Each room is a shared instance laid out in a strip below the map (same server, all players see each other). Walk into the building door (bottom middle of its footprint) to enter; walk onto the room door to leave (you come out where you went in). layout: # wall, . floor, D door, letters = furniture (legend), K = shopkeeper spot.",
+ "interiors": {
+  "tavern": {
+   "buildings": [
+    "tavern"
+   ],
+   "keeper": "tavern_keeper",
+   "layout": [
+    "##############",
+    "#H..b.b.b.b..#",
+    "#............#",
+    "#.t..t...K...#",
+    "#........bbbb#",
+    "#.t..t.......#",
+    "#............#",
+    "#.t..t....r..#",
+    "#............#",
+    "######D#######"
+   ]
+  },
+  "carpenter": {
+   "buildings": [
+    "carpenter"
+   ],
+   "keeper": "carpenter",
+   "layout": [
+    "##############",
+    "#w.w.w..c.c.s#",
+    "#............#",
+    "#..K.........#",
+    "#............#",
+    "#.d......w.w.#",
+    "#............#",
+    "#.......r.bb.#",
+    "#............#",
+    "######D#######"
+   ]
+  },
+  "blacksmith": {
+   "buildings": [
+    "blacksmith"
+   ],
+   "keeper": "smith",
+   "layout": [
+    "##############",
+    "#F.F..f..T.c.#",
+    "#............#",
+    "#....K.......#",
+    "#..kkkk......#",
+    "#............#",
+    "#b.........b.#",
+    "#b..........c#",
+    "#............#",
+    "######D#######"
+   ]
+  },
+  "home": {
+   "buildings": [
+    "home1",
+    "home2",
+    "home3",
+    "home4",
+    "home5",
+    "home6",
+    "home7",
+    "home8"
+   ],
+   "layout": [
+    "##########",
+    "#B.d..H..#",
+    "#........#",
+    "#..t..r..#",
+    "#........#",
+    "#c.......#",
+    "####D#####"
+   ]
+  }
+ },
+ "interiorLegend": {
+  "b": "int_barrel",
+  "t": "int_table",
+  "H": "int_hearth",
+  "B": "int_bed",
+  "d": "int_dresser",
+  "w": "int_workbench",
+  "c": "int_chest",
+  "s": "int_stairs",
+  "r": "int_rug",
+  "k": "int_desk",
+  "F": "int_forge",
+  "f": "int_furnace",
+  "T": "int_tinker"
+ }
+}

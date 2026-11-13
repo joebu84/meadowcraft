@@ -1,0 +1,47 @@
+{
+ "id": "cb7b7a8e60",
+ "zips": [
+  "4cf3a4ba409ac5e4e247087355fad3bff60560d93d8fc4c70f6c3078b56d0d80",
+  "8c907e631458dd85dc389b20cf65055c57499a69dc417b5bfcacd01e66d4c58b"
+ ],
+ "kind": "character",
+ "name": "Idle",
+ "prompt": "a white rat a bit bigger than normal with fluffy wool like a sheep rd eyes",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "east",
+  "north",
+  "north-east",
+  "north-west",
+  "south",
+  "south-east",
+  "south-west",
+  "west"
+ ],
+ "animations": {
+  "Bark": {
+   "dirs": [
+    "south-east",
+    "south",
+    "east"
+   ],
+   "frames": 6
+  }
+ },
+ "frame_sizes": [
+  [
+   48,
+   48
+  ],
+  [
+   64,
+   64
+  ]
+ ],
+ "suggest": "wool_rat",
+ "sure": true,
+ "entry": 0
+}

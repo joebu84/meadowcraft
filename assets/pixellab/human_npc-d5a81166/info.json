@@ -1,0 +1,33 @@
+{
+ "id": "d5a8116692_9",
+ "zips": [
+  "b0ad7824b07258ecf3211c1aeb35ab59577a611200637d4f4bf0db32ffd9bf95"
+ ],
+ "kind": "character",
+ "name": "blue tunic",
+ "prompt": "a young man in a toga and sandals",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "east",
+  "north",
+  "north-east",
+  "north-west",
+  "south",
+  "south-east",
+  "south-west",
+  "west"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   48,
+   48
+  ]
+ ],
+ "suggest": "human_npc",
+ "sure": false,
+ "entry": 9
+}

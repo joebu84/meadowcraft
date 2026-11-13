@@ -1,0 +1,27 @@
+{
+ "id": "b42273cb22",
+ "zips": [
+  "7da4a3d8c31cb8fac70c3487980a3872217d329f1ddae0cbdf506dc013467067",
+  "a10ba6ccfb840f57db037226871f1dcb8b76591c025f9a15a4097ce3a6d30ef6"
+ ],
+ "kind": "object",
+ "name": "base",
+ "prompt": "a wood campfire with a small metal pot hung over it full of soup",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "unknown"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   48,
+   48
+  ]
+ ],
+ "suggest": "decor_campfire",
+ "sure": true,
+ "entry": 0
+}

@@ -1,0 +1,45 @@
+{
+ "id": "06c5a9bcc5",
+ "zips": [
+  "e4f324cab2fdbeaeb1fe968d362ebe3e34ba64a1296ee5ba6ae2b20760d6c3cb",
+  "e5abd1e2159a433a1d83c6a5087964751e2ad5b46e5896259e5e74db8150e686"
+ ],
+ "kind": "character",
+ "name": "Idle",
+ "prompt": "a giant man sized goose with a blue ribbin around its neck with a large bronze jingle bell pendant",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "east",
+  "north",
+  "north-east",
+  "north-west",
+  "south",
+  "south-east",
+  "south-west",
+  "west"
+ ],
+ "animations": {
+  "the_goose_pecks_with_its_head_and_then_opens_its_w": {
+   "dirs": [
+    "south"
+   ],
+   "frames": 9
+  }
+ },
+ "frame_sizes": [
+  [
+   48,
+   48
+  ],
+  [
+   60,
+   60
+  ]
+ ],
+ "suggest": "goose",
+ "sure": true,
+ "entry": 0
+}

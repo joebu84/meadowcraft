@@ -1,0 +1,548 @@
+{
+ "_doc": "World resource nodes. harvest: which tool power hits it (tree/boulder/ore) when attacked; item: what each hit gives. use: E-interaction (pickup | pick | loot). status: chance to catch a status effect when picking. thorns: damage when hit bare-handed or picked. rare: [[item, chancePerHit]] bonus drops. iron_node: rare node, few hits, mostly iron ore.",
+ "tree": {
+  "hp": 8,
+  "harvest": "tree",
+  "item": "wood",
+  "solid": true,
+  "respawn": 90000,
+  "sprites": [
+   "tree_oak_1",
+   "tree_oak_2"
+  ],
+  "mapColor": "#2f6a24",
+  "_doc": "legacy generic tree; new worlds use tree_<family>"
+ },
+ "apple_tree": {
+  "hp": 6,
+  "harvest": "tree",
+  "item": "wood",
+  "solid": true,
+  "respawn": 120000,
+  "use": "pick",
+  "pickItem": "apple",
+  "pickCooldown": 45000,
+  "status": {
+   "parasites": 0.1,
+   "poison": 0.08
+  },
+  "mapColor": "#7a8a2a"
+ },
+ "boulder": {
+  "hp": 8,
+  "harvest": "boulder",
+  "item": "stone",
+  "solid": true,
+  "respawn": 120000,
+  "rare": [
+   [
+    "iron_ore",
+    0.03
+   ]
+  ]
+ },
+ "briar": {
+  "hp": 3,
+  "harvest": "tree",
+  "item": "thorn",
+  "solid": true,
+  "respawn": 60000,
+  "thorns": 3,
+  "use": "pick",
+  "pickItem": "red_berry",
+  "pickCooldown": 30000,
+  "mapColor": "#5a3a24"
+ },
+ "pebble": {
+  "hp": 1,
+  "item": "loose_rock",
+  "min": 1,
+  "max": 2,
+  "solid": false,
+  "respawn": 45000,
+  "use": "pickup"
+ },
+ "fallen_apple": {
+  "hp": 1,
+  "item": "apple",
+  "min": 1,
+  "max": 1,
+  "solid": false,
+  "respawn": 60000,
+  "use": "pickup",
+  "status": {
+   "poison": 0.2,
+   "parasites": 0.15
+  }
+ },
+ "loot_chest": {
+  "hp": 1,
+  "solid": false,
+  "respawn": 600000,
+  "use": "loot",
+  "sprites": [
+   "loot_chest",
+   "loot_chest_2",
+   "loot_chest_3"
+  ]
+ },
+ "iron_node": {
+  "hp": 4,
+  "harvest": "ore",
+  "item": "iron_ore",
+  "solid": true,
+  "respawn": 600000,
+  "alt": [
+   "stone",
+   0.25
+  ]
+ },
+ "tree_oak": {
+  "hp": 8,
+  "harvest": "tree",
+  "item": "wood",
+  "solid": true,
+  "respawn": 90000,
+  "family": "oak",
+  "sprites": [
+   "tree_oak_1",
+   "tree_oak_2"
+  ],
+  "mapColor": "#2f6a24"
+ },
+ "tree_pine": {
+  "hp": 10,
+  "harvest": "tree",
+  "item": "wood",
+  "solid": true,
+  "respawn": 90000,
+  "family": "pine",
+  "sprites": [
+   "tree_pine_1"
+  ],
+  "mapColor": "#1d4a2a",
+  "_doc": "tall pine: more wood per tree"
+ },
+ "tree_birch": {
+  "hp": 8,
+  "harvest": "tree",
+  "item": "wood",
+  "solid": true,
+  "respawn": 90000,
+  "family": "birch",
+  "sprites": [
+   "tree_birch_1",
+   "tree_birch_2"
+  ],
+  "mapColor": "#9fcf6a"
+ },
+ "tree_autumn": {
+  "hp": 8,
+  "harvest": "tree",
+  "item": "wood",
+  "solid": true,
+  "respawn": 90000,
+  "family": "autumn",
+  "sprites": [
+   "tree_autumn_1",
+   "tree_autumn_2"
+  ],
+  "mapColor": "#d0652a"
+ },
+ "tree_blossom": {
+  "hp": 8,
+  "harvest": "tree",
+  "item": "wood",
+  "solid": true,
+  "respawn": 90000,
+  "family": "blossom",
+  "sprites": [
+   "tree_blossom_1"
+  ],
+  "mapColor": "#e8a0c0"
+ },
+ "tree_willow": {
+  "hp": 8,
+  "harvest": "tree",
+  "item": "wood",
+  "solid": true,
+  "respawn": 90000,
+  "family": "willow",
+  "sprites": [
+   "tree_willow_1"
+  ],
+  "mapColor": "#5f9a4a"
+ },
+ "tree_gnarled": {
+  "hp": 10,
+  "harvest": "tree",
+  "item": "wood",
+  "solid": true,
+  "respawn": 90000,
+  "family": "gnarled",
+  "sprites": [
+   "tree_gnarled_1",
+   "tree_gnarled_2"
+  ],
+  "mapColor": "#25382a",
+  "rare": [
+   [
+    "thorn",
+    0.35
+   ]
+  ],
+  "_doc": "tangled dead-looking trees around the Briar Patch; thorns come off with the wood"
+ },
+ "tree_mystic": {
+  "hp": 14,
+  "harvest": "tree",
+  "item": "wood",
+  "solid": true,
+  "respawn": 90000,
+  "family": "mystic",
+  "sprites": [
+   "tree_mystic_1"
+  ],
+  "mapColor": "#3a3aa0",
+  "rare": [
+   [
+    "iron_ore",
+    0.08
+   ],
+   [
+    "feather",
+    0.1
+   ]
+  ],
+  "_doc": "rare starry grove; odd things fall out"
+ },
+ "_ruins_doc": "Ruin pieces: wood ones break with an axe (wood), stone with a pick (stone), iron with a pick (stone + small rare iron ore). Broken pieces regrow after 2 hours, so ruins are a slow renewable source. Floors are walkable.",
+ "ruin_wall_stone": {
+  "hp": 10,
+  "harvest": "boulder",
+  "item": "stone",
+  "solid": true,
+  "respawn": 7200000,
+  "sprites": [
+   "ruin_wall_stone_1",
+   "ruin_wall_stone_2",
+   "ruin_wall_stone_3"
+  ],
+  "ruin": true,
+  "mapColor": "#8a8478"
+ },
+ "ruin_wall_wood": {
+  "hp": 6,
+  "harvest": "tree",
+  "item": "wood",
+  "solid": true,
+  "respawn": 7200000,
+  "sprites": [
+   "ruin_wall_wood_1",
+   "ruin_wall_wood_2",
+   "ruin_wall_wood_3"
+  ],
+  "ruin": true,
+  "mapColor": "#8a8478"
+ },
+ "ruin_wall_iron": {
+  "hp": 8,
+  "harvest": "ore",
+  "item": "stone",
+  "solid": true,
+  "respawn": 7200000,
+  "sprites": [
+   "ruin_wall_iron_1",
+   "ruin_wall_iron_2",
+   "ruin_wall_iron_3"
+  ],
+  "ruin": true,
+  "mapColor": "#8a8478",
+  "rare": [
+   [
+    "iron_ore",
+    0.15
+   ]
+  ]
+ },
+ "ruin_rubble": {
+  "hp": 3,
+  "harvest": "boulder",
+  "item": "stone",
+  "solid": false,
+  "respawn": 7200000,
+  "sprites": [
+   "ruin_rubble_stone",
+   "ruin_rubble_iron"
+  ],
+  "ruin": true,
+  "mapColor": "#8a8478"
+ },
+ "ruin_wood_debris": {
+  "hp": 3,
+  "harvest": "tree",
+  "item": "wood",
+  "solid": false,
+  "respawn": 7200000,
+  "sprites": [
+   "ruin_rubble_wood"
+  ],
+  "ruin": true,
+  "mapColor": "#8a8478"
+ },
+ "ruin_furniture": {
+  "hp": 4,
+  "harvest": "tree",
+  "item": "wood",
+  "solid": true,
+  "respawn": 7200000,
+  "sprites": [
+   "ruin_bed",
+   "ruin_dresser_1",
+   "ruin_dresser_2",
+   "ruin_desk_1",
+   "ruin_desk_2",
+   "ruin_table_round",
+   "ruin_barrel",
+   "ruin_stairs_wood"
+  ],
+  "ruin": true,
+  "mapColor": "#8a8478"
+ },
+ "ruin_stonework": {
+  "hp": 8,
+  "harvest": "boulder",
+  "item": "stone",
+  "solid": true,
+  "respawn": 7200000,
+  "sprites": [
+   "ruin_stairs_stone",
+   "ruin_stairs_castle",
+   "ruin_statue"
+  ],
+  "ruin": true,
+  "mapColor": "#8a8478",
+  "rare": [
+   [
+    "iron_ore",
+    0.05
+   ]
+  ]
+ },
+ "ruin_campfire": {
+  "hp": 3,
+  "harvest": "tree",
+  "item": "wood",
+  "solid": false,
+  "respawn": 7200000,
+  "sprites": [
+   "ruin_campfire"
+  ],
+  "ruin": true,
+  "mapColor": "#8a8478"
+ },
+ "ruin_floor_castle": {
+  "hp": 4,
+  "harvest": "boulder",
+  "item": "stone",
+  "solid": false,
+  "respawn": 7200000,
+  "sprites": [
+   "floor_ruin_castle_1",
+   "floor_ruin_castle_2",
+   "floor_ruin_castle_3",
+   "floor_ruin_castle_4",
+   "floor_ruin_castle_5",
+   "floor_ruin_castle_6",
+   "floor_ruin_castle_7"
+  ],
+  "ruin": true,
+  "mapColor": "#8a8478",
+  "floor": true
+ },
+ "ruin_floor_stone": {
+  "hp": 4,
+  "harvest": "boulder",
+  "item": "stone",
+  "solid": false,
+  "respawn": 7200000,
+  "sprites": [
+   "floor_ruin_stone_1",
+   "floor_ruin_stone_2"
+  ],
+  "ruin": true,
+  "mapColor": "#8a8478",
+  "floor": true
+ },
+ "ruin_floor_iron": {
+  "hp": 5,
+  "harvest": "ore",
+  "item": "stone",
+  "solid": false,
+  "respawn": 7200000,
+  "sprites": [
+   "floor_ruin_iron_1",
+   "floor_ruin_iron_2"
+  ],
+  "ruin": true,
+  "mapColor": "#8a8478",
+  "floor": true,
+  "rare": [
+   [
+    "iron_ore",
+    0.1
+   ]
+  ]
+ },
+ "ruin_floor_wood": {
+  "hp": 3,
+  "harvest": "tree",
+  "item": "wood",
+  "solid": false,
+  "respawn": 7200000,
+  "sprites": [
+   "floor_ruin_wood_1",
+   "floor_ruin_wood_2",
+   "floor_ruin_wood_3"
+  ],
+  "ruin": true,
+  "mapColor": "#8a8478",
+  "floor": true
+ },
+ "goose_nest": {
+  "hp": 1,
+  "solid": false,
+  "sprites": [
+   "goose_nest"
+  ],
+  "mapColor": "#e0b050",
+  "_doc": "marks the Goose Boss lair (decor)"
+ },
+ "thicket": {
+  "hp": 120,
+  "harvest": "thicket",
+  "item": "thorn",
+  "solid": true,
+  "respawn": 600000,
+  "prick": 2,
+  "sprites": [
+   "thicket_1",
+   "thicket_2",
+   "thicket_3",
+   "thicket_4",
+   "thicket_5"
+  ],
+  "mapColor": "#3a2418",
+  "_doc": "Briar maze walls. Only iron axes / the Iron Flower can dent them (power.thicket), 120 hp, regrow after 10 min. Touching one pricks for 2 damage."
+ },
+ "_interior_doc": "Interior furniture: decoration only (no harvest), solid unless noted.",
+ "int_table": {
+  "hp": 1,
+  "solid": true,
+  "sprites": [
+   "ruin_table_round"
+  ],
+  "interior": true
+ },
+ "int_desk": {
+  "hp": 1,
+  "solid": true,
+  "sprites": [
+   "ruin_desk_1",
+   "ruin_desk_2"
+  ],
+  "interior": true
+ },
+ "int_barrel": {
+  "hp": 1,
+  "solid": true,
+  "sprites": [
+   "ruin_barrel"
+  ],
+  "interior": true
+ },
+ "int_bed": {
+  "hp": 1,
+  "solid": true,
+  "sprites": [
+   "bed",
+   "ruin_bed"
+  ],
+  "interior": true
+ },
+ "int_dresser": {
+  "hp": 1,
+  "solid": true,
+  "sprites": [
+   "ruin_dresser_1",
+   "ruin_dresser_2"
+  ],
+  "interior": true
+ },
+ "int_hearth": {
+  "hp": 1,
+  "solid": true,
+  "sprites": [
+   "ruin_campfire"
+  ],
+  "interior": true
+ },
+ "int_workbench": {
+  "hp": 1,
+  "solid": true,
+  "sprites": [
+   "table"
+  ],
+  "interior": true
+ },
+ "int_chest": {
+  "hp": 1,
+  "solid": true,
+  "sprites": [
+   "chest",
+   "loot_chest_2"
+  ],
+  "interior": true
+ },
+ "int_stairs": {
+  "hp": 1,
+  "solid": false,
+  "sprites": [
+   "ruin_stairs_wood"
+  ],
+  "interior": true
+ },
+ "int_rug": {
+  "hp": 1,
+  "solid": false,
+  "sprites": [
+   "floor_ruin_wood_2"
+  ],
+  "interior": true,
+  "floor": true
+ },
+ "int_forge": {
+  "hp": 1,
+  "solid": true,
+  "sprites": [
+   "forge"
+  ],
+  "interior": true
+ },
+ "int_furnace": {
+  "hp": 1,
+  "solid": true,
+  "sprites": [
+   "furnace"
+  ],
+  "interior": true
+ },
+ "int_tinker": {
+  "hp": 1,
+  "solid": true,
+  "sprites": [
+   "tinker_table"
+  ],
+  "interior": true
+ }
+}

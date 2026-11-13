@@ -1,0 +1,26 @@
+{
+ "id": "8ac4863db2",
+ "zips": [
+  "24a0e75c3118dbb67aa9c3ec2013a5909d333addfc1a7c7a13106fb320973a2b"
+ ],
+ "kind": "object",
+ "name": "base",
+ "prompt": "little timber-frame cottage, mossy green shingle roof, wool-white walls, lantern by door, top-down view",
+ "size": {
+  "width": 96,
+  "height": 96
+ },
+ "directions": [
+  "unknown"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   96,
+   96
+  ]
+ ],
+ "suggest": null,
+ "sure": false,
+ "entry": 0
+}

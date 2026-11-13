@@ -1,0 +1,26 @@
+{
+ "id": "9d72a3939a",
+ "zips": [
+  "7c166bf2aa22ca31392035a55af795246b6ce8a0b318c349d1f1d9a1d5709d40"
+ ],
+ "kind": "object",
+ "name": "base",
+ "prompt": "cozy tiny stone cottage, red clay tile roof, chimney, blue shutters, ivy, top-down view",
+ "size": {
+  "width": 96,
+  "height": 96
+ },
+ "directions": [
+  "unknown"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   96,
+   96
+  ]
+ ],
+ "suggest": null,
+ "sure": false,
+ "entry": 0
+}

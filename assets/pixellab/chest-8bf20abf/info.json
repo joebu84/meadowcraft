@@ -1,0 +1,26 @@
+{
+ "id": "8bf20abf1e",
+ "zips": [
+  "10976580d62257df84aaad8ea3e8dacbc577752621f499bb3e47524464fb87c9"
+ ],
+ "kind": "object",
+ "name": "base",
+ "prompt": "a treasure chest wood and iron facing the player",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "unknown"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   48,
+   48
+  ]
+ ],
+ "suggest": "chest",
+ "sure": true,
+ "entry": 0
+}

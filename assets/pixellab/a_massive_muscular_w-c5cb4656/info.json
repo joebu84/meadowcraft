@@ -1,0 +1,33 @@
+{
+ "id": "c5cb4656c4",
+ "zips": [
+  "4e225cf82458dd98e0de033f00a2ae11cd442a696618435c6d504f8b9b5fb9d4"
+ ],
+ "kind": "character",
+ "name": "a massive muscular w",
+ "prompt": "flat shaded light brown bear",
+ "size": {
+  "width": 96,
+  "height": 96
+ },
+ "directions": [
+  "east",
+  "north",
+  "north-east",
+  "north-west",
+  "south",
+  "south-east",
+  "south-west",
+  "west"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   96,
+   96
+  ]
+ ],
+ "suggest": null,
+ "sure": false,
+ "entry": 0
+}

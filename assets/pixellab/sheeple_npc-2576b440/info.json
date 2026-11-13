@@ -1,0 +1,33 @@
+{
+ "id": "2576b440e5",
+ "zips": [
+  "c27365274c9727b2f5bff31624ec593f657c8f1118ab1e50dfe04748ef0af5ce"
+ ],
+ "kind": "character",
+ "name": "pale skin, light ora",
+ "prompt": "female sheeple girl: human face with rosy cheeks, voluminous curly golden-orange wool fleece for hair, droopy cream lamb ears with small white bows, two tiny brown horn nubs; white fuzzy knit off-shoulder dress with flared skirt decorated with little white daisies with yellow centers, big white satin sash bow at the back; golden-orange fleecy sheep arms below the elbow ending in small brown hooves, golden fleecy sheep legs, white satin slippers with crisscross ribbons",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "east",
+  "north",
+  "north-east",
+  "north-west",
+  "south",
+  "south-east",
+  "south-west",
+  "west"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   48,
+   48
+  ]
+ ],
+ "suggest": "sheeple_npc",
+ "sure": false,
+ "entry": 0
+}

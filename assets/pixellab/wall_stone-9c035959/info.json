@@ -1,0 +1,34 @@
+{
+ "id": "9c0359596a",
+ "zips": [
+  "39954c59bbb41345ee8b0104caf1c507c1e868b0d143af7a4fff54d95c4c2868",
+  "fae7c0de79d1aa46e409ad341ecde4f019b2d4d24a31be8bbd7a2bdb86eedbc3"
+ ],
+ "kind": "object",
+ "name": "base",
+ "prompt": "a simple stone wall",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "east",
+  "north",
+  "north-east",
+  "north-west",
+  "south",
+  "south-east",
+  "south-west",
+  "west"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   48,
+   48
+  ]
+ ],
+ "suggest": "wall_stone",
+ "sure": true,
+ "entry": 0
+}

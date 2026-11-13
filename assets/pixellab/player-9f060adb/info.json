@@ -1,0 +1,34 @@
+{
+ "id": "9f060adbfc",
+ "zips": [
+  "1eba57847dba13e5ab3bfc66700c72b0c6a85d719101e9a687477e07def5df59",
+  "6038b688e872a78a20caf74499d08f74a1f3be3ec7657b276f4be0b4c6935554"
+ ],
+ "kind": "character",
+ "name": "he has causcasion fa",
+ "prompt": "a person in a blue tunic and grey cloak  they have sheep fleece for hair and small rams horns and sheep ears, they have a human torso but sheep arms below the elbow and a sheep lower half",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "east",
+  "north",
+  "north-east",
+  "north-west",
+  "south",
+  "south-east",
+  "south-west",
+  "west"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   48,
+   48
+  ]
+ ],
+ "suggest": "player",
+ "sure": false,
+ "entry": 0
+}

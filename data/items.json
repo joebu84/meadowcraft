@@ -1,0 +1,475 @@
+{
+ "_doc": "Every item. kind: resource|tool|weapon|ranged|shield|armor|food|placeable. power = harvest power per hit vs node harvest keys (tree/boulder/ore). food: heal, cures[], causes{status:chance}. armor: flat damage reduction. ranged: fires projectile (proj) with speed/range; ignoreArmor skips target armor. buy = shop price, sell = what shops pay. Icons: client/assets/manifest.json -> items.<id> (default items/<id>.png). ammo: list of ammo item ids a ranged weapon consumes (first found is used). melt: iron bars returned when melted at a Forge (auto-generates a melt recipe). hook: hookshot pulls you to what it hits.",
+ "fist": {
+  "name": "Fists",
+  "kind": "weapon",
+  "dmg": 4,
+  "range": 34,
+  "cooldown": 400,
+  "power": {
+   "tree": 1
+  }
+ },
+ "wood": {
+  "name": "Wood",
+  "kind": "resource",
+  "stack": 99,
+  "sell": 1
+ },
+ "loose_rock": {
+  "name": "Loose Rock",
+  "kind": "resource",
+  "stack": 99
+ },
+ "stone": {
+  "name": "Stone",
+  "kind": "resource",
+  "stack": 99,
+  "sell": 1
+ },
+ "iron_ore": {
+  "name": "Iron Ore",
+  "kind": "resource",
+  "stack": 99,
+  "sell": 4
+ },
+ "iron_bar": {
+  "name": "Iron Bar",
+  "kind": "resource",
+  "stack": 99,
+  "sell": 10
+ },
+ "wool": {
+  "name": "Wool",
+  "kind": "resource",
+  "stack": 99,
+  "sell": 2
+ },
+ "feather": {
+  "name": "Goose Feather",
+  "kind": "resource",
+  "stack": 99,
+  "sell": 2
+ },
+ "thorn": {
+  "name": "Briar Thorn",
+  "kind": "resource",
+  "stack": 99,
+  "sell": 1
+ },
+ "fish": {
+  "name": "Fish",
+  "kind": "food",
+  "heal": 4,
+  "stack": 20,
+  "sell": 4
+ },
+ "old_boot": {
+  "name": "Soggy Old Boot",
+  "kind": "resource",
+  "stack": 10,
+  "sell": 0
+ },
+ "raw_meat": {
+  "name": "Raw Meat",
+  "kind": "food",
+  "heal": 5,
+  "stack": 20,
+  "sell": 1
+ },
+ "cooked_meat": {
+  "name": "Cooked Meat",
+  "kind": "food",
+  "heal": 40,
+  "stack": 20,
+  "sell": 3
+ },
+ "cooked_fish": {
+  "name": "Grilled Fish",
+  "kind": "food",
+  "heal": 35,
+  "stack": 20,
+  "sell": 6
+ },
+ "apple": {
+  "name": "Apple",
+  "kind": "food",
+  "heal": 15,
+  "stack": 30,
+  "sell": 1
+ },
+ "red_berry": {
+  "name": "Red Briar Berry",
+  "kind": "food",
+  "heal": 2,
+  "causes": {
+   "poison": 1
+  },
+  "stack": 30,
+  "sell": 1
+ },
+ "bread": {
+  "name": "Clover Bread",
+  "kind": "food",
+  "heal": 30,
+  "stack": 20,
+  "buy": 4
+ },
+ "bandage": {
+  "name": "Wool Bandage",
+  "kind": "food",
+  "heal": 25,
+  "stack": 20,
+  "buy": 3
+ },
+ "antidote": {
+  "name": "Antidote",
+  "kind": "food",
+  "heal": 5,
+  "cures": [
+   "poison",
+   "parasites"
+  ],
+  "stack": 10,
+  "buy": 6,
+  "sell": 2
+ },
+ "healing_tonic": {
+  "name": "Healing Tonic",
+  "kind": "food",
+  "heal": 60,
+  "cures": [
+   "parasites"
+  ],
+  "stack": 10,
+  "buy": 12,
+  "sell": 4
+ },
+ "stone_axe": {
+  "name": "Stone Axe",
+  "kind": "tool",
+  "dmg": 7,
+  "range": 36,
+  "cooldown": 450,
+  "power": {
+   "tree": 2
+  }
+ },
+ "stone_pick": {
+  "name": "Stone Pickaxe",
+  "kind": "tool",
+  "dmg": 8,
+  "range": 36,
+  "cooldown": 500,
+  "power": {
+   "tree": 1,
+   "boulder": 2,
+   "ore": 1
+  }
+ },
+ "iron_axe": {
+  "name": "Iron Axe",
+  "kind": "tool",
+  "dmg": 12,
+  "range": 38,
+  "cooldown": 400,
+  "power": {
+   "tree": 4,
+   "thicket": 4
+  },
+  "buy": 25,
+  "sell": 8,
+  "melt": 1
+ },
+ "iron_pick": {
+  "name": "Iron Pickaxe",
+  "kind": "tool",
+  "dmg": 13,
+  "range": 38,
+  "cooldown": 450,
+  "power": {
+   "tree": 1,
+   "boulder": 4,
+   "ore": 3
+  },
+  "buy": 28,
+  "sell": 8,
+  "melt": 2
+ },
+ "fishing_rod": {
+  "name": "Fishing Rod",
+  "kind": "tool",
+  "dmg": 2,
+  "range": 30,
+  "cooldown": 500,
+  "fishing": true,
+  "sell": 2
+ },
+ "iron_flower": {
+  "name": "Iron Flower",
+  "kind": "weapon",
+  "unique": true,
+  "dmg": 15,
+  "range": 40,
+  "cooldown": 420,
+  "power": {
+   "tree": 3,
+   "thicket": 3
+  },
+  "buy": 30,
+  "sell": 10,
+  "_doc": "a flower with sharpened petals; chops trees exactly like an axe",
+  "melt": 1
+ },
+ "wooden_spear": {
+  "name": "Wooden Spear",
+  "kind": "weapon",
+  "dmg": 9,
+  "range": 58,
+  "cooldown": 550
+ },
+ "spear": {
+  "name": "Iron Spear",
+  "kind": "weapon",
+  "dmg": 14,
+  "range": 62,
+  "cooldown": 520,
+  "buy": 8,
+  "sell": 3,
+  "melt": 1
+ },
+ "sword": {
+  "name": "Sword",
+  "kind": "weapon",
+  "dmg": 16,
+  "range": 42,
+  "cooldown": 380,
+  "buy": 15,
+  "sell": 5,
+  "melt": 1
+ },
+ "iron_sword": {
+  "name": "Iron Sword",
+  "kind": "weapon",
+  "dmg": 24,
+  "range": 46,
+  "cooldown": 360,
+  "buy": 40,
+  "sell": 10,
+  "melt": 2
+ },
+ "war_bell": {
+  "name": "War Bell",
+  "kind": "ranged",
+  "unique": true,
+  "proj": "note",
+  "dmg": 11,
+  "speed": 320,
+  "range": 300,
+  "cooldown": 650,
+  "ignoreArmor": true,
+  "buy": 45,
+  "sell": 12,
+  "_doc": "hand bell that rings out musical-note projectiles; ignores armor",
+  "melt": 2
+ },
+ "shield": {
+  "name": "Shield",
+  "kind": "shield",
+  "block": 0.4,
+  "buy": 10,
+  "sell": 3,
+  "_doc": "passive while carried: -40% incoming damage",
+  "melt": 1
+ },
+ "wool_armor": {
+  "name": "Wool Armor",
+  "kind": "armor",
+  "armor": 2,
+  "tier": 1,
+  "sell": 3
+ },
+ "wood_armor": {
+  "name": "Wood Armor",
+  "kind": "armor",
+  "armor": 4,
+  "tier": 2,
+  "sell": 5
+ },
+ "iron_armor": {
+  "name": "Iron Armor",
+  "kind": "armor",
+  "armor": 7,
+  "tier": 3,
+  "buy": 60,
+  "sell": 15,
+  "melt": 3
+ },
+ "wall_wood": {
+  "name": "Wood Wall",
+  "kind": "placeable",
+  "stack": 50,
+  "buy": 6
+ },
+ "wall_stone": {
+  "name": "Stone Wall",
+  "kind": "placeable",
+  "stack": 50
+ },
+ "wall_iron": {
+  "name": "Iron Wall",
+  "kind": "placeable",
+  "stack": 50
+ },
+ "door_wood": {
+  "name": "Wood Door",
+  "kind": "placeable",
+  "stack": 20,
+  "buy": 9
+ },
+ "floor_wood": {
+  "name": "Wood Floor",
+  "kind": "placeable",
+  "stack": 99,
+  "buy": 2
+ },
+ "floor_stone": {
+  "name": "Stone Floor",
+  "kind": "placeable",
+  "stack": 99
+ },
+ "bed": {
+  "name": "Bed",
+  "kind": "placeable",
+  "stack": 5,
+  "buy": 14
+ },
+ "chest": {
+  "name": "Chest",
+  "kind": "placeable",
+  "stack": 10,
+  "buy": 12
+ },
+ "table": {
+  "name": "Workbench Table",
+  "kind": "placeable",
+  "stack": 5,
+  "buy": 9
+ },
+ "furnace": {
+  "name": "Stone Furnace",
+  "kind": "placeable",
+  "stack": 5
+ },
+ "bow": {
+  "name": "Bow",
+  "kind": "ranged",
+  "proj": "arrow",
+  "dmg": 0,
+  "speed": 360,
+  "range": 320,
+  "cooldown": 550,
+  "ammo": [
+   "iron_arrow",
+   "stone_arrow"
+  ],
+  "sell": 3,
+  "buy": 12
+ },
+ "stone_arrow": {
+  "name": "Stone Arrow",
+  "kind": "ammo",
+  "dmg": 9,
+  "stack": 99
+ },
+ "iron_arrow": {
+  "name": "Iron Arrow",
+  "kind": "ammo",
+  "dmg": 15,
+  "stack": 99
+ },
+ "iron_crossbow": {
+  "name": "Iron Crossbow",
+  "kind": "ranged",
+  "proj": "bolt",
+  "dmg": 0,
+  "speed": 460,
+  "range": 380,
+  "cooldown": 900,
+  "ammo": [
+   "iron_bolt"
+  ],
+  "melt": 2,
+  "sell": 20
+ },
+ "iron_bolt": {
+  "name": "Iron Bolt",
+  "kind": "ammo",
+  "dmg": 26,
+  "stack": 99
+ },
+ "musket": {
+  "name": "Musket",
+  "kind": "ranged",
+  "proj": "ball",
+  "dmg": 0,
+  "speed": 560,
+  "range": 420,
+  "cooldown": 1600,
+  "ammo": [
+   "musket_ball"
+  ],
+  "melt": 2,
+  "sell": 25
+ },
+ "musket_ball": {
+  "name": "Musket Ball",
+  "kind": "ammo",
+  "dmg": 40,
+  "stack": 99
+ },
+ "hookshot": {
+  "name": "Hookshot",
+  "kind": "tool",
+  "hook": true,
+  "range": 288,
+  "cooldown": 700,
+  "dmg": 3,
+  "melt": 2,
+  "sell": 20,
+  "_doc": "fire at a tree/rock/wall: pulls you to it, even across water"
+ },
+ "tinker_table": {
+  "name": "Tinker's Table",
+  "kind": "placeable",
+  "stack": 2
+ },
+ "forge": {
+  "name": "Forge",
+  "kind": "placeable",
+  "stack": 2,
+  "_doc": "normally made by upgrading a placed Stone Furnace"
+ },
+ "rat_tail": {
+  "name": "Rat Tail",
+  "kind": "resource",
+  "stack": 99,
+  "sell": 1,
+  "_doc": "tough stringy tail; strings bows"
+ },
+ "golden_egg": {
+  "name": "Golden Egg",
+  "kind": "resource",
+  "stack": 10,
+  "sell": 120,
+  "_doc": "Goose Boss trophy; the trader pays well"
+ },
+ "thornfeather_mantle": {
+  "name": "Thornfeather Mantle",
+  "kind": "armor",
+  "armor": 7,
+  "tier": 3,
+  "sell": 60,
+  "_doc": "specialty boss armor between wood and iron"
+ }
+}

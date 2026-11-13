@@ -1,0 +1,26 @@
+{
+ "id": "81a78c7489",
+ "zips": [
+  "159ee88851ddc15888d080637183f64c2a8b74924d164dd88212fe1a1cd5631a"
+ ],
+ "kind": "object",
+ "name": "base",
+ "prompt": "a simple castle staircase metal and stone facing the player",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "unknown"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   48,
+   48
+  ]
+ ],
+ "suggest": "decor_stairs_castle",
+ "sure": true,
+ "entry": 0
+}

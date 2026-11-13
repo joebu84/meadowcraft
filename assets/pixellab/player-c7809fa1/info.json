@@ -1,0 +1,34 @@
+{
+ "id": "c7809fa1c8",
+ "zips": [
+  "40d36a15b14541bf7ccf26176f9d83337085b0c660ae519304de01baa1cd73e5",
+  "57287d1cde82fa2290eb12499270bdf0c9cc563d4fa63d20d64a7084e805ef5a"
+ ],
+ "kind": "character",
+ "name": "dark brown fleece below the lebow dark brown sheep arms  below tunic brown sheep legs",
+ "prompt": "a person in a blue tunic and grey cloak  they have sheep fleece for hair and small rams horns and sheep ears, they have a human torso but sheep arms below the elbow and a sheep lower half",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "east",
+  "north",
+  "north-east",
+  "north-west",
+  "south",
+  "south-east",
+  "south-west",
+  "west"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   48,
+   48
+  ]
+ ],
+ "suggest": "player",
+ "sure": false,
+ "entry": 0
+}

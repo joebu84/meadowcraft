@@ -1,0 +1,26 @@
+{
+ "id": "8efb0c2e35",
+ "zips": [
+  "214232467cc3b26aaf0211c32c6d9b09e6f6f925aa4aee2a5046397278873569"
+ ],
+ "kind": "object",
+ "name": "base",
+ "prompt": "a steel and stone crafting table with advanced tools lying out and clock work peices on it",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "unknown"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   48,
+   48
+  ]
+ ],
+ "suggest": "tinker_table",
+ "sure": true,
+ "entry": 0
+}

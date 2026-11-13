@@ -1,0 +1,252 @@
+{
+ "_doc": "Procedural regions outside the fixed town. Densities are per-tile chances. dens: black holes that spawn `spawns` (weighted) up to `max` alive each, every `interval` ms; building anything on the den tile seals it. chests: world loot chests using loot table. zones: hidden spawners (camps, patrols). Iron is scarce: only rare iron_node deposits (quarry/gangs/briar), 3% from boulders, chests, fishing, melting gear.",
+ "meadow": {
+  "nodes": {
+   "boulder": 0.004,
+   "pebble": 0.012,
+   "loot_chest": 0.0012
+  },
+  "loot": "chest_meadow",
+  "dens": {
+   "count": 12,
+   "spawns": {
+    "wolf": 3,
+    "goose": 2,
+    "wool_rat": 3
+   },
+   "max": 2,
+   "interval": 25000
+  },
+  "zones": [
+   {
+    "types": {
+     "wool_rat": 1
+    },
+    "count": 6,
+    "max": 2,
+    "interval": 20000
+   }
+  ],
+  "groves": {
+   "count": 26,
+   "radius": [
+    3,
+    7
+   ],
+   "density": 0.62,
+   "lone": 0.006,
+   "families": {
+    "tree_oak": 4,
+    "tree_birch": 2.5,
+    "tree_pine": 2.5,
+    "tree_autumn": 2,
+    "tree_blossom": 1.2,
+    "tree_mystic": 0.35
+   }
+  },
+  "ruins": {
+   "count": 5,
+   "size": [
+    4,
+    6
+   ],
+   "chest": 0.3,
+   "mats": {
+    "wood": 3,
+    "stone": 2
+   }
+  },
+  "bossLair": {
+   "type": "goose_boss",
+   "interval": 900000
+  }
+ },
+ "orchard": {
+  "size": [
+   30,
+   20
+  ],
+  "appleTree": 0.8,
+  "fallenApple": 0.12,
+  "nodes": {
+   "pebble": 0.01,
+   "loot_chest": 0.004
+  },
+  "loot": "chest_orchard",
+  "dens": {
+   "count": 2,
+   "spawns": {
+    "wolf": 1,
+    "wool_rat": 2
+   },
+   "max": 2,
+   "interval": 30000
+  },
+  "zones": [
+   {
+    "types": {
+     "bandit": 1
+    },
+    "count": 3,
+    "max": 3,
+    "interval": 30000
+   },
+   {
+    "types": {
+     "sheeple_soldier": 1
+    },
+    "count": 1,
+    "max": 3,
+    "interval": 45000
+   }
+  ],
+  "veterans": 3,
+  "ruins": {
+   "count": 4,
+   "size": [
+    5,
+    8
+   ],
+   "chest": 0.5,
+   "mats": {
+    "wood": 2,
+    "stone": 2
+   },
+   "edge": true
+  }
+ },
+ "briar": {
+  "size": [
+   37,
+   25
+  ],
+  "nodes": {
+   "briar": 0.05,
+   "pebble": 0.01
+  },
+  "loot": "chest_briar",
+  "dens": {
+   "count": 4,
+   "spawns": {
+    "thorn_wolf": 3,
+    "war_goose": 2,
+    "wolf": 1
+   },
+   "max": 3,
+   "interval": 15000
+  },
+  "edgeTrees": {
+   "type": "tree_gnarled",
+   "ring": 5,
+   "density": 0.2
+  },
+  "maze": {
+   "cell": 3,
+   "loops": 0.1,
+   "entrances": 4,
+   "chests": 3,
+   "chestLoot": "chest_briar_deep",
+   "_doc": "Recursive-backtracker maze on a coarse grid (2-tile corridors, 1-tile thicket walls). loops = fraction of extra walls knocked out. Dens + best chests go to the deepest cells (BFS distance from the entrances)."
+  },
+  "ruins": {
+   "count": 4,
+   "size": [
+    6,
+    9
+   ],
+   "chest": 0.7,
+   "mats": {
+    "stone": 2,
+    "castle": 2,
+    "iron": 1
+   },
+   "edge": true
+  }
+ },
+ "quarry": {
+  "size": [
+   26,
+   18
+  ],
+  "nodes": {
+   "boulder": 0.1,
+   "pebble": 0.03,
+   "iron_node": 0.006
+  },
+  "loot": "chest_meadow",
+  "groves": {
+   "count": 3,
+   "radius": [
+    2,
+    4
+   ],
+   "density": 0.5,
+   "lone": 0.004,
+   "families": {
+    "tree_pine": 1
+   }
+  },
+  "ruins": {
+   "count": 1,
+   "size": [
+    4,
+    6
+   ],
+   "chest": 0.4,
+   "mats": {
+    "stone": 1
+   }
+  }
+ },
+ "gangs": {
+  "size": [
+   32,
+   18
+  ],
+  "nodes": {
+   "pebble": 0.01,
+   "iron_node": 0.004
+  },
+  "loot": "chest_meadow",
+  "camps": {
+   "goblin_red": {
+    "max": 4,
+    "interval": 20000
+   },
+   "goblin_blue": {
+    "max": 4,
+    "interval": 20000
+   }
+  },
+  "groves": {
+   "count": 2,
+   "radius": [
+    2,
+    3
+   ],
+   "density": 0.4,
+   "lone": 0.004,
+   "families": {
+    "tree_autumn": 1,
+    "tree_oak": 1
+   }
+  }
+ },
+ "river": {
+  "width": 4,
+  "zoneEvery": 18,
+  "zones": {
+   "types": {
+    "snapper": 1
+   },
+   "max": 2,
+   "interval": 30000
+  },
+  "willows": {
+   "type": "tree_willow",
+   "density": 0.3
+  }
+ },
+ "_trees_doc": "Trees grow in GROVES of one family: seeded grove centres, density falls off from the centre with noise; lone trees take the family of the nearest grove. Willows line the river bank, gnarled trees ring the Briar Patch, apple trees stay in orchard rows.",
+ "_ruins_doc": "Ruins: broken buildings of ruin_* pieces. count/size per region; more and bigger in dangerous regions. chest = chance a ruin holds a loot chest from the region table. mats = weighted building material."
+}

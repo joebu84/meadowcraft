@@ -1,0 +1,26 @@
+{
+ "id": "16b755c9a1",
+ "zips": [
+  "6ccd82b8f4da7d10a5a6148cbf607e15bd8d402f600b42ffa0c6fed4c7e63e12"
+ ],
+ "kind": "object",
+ "name": "base",
+ "prompt": "Object: Object 0 (unknown)",
+ "size": {
+  "width": 26,
+  "height": 54
+ },
+ "directions": [
+  "unknown"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   26,
+   54
+  ]
+ ],
+ "suggest": null,
+ "sure": false,
+ "entry": 0
+}

@@ -1,0 +1,26 @@
+{
+ "id": "e66a7955c1",
+ "zips": [
+  "18f3cd7cd809701a9db0514c47349122dda3aeab75bbc6a9c7cd09aebc7ca650"
+ ],
+ "kind": "object",
+ "name": "base",
+ "prompt": "a simple stone floor square",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "unknown"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   48,
+   48
+  ]
+ ],
+ "suggest": "floor_stone",
+ "sure": true,
+ "entry": 0
+}

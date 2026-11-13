@@ -1,0 +1,26 @@
+{
+ "id": "1f1856edf7",
+ "zips": [
+  "b1ecae27379f60ca5baddbf3b68cc232a027de65849cf78049747514b2b419fb"
+ ],
+ "kind": "object",
+ "name": "base",
+ "prompt": "a work bench with a hammer resting on it",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "unknown"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   48,
+   48
+  ]
+ ],
+ "suggest": "table",
+ "sure": true,
+ "entry": 0
+}

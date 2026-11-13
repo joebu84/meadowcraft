@@ -1,0 +1,26 @@
+{
+ "id": "5040ca25fe",
+ "zips": [
+  "abf5989238d5f8badf64e0f56dd932afb08c00a9a45f98091eea634ec22e3efb"
+ ],
+ "kind": "object",
+ "name": "base",
+ "prompt": "a simple castle floor square metal and stone",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "unknown"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   48,
+   48
+  ]
+ ],
+ "suggest": "floor_castle",
+ "sure": false,
+ "entry": 0
+}

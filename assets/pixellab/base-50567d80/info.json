@@ -1,0 +1,27 @@
+{
+ "id": "50567d80b8",
+ "zips": [
+  "018dca0b91c22a16ad7384383480a302aec8fdd497d7bb0db141e8ab4f4bec9c",
+  "b8dec85fab1631e90cc2da640f6ad6dbe504103f316406bd7d05ae60ebf94bce"
+ ],
+ "kind": "object",
+ "name": "base",
+ "prompt": "two-story village tavern, thatched roof, hanging sign with a sheep and mug, warm glowing windows, barrels by door, top-down view",
+ "size": {
+  "width": 128,
+  "height": 128
+ },
+ "directions": [
+  "unknown"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   128,
+   128
+  ]
+ ],
+ "suggest": null,
+ "sure": false,
+ "entry": 0
+}

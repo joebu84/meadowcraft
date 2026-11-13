@@ -1,0 +1,26 @@
+{
+ "id": "2a80da34bf",
+ "zips": [
+  "4fd7a8904e3ad690704439a6f2ba642c49862c99e11736e64788d0d4fcd1f77e"
+ ],
+ "kind": "object",
+ "name": "base",
+ "prompt": "a wood barrel with standing up with a tap in the side,   there is a wood mug of pink foamy beer resting on top of the barrell",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "unknown"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   48,
+   48
+  ]
+ ],
+ "suggest": null,
+ "sure": false,
+ "entry": 0
+}

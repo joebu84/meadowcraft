@@ -1,0 +1,376 @@
+{
+ "_doc": "Mob types (enemies AND friendly NPC fighters). faction: wild | red | blue | bandit | sheeple. Hostility: sheeple fight everyone hostile; red<->blue fight each other; all non-sheeple attack players. ai: chase | charge | gunner | soldier. armor: flat damage reduction (War Bell ignores it). drops: [item, min, max, chance]. coins: [min,max].",
+ "wolf": {
+  "name": "Fluffy Wolf",
+  "faction": "wild",
+  "hp": 30,
+  "speed": 95,
+  "dmg": 8,
+  "ai": "chase",
+  "aggro": 220,
+  "attackRange": 26,
+  "cooldown": 900,
+  "coins": [
+   1,
+   2
+  ],
+  "drops": [
+   [
+    "wool",
+    1,
+    2,
+    1
+   ],
+   [
+    "raw_meat",
+    1,
+    1,
+    0.6
+   ]
+  ]
+ },
+ "thorn_wolf": {
+  "name": "Thorn Wolf",
+  "faction": "wild",
+  "hp": 55,
+  "speed": 110,
+  "dmg": 13,
+  "armor": 2,
+  "ai": "chase",
+  "aggro": 260,
+  "attackRange": 28,
+  "cooldown": 800,
+  "coins": [
+   2,
+   5
+  ],
+  "drops": [
+   [
+    "wool",
+    2,
+    3,
+    1
+   ],
+   [
+    "thorn",
+    1,
+    3,
+    0.7
+   ],
+   [
+    "raw_meat",
+    1,
+    1,
+    0.6
+   ]
+  ]
+ },
+ "goose": {
+  "name": "Giant Goose",
+  "faction": "wild",
+  "hp": 40,
+  "speed": 60,
+  "chargeSpeed": 300,
+  "dmg": 12,
+  "ai": "charge",
+  "aggro": 200,
+  "attackRange": 28,
+  "cooldown": 1500,
+  "coins": [
+   1,
+   3
+  ],
+  "drops": [
+   [
+    "feather",
+    1,
+    3,
+    1
+   ],
+   [
+    "raw_meat",
+    1,
+    2,
+    0.8
+   ]
+  ]
+ },
+ "war_goose": {
+  "name": "War Goose",
+  "faction": "wild",
+  "hp": 75,
+  "speed": 70,
+  "chargeSpeed": 360,
+  "dmg": 18,
+  "armor": 3,
+  "ai": "charge",
+  "aggro": 240,
+  "attackRange": 30,
+  "cooldown": 1200,
+  "coins": [
+   3,
+   6
+  ],
+  "drops": [
+   [
+    "feather",
+    2,
+    4,
+    1
+   ],
+   [
+    "raw_meat",
+    1,
+    2,
+    1
+   ]
+  ]
+ },
+ "snapper": {
+  "name": "River Snapper",
+  "faction": "wild",
+  "hp": 50,
+  "speed": 55,
+  "dmg": 11,
+  "armor": 5,
+  "ai": "chase",
+  "aggro": 160,
+  "attackRange": 26,
+  "cooldown": 1100,
+  "leash": 260,
+  "coins": [
+   2,
+   4
+  ],
+  "drops": [
+   [
+    "fish",
+    1,
+    2,
+    0.8
+   ],
+   [
+    "raw_meat",
+    1,
+    1,
+    0.5
+   ]
+  ]
+ },
+ "goblin_red": {
+  "name": "Red Gang Goblin",
+  "faction": "red",
+  "hp": 35,
+  "speed": 80,
+  "dmg": 9,
+  "ai": "gunner",
+  "aggro": 260,
+  "range": 230,
+  "cooldown": 1400,
+  "bulletSpeed": 260,
+  "coins": [
+   3,
+   6
+  ],
+  "drops": [
+   [
+    "iron_bar",
+    1,
+    1,
+    0.05
+   ],
+   [
+    "musket_ball",
+    1,
+    3,
+    0.2
+   ]
+  ]
+ },
+ "goblin_blue": {
+  "name": "Blue Gang Goblin",
+  "faction": "blue",
+  "hp": 35,
+  "speed": 80,
+  "dmg": 9,
+  "ai": "gunner",
+  "aggro": 260,
+  "range": 230,
+  "cooldown": 1400,
+  "bulletSpeed": 260,
+  "coins": [
+   3,
+   6
+  ],
+  "drops": [
+   [
+    "iron_bar",
+    1,
+    1,
+    0.05
+   ],
+   [
+    "musket_ball",
+    1,
+    3,
+    0.2
+   ]
+  ]
+ },
+ "bandit": {
+  "name": "Sheeple Bandit",
+  "faction": "bandit",
+  "hp": 60,
+  "speed": 92,
+  "dmg": 14,
+  "armor": 3,
+  "ai": "chase",
+  "aggro": 240,
+  "attackRange": 30,
+  "cooldown": 850,
+  "coins": [
+   4,
+   9
+  ],
+  "drops": [
+   [
+    "wool",
+    1,
+    3,
+    1
+   ],
+   [
+    "sword",
+    1,
+    1,
+    0.12
+   ],
+   [
+    "spear",
+    1,
+    1,
+    0.12
+   ]
+  ]
+ },
+ "sheeple_soldier": {
+  "name": "Sheeple Soldier",
+  "faction": "sheeple",
+  "hp": 90,
+  "speed": 85,
+  "dmg": 12,
+  "armor": 4,
+  "ai": "soldier",
+  "aggro": 200,
+  "attackRange": 30,
+  "cooldown": 800,
+  "leash": 380,
+  "coins": [
+   0,
+   0
+  ],
+  "drops": []
+ },
+ "wool_rat": {
+  "name": "Wool Rat",
+  "faction": "wild",
+  "hp": 14,
+  "speed": 100,
+  "dmg": 4,
+  "ai": "chase",
+  "aggro": 170,
+  "attackRange": 22,
+  "cooldown": 800,
+  "leash": 300,
+  "coins": [
+   0,
+   1
+  ],
+  "drops": [
+   [
+    "rat_tail",
+    1,
+    1,
+    1
+   ],
+   [
+    "raw_meat",
+    1,
+    1,
+    0.6
+   ]
+  ]
+ },
+ "goose_boss": {
+  "name": "Goose Boss",
+  "boss": true,
+  "faction": "wild",
+  "hp": 320,
+  "speed": 70,
+  "chargeSpeed": 340,
+  "dmg": 20,
+  "armor": 3,
+  "ai": "boss_goose",
+  "aggro": 260,
+  "attackRange": 40,
+  "cooldown": 1200,
+  "leash": 520,
+  "honk": {
+   "every": 6000,
+   "radius": 110,
+   "dmg": 12,
+   "push": 60,
+   "windup": 900
+  },
+  "summon": {
+   "type": "goose",
+   "every": 16000,
+   "count": 2,
+   "max": 4,
+   "below": 0.6
+  },
+  "coins": [
+   40,
+   70
+  ],
+  "drops": [
+   [
+    "feather",
+    8,
+    14,
+    1
+   ],
+   [
+    "raw_meat",
+    3,
+    5,
+    1
+   ],
+   [
+    "golden_egg",
+    1,
+    1,
+    1
+   ],
+   [
+    "thornfeather_mantle",
+    1,
+    1,
+    0.35
+   ],
+   [
+    "war_bell",
+    1,
+    1,
+    0.2
+   ],
+   [
+    "iron_bar",
+    1,
+    3,
+    0.6
+   ]
+  ],
+  "_doc": "Lair at a goose nest near the river. Goose charge + honk shockwave (hits and pushes everyone close) + summons geese below 60% hp. Respawns 15 min after death."
+ }
+}
