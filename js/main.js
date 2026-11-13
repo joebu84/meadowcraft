@@ -335,7 +335,7 @@ function refreshPanel() {
 
 // ---------------- minimap
 let mini;
-const TILE_COL = ['#68b24c', '#62aa48', '#78b85a', '#c4a470', '#3e78c8', '#e2ce96', '#96928c', '#96704a', '#54963e', '#4a4634', '#96683c', '#7a5a34', '#70ba54', '#5a96e6', '#3a6230'];
+const TILE_COL = ['#68b24c', '#62aa48', '#78b85a', '#d8d0c4', '#4ec8e8', '#e8e0d0', '#7ec65c', '#5a4a3a', '#54963e', '#3a3428', '#96683c', '#7a5a34', '#70ba54', '#5a96e6', '#2a4a28'];
 function buildMinimap() {
   mini = document.createElement('canvas'); mini.width = S.W; mini.height = S.H; const g = mini.getContext('2d'), im = g.createImageData(S.W, S.H);
   for (let i = 0; i < S.tiles.length; i++) { const c = TILE_COL[S.tiles[i]] || '#000', o = i * 4; im.data[o] = parseInt(c.slice(1, 3), 16); im.data[o + 1] = parseInt(c.slice(3, 5), 16); im.data[o + 2] = parseInt(c.slice(5, 7), 16); im.data[o + 3] = 255; if (S.blocked.has(i)) { im.data[o] = 120; im.data[o + 1] = 60; im.data[o + 2] = 40; } }
@@ -397,6 +397,31 @@ function interpEntities() {
 const NODE_FRAME_OFF = { tree: 1, apple_tree: 2, boulder: 1, iron_node: 1, briar: 2, loot_chest: 1 };
 // nodes can list several sprite variants (tree families, ruin pieces, thickets); pick one per tile, stable across clients
 const hash2 = (x, y) => { let h = Math.imul(x, 374761393) + Math.imul(y, 668265263) | 0; h = Math.imul(h ^ h >>> 13, 1274126177); return (h ^ h >>> 16) >>> 0; };
+function isWaterTile(x, y) {
+  if (!S.tiles) return false;
+  if (x < 0 || y < 0 || x >= S.W || y >= S.H) return true;   // map rim is water
+  return S.tiles[y * S.W + x] === 4;
+}
+function groundSpr(t, x, y) {
+  const shore = MAN.shore;
+  if (shore && t === (shore.sand ?? 5) && MAN.sprites[shore.sheet]) {
+    const mask = (isWaterTile(x, y - 1) ? 1 : 0) | (isWaterTile(x + 1, y) ? 2 : 0) | (isWaterTile(x, y + 1) ? 4 : 0) | (isWaterTile(x - 1, y) ? 8 : 0);
+    let opts = mask ? (shore.mask[mask] || shore.mask[String(mask)]) : null;
+    if (mask && !opts) {   // no exact autotile: try a matching corner or single edge
+      for (const sub of [mask & 12, mask & 3, mask & 6, mask & 9, mask & 1, mask & 2, mask & 4, mask & 8]) {
+        if (!sub) continue;
+        opts = shore.mask[sub] || shore.mask[String(sub)];
+        if (opts) break;
+      }
+    }
+    if (opts && opts.length) return { key: shore.sheet, col: opts[hash2(x, y) % opts.length] };
+  }
+  const gk = MAN.ground?.[t]; if (!gk || !MAN.sprites[gk]) return null;
+  const sub = MAN.groundVariants?.[t] || MAN.groundVariants?.[String(t)];
+  if (sub && sub.length) return { key: gk, col: sub[hash2(x, y) % sub.length] };
+  return { key: gk, col: hash2(x, y) % MAN.sprites[gk].cols };
+}
+
 function nodeSprite(n) {
   if (n.spr) return n.spr;
   const list = (D.nodes?.[n.type]?.sprites || []).filter(k => MAN.sprites[k]);
@@ -438,8 +463,8 @@ function render() {
     }
   } else {
     for (let y = y0; y <= y1; y++) for (let x = x0; x <= x1; x++) {
-      const t = S.tiles[y * S.W + x], gk = MAN.ground?.[t];   // imported ground sheets: 16 variants, picked per tile
-      if (gk && MAN.sprites[gk]) spr(gk, hash2(x, y) % MAN.sprites[gk].cols, 0, x * T, y * T); else ctx.drawImage(tsI, t * T, 0, T, T, x * T, y * T, T, T);
+      const t = S.tiles[y * S.W + x], gs = groundSpr(t, x, y);   // imported sheets: hash variants, shore autotiles at river edges
+      if (gs) spr(gs.key, gs.col, 0, x * T, y * T); else ctx.drawImage(tsI, t * T, 0, T, T, x * T, y * T, T, T);
     }
     for (const d of S.dens) if (d.tx >= x0 - 1 && d.tx <= x1 + 1 && d.ty >= y0 - 1 && d.ty <= y1 + 1) spr(denSprite(d), 0, 0, (d.tx + 0.5) * T, (d.ty + 0.5) * T);
     for (let y = y0; y <= y1; y++) for (let x = x0; x <= x1; x++) { const n = S.nodeAt.get(K(x, y)); if (n && n.on && D.nodes?.[n.type]?.floor) spr(nodeSprite(n), 0, 0, x * T, y * T); }

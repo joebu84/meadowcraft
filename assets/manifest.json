@@ -1660,6 +1660,97 @@
    "scale": 1,
    "top": 44,
    "source": "pixellab:7927626cfc"
+  },
+  "ground_meadow": {
+   "file": "sprites/ground_meadow.png",
+   "fw": 32,
+   "fh": 32,
+   "cols": 16,
+   "rows": 1,
+   "anchor": [
+    0,
+    0
+   ],
+   "scale": 1,
+   "source": "pixellab-tiles:meadow.png"
+  },
+  "ground_forest": {
+   "file": "sprites/ground_forest.png",
+   "fw": 32,
+   "fh": 32,
+   "cols": 16,
+   "rows": 1,
+   "anchor": [
+    0,
+    0
+   ],
+   "scale": 1,
+   "source": "pixellab-tiles:forest.png"
+  },
+  "ground_briar": {
+   "file": "sprites/ground_briar.png",
+   "fw": 32,
+   "fh": 32,
+   "cols": 16,
+   "rows": 1,
+   "anchor": [
+    0,
+    0
+   ],
+   "scale": 1,
+   "source": "pixellab-tiles:briar.png"
+  },
+  "ground_water": {
+   "file": "sprites/ground_water.png",
+   "fw": 32,
+   "fh": 32,
+   "cols": 16,
+   "rows": 1,
+   "anchor": [
+    0,
+    0
+   ],
+   "scale": 1,
+   "source": "pixellab-tiles:water.png"
+  },
+  "ground_path": {
+   "file": "sprites/ground_path.png",
+   "fw": 32,
+   "fh": 32,
+   "cols": 16,
+   "rows": 1,
+   "anchor": [
+    0,
+    0
+   ],
+   "scale": 1,
+   "source": "pixellab-tiles:roman.png"
+  },
+  "ground_sand": {
+   "file": "sprites/ground_sand.png",
+   "fw": 32,
+   "fh": 32,
+   "cols": 9,
+   "rows": 1,
+   "anchor": [
+    0,
+    0
+   ],
+   "scale": 1,
+   "source": "pixellab-tiles:shore.png"
+  },
+  "ground_shore": {
+   "file": "sprites/ground_shore.png",
+   "fw": 32,
+   "fh": 32,
+   "cols": 28,
+   "rows": 1,
+   "anchor": [
+    0,
+    0
+   ],
+   "scale": 1,
+   "source": "pixellab-tiles:shore.png"
   }
  },
  "items": {
@@ -1723,5 +1814,80 @@
   "thornfeather_mantle": "items/thornfeather_mantle.png",
   "stairs_wood": "items/stairs_wood.png"
  },
- "custom": "List files in assets/custom.txt to stop this generator overwriting them."
+ "custom": "List files in assets/custom.txt to stop this generator overwriting them.",
+ "ground": {
+  "0": "ground_meadow",
+  "1": "ground_meadow",
+  "8": "ground_meadow",
+  "12": "ground_meadow",
+  "6": "ground_meadow",
+  "2": "ground_meadow",
+  "14": "ground_forest",
+  "9": "ground_briar",
+  "7": "ground_briar",
+  "4": "ground_water",
+  "3": "ground_path",
+  "5": "ground_sand"
+ },
+ "groundVariants": {
+  "2": [
+   0,
+   1,
+   6,
+   8,
+   12,
+   14
+  ]
+ },
+ "shore": {
+  "sand": 5,
+  "water": 4,
+  "sheet": "ground_shore",
+  "mask": {
+   "1": [
+    0,
+    12,
+    18,
+    26
+   ],
+   "8": [
+    1,
+    13,
+    19,
+    27
+   ],
+   "4": [
+    2,
+    14,
+    16,
+    24
+   ],
+   "2": [
+    3,
+    15,
+    17,
+    25
+   ],
+   "9": [
+    4,
+    8,
+    23
+   ],
+   "12": [
+    5,
+    9,
+    20
+   ],
+   "6": [
+    6,
+    10,
+    21
+   ],
+   "3": [
+    7,
+    11,
+    22
+   ]
+  }
+ }
 }
