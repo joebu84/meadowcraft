@@ -1,0 +1,44 @@
+{
+ "id": "1c01963fe6",
+ "zips": [
+  "a_toddler_with_grey_eyes"
+ ],
+ "kind": "character",
+ "name": "Idle",
+ "prompt": "a toddler with grey eyes and short light brown hair  a babies head   hes wearing a cream sweater with green stripes and blue jeans no shoes",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "east",
+  "north",
+  "north-east",
+  "north-west",
+  "south",
+  "south-east",
+  "south-west",
+  "west"
+ ],
+ "animations": {
+  "Sad_Walk": {
+   "dirs": [
+    "south"
+   ],
+   "frames": 8
+  }
+ },
+ "frame_sizes": [
+  [
+   48,
+   48
+  ],
+  [
+   80,
+   80
+  ]
+ ],
+ "suggest": null,
+ "sure": false,
+ "entry": 0
+}

@@ -1,0 +1,44 @@
+{
+ "id": "e74bea829c",
+ "zips": [
+  "a_blonde_sailor_in_borwn (1)"
+ ],
+ "kind": "character",
+ "name": "Idle",
+ "prompt": "a blonde sailor in borwn leather pants and a white shirt and brown leather vest  he has a chubby face and a sailors hat   ",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "east",
+  "north",
+  "north-east",
+  "north-west",
+  "south",
+  "south-east",
+  "south-west",
+  "west"
+ ],
+ "animations": {
+  "he_talks_and_shakes_his_head_while_gesturing_with": {
+   "dirs": [
+    "south"
+   ],
+   "frames": 17
+  }
+ },
+ "frame_sizes": [
+  [
+   48,
+   48
+  ],
+  [
+   64,
+   64
+  ]
+ ],
+ "suggest": null,
+ "sure": false,
+ "entry": 0
+}

@@ -446,6 +446,114 @@
     "wood": 2
    },
    "station": "tinker"
+  },
+  {
+   "id": "stairs_stone",
+   "out": [
+    "stairs_stone",
+    1
+   ],
+   "in": {
+    "stone": 8,
+    "wood": 4
+   },
+   "station": "table",
+   "_doc": "Upgraded staircase tier."
+  },
+  {
+   "id": "stairs_castle",
+   "out": [
+    "stairs_castle",
+    1
+   ],
+   "in": {
+    "stone": 6,
+    "iron_bar": 4,
+    "wood": 2
+   },
+   "station": "forge",
+   "_doc": "Top-tier staircase."
+  },
+  {
+   "id": "fence_wood",
+   "out": [
+    "fence_wood",
+    2
+   ],
+   "in": {
+    "wood": 2
+   },
+   "station": null
+  },
+  {
+   "id": "dresser",
+   "out": [
+    "dresser",
+    1
+   ],
+   "in": {
+    "wood": 8
+   },
+   "station": null
+  },
+  {
+   "id": "barrel",
+   "out": [
+    "barrel",
+    1
+   ],
+   "in": {
+    "wood": 6
+   },
+   "station": null
+  },
+  {
+   "id": "campfire",
+   "out": [
+    "campfire",
+    1
+   ],
+   "in": {
+    "wood": 4,
+    "loose_rock": 2
+   },
+   "station": null
+  },
+  {
+   "id": "door_stone",
+   "out": [
+    "door_stone",
+    1
+   ],
+   "in": {
+    "stone": 4,
+    "wood": 2
+   },
+   "station": "table"
+  },
+  {
+   "id": "floor_castle",
+   "out": [
+    "floor_castle",
+    2
+   ],
+   "in": {
+    "stone": 3,
+    "iron_bar": 1
+   },
+   "station": "forge"
+  },
+  {
+   "id": "workbench",
+   "out": [
+    "workbench",
+    1
+   ],
+   "in": {
+    "wood": 8,
+    "loose_rock": 2
+   },
+   "station": null
   }
  ]
 }

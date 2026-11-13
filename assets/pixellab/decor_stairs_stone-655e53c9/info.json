@@ -1,0 +1,26 @@
+{
+ "id": "655e53c981",
+ "zips": [
+  "a_simple_stone_staircase_facin (5)"
+ ],
+ "kind": "object",
+ "name": "base",
+ "prompt": "a simple stone staircase facing the player",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "unknown"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   48,
+   48
+  ]
+ ],
+ "suggest": "decor_stairs_stone",
+ "sure": true,
+ "entry": 0
+}

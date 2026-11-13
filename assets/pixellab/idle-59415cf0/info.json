@@ -1,0 +1,50 @@
+{
+ "id": "59415cf066",
+ "zips": [
+  "a_man_with_a_beard"
+ ],
+ "kind": "character",
+ "name": "Idle",
+ "prompt": "a man with a beard and mustache and short dark brown hair  he is wearing red priests robes lined in gold with a fiery halo",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "east",
+  "north",
+  "north-east",
+  "north-west",
+  "south",
+  "south-east",
+  "south-west",
+  "west"
+ ],
+ "animations": {
+  "he_magical_ignites_a_sword_of_fire_in_his_hand_and": {
+   "dirs": [
+    "south"
+   ],
+   "frames": 15
+  },
+  "yelling_and_pointing": {
+   "dirs": [
+    "south"
+   ],
+   "frames": 15
+  }
+ },
+ "frame_sizes": [
+  [
+   48,
+   48
+  ],
+  [
+   68,
+   68
+  ]
+ ],
+ "suggest": null,
+ "sure": false,
+ "entry": 0
+}

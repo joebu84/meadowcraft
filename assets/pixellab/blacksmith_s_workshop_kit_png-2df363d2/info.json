@@ -1,0 +1,23 @@
+{
+ "id": "2df363d2f3",
+ "zips": [
+  "blacksmith-s-workshop-building-kit"
+ ],
+ "kind": "object",
+ "name": "blacksmith-s-workshop-kit.png",
+ "prompt": "",
+ "size": null,
+ "directions": [
+  "unknown"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   320,
+   320
+  ]
+ ],
+ "suggest": null,
+ "sure": false,
+ "entry": 0
+}

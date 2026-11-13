@@ -248,5 +248,27 @@
   }
  },
  "_trees_doc": "Trees grow in GROVES of one family: seeded grove centres, density falls off from the centre with noise; lone trees take the family of the nearest grove. Willows line the river bank, gnarled trees ring the Briar Patch, apple trees stay in orchard rows.",
- "_ruins_doc": "Ruins: broken buildings of ruin_* pieces. count/size per region; more and bigger in dangerous regions. chest = chance a ruin holds a loot chest from the region table. mats = weighted building material."
+ "_ruins_doc": "Ruins: broken buildings of ruin_* pieces. count/size per region; more and bigger in dangerous regions. chest = chance a ruin holds a loot chest from the region table. mats = weighted building material.",
+ "badlands": {
+  "_doc": "Belt between the forest groves and the river. Cracked dirt, scattered rocks, stationary snakes.",
+  "nodes": {
+   "boulder": 0.03,
+   "pebble": 0.01,
+   "loot_chest": 0.0015
+  },
+  "loot": "chest_meadow",
+  "zones": [
+   {
+    "types": {
+     "snake": 1
+    },
+    "count": 8,
+    "max": 1,
+    "interval": 35000
+   }
+  ],
+  "groves": {
+   "count": 0
+  }
+ }
 }

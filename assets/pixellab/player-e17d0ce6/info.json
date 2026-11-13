@@ -1,0 +1,44 @@
+{
+ "id": "e17d0ce649",
+ "zips": [
+  "Barman"
+ ],
+ "kind": "character",
+ "name": "fat human face   and",
+ "prompt": "a fat sheeple barman  he has fluffy wool fleece for hair, brown rams horns , sheep ears a fat human face.  he has sheep hands and sheep legs and a fluffy white tail,   he has a green coat with long tails and a light brown vest",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "east",
+  "north",
+  "north-east",
+  "north-west",
+  "south",
+  "south-east",
+  "south-west",
+  "west"
+ ],
+ "animations": {
+  "Drinking": {
+   "dirs": [
+    "south"
+   ],
+   "frames": 6
+  }
+ },
+ "frame_sizes": [
+  [
+   48,
+   48
+  ],
+  [
+   80,
+   80
+  ]
+ ],
+ "suggest": "player",
+ "sure": false,
+ "entry": 0
+}

@@ -1,0 +1,23 @@
+{
+ "id": "6bbeac157a",
+ "zips": [
+  "blacksmith-s-workshop-room-pack"
+ ],
+ "kind": "object",
+ "name": "blacksmith-s-workshop-no-furniture.png",
+ "prompt": "",
+ "size": null,
+ "directions": [
+  "unknown"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   256,
+   256
+  ]
+ ],
+ "suggest": null,
+ "sure": false,
+ "entry": 0
+}

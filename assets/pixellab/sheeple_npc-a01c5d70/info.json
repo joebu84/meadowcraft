@@ -1,0 +1,33 @@
+{
+ "id": "a01c5d70b3",
+ "zips": [
+  "Sheeple_Dancer_copy_5 (1)"
+ ],
+ "kind": "character",
+ "name": "cream colored hands",
+ "prompt": "female sheeple girl: human face with rosy cheeks, voluminous curly golden-orange wool fleece for hair, droopy cream lamb ears with small white bows, two tiny brown horn nubs; white fuzzy knit off-shoulder dress with flared skirt decorated with little white daisies with yellow centers, big white satin sash bow at the back; golden-orange fleecy sheep arms below the elbow ending in small brown hooves, golden fleecy sheep legs, white satin slippers with crisscross ribbons",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "east",
+  "north",
+  "north-east",
+  "north-west",
+  "south",
+  "south-east",
+  "south-west",
+  "west"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   48,
+   48
+  ]
+ ],
+ "suggest": "sheeple_npc",
+ "sure": false,
+ "entry": 0
+}

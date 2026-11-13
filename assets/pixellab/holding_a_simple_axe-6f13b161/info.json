@@ -1,0 +1,44 @@
+{
+ "id": "6f13b1612a_1",
+ "zips": [
+  "Main_Character"
+ ],
+ "kind": "character",
+ "name": "holding a simple axe",
+ "prompt": "a dancer girl with a tight body and short spikey black hair with very long side bangs her dress is red and her heels are black",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "east",
+  "north",
+  "north-east",
+  "north-west",
+  "south",
+  "south-east",
+  "south-west",
+  "west"
+ ],
+ "animations": {
+  "swings_axe": {
+   "dirs": [
+    "north"
+   ],
+   "frames": 15
+  }
+ },
+ "frame_sizes": [
+  [
+   48,
+   48
+  ],
+  [
+   68,
+   68
+  ]
+ ],
+ "suggest": null,
+ "sure": false,
+ "entry": 1
+}

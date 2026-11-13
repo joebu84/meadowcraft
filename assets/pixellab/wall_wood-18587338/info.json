@@ -1,0 +1,29 @@
+{
+ "id": "1858733836",
+ "zips": [
+  "a_wooden_wall_with_a_door_in_i (3) - Copy",
+  "a_wooden_wall_with_a_door_in_i (3)",
+  "a_wooden_wall_with_a_door_in_i (5)",
+  "a_wooden_wall_with_a_door_in_i - Copy"
+ ],
+ "kind": "object",
+ "name": "base",
+ "prompt": "a wooden wall with a door in it for interior crafting",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "unknown"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   48,
+   48
+  ]
+ ],
+ "suggest": "wall_wood",
+ "sure": true,
+ "entry": 0
+}

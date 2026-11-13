@@ -1,0 +1,45 @@
+{
+ "id": "3028b62982",
+ "zips": [
+  "a_blue_goblin_with_big"
+ ],
+ "kind": "character",
+ "name": "goblin has no nose a",
+ "prompt": "a blue goblin with big eyes a wide big mouth and no nose.    hes smiling big teeth  hes wearing black army pants and khaki boots",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "east",
+  "north",
+  "north-east",
+  "north-west",
+  "south",
+  "south-east",
+  "south-west",
+  "west"
+ ],
+ "animations": {
+  "he_lifts_a_chunky_black_pistol_up_and_shoots_at_th": {
+   "dirs": [
+    "north",
+    "south"
+   ],
+   "frames": 15
+  }
+ },
+ "frame_sizes": [
+  [
+   48,
+   48
+  ],
+  [
+   68,
+   68
+  ]
+ ],
+ "suggest": "goblin_blue",
+ "sure": true,
+ "entry": 0
+}

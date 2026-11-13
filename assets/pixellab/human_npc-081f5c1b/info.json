@@ -1,0 +1,33 @@
+{
+ "id": "081f5c1b42",
+ "zips": [
+  "a_young_man_in_a_copy"
+ ],
+ "kind": "character",
+ "name": "skin is caucasian",
+ "prompt": "a young man in a toga and sandals",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "east",
+  "north",
+  "north-east",
+  "north-west",
+  "south",
+  "south-east",
+  "south-west",
+  "west"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   48,
+   48
+  ]
+ ],
+ "suggest": "human_npc",
+ "sure": false,
+ "entry": 0
+}

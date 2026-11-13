@@ -1,0 +1,44 @@
+{
+ "id": "8598c100ee",
+ "zips": [
+  "Guard"
+ ],
+ "kind": "character",
+ "name": "horns are gold, face",
+ "prompt": "a person in a blue tunic and grey cloak  they have sheep fleece for hair and small rams horns and sheep ears, they have a human torso but sheep arms below the elbow and a sheep lower half",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "east",
+  "north",
+  "north-east",
+  "north-west",
+  "south",
+  "south-east",
+  "south-west",
+  "west"
+ ],
+ "animations": {
+  "lifts_sheild_up_in_guard_and_swings_weapon": {
+   "dirs": [
+    "south"
+   ],
+   "frames": 9
+  }
+ },
+ "frame_sizes": [
+  [
+   48,
+   48
+  ],
+  [
+   68,
+   68
+  ]
+ ],
+ "suggest": "player",
+ "sure": false,
+ "entry": 0
+}

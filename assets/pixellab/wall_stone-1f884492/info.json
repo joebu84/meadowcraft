@@ -1,0 +1,33 @@
+{
+ "id": "1f88449233",
+ "zips": [
+  "a_full_stone_wall_for_interior"
+ ],
+ "kind": "object",
+ "name": "base",
+ "prompt": "a full stone wall for interior building crafting",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "east",
+  "north",
+  "north-east",
+  "north-west",
+  "south",
+  "south-east",
+  "south-west",
+  "west"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   48,
+   48
+  ]
+ ],
+ "suggest": "wall_stone",
+ "sure": true,
+ "entry": 0
+}

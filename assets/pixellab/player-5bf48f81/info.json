@@ -1,0 +1,33 @@
+{
+ "id": "5bf48f815d",
+ "zips": [
+  "a_sheep_man_sheep (1)"
+ ],
+ "kind": "character",
+ "name": "human face and human",
+ "prompt": "a sheep man  sheep fleece for hair rams horns sheep ears, human face and torso  sheeple legs and lower half, sheep arms below the elbow.    hes wearing a white toga",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "east",
+  "north",
+  "north-east",
+  "north-west",
+  "south",
+  "south-east",
+  "south-west",
+  "west"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   48,
+   48
+  ]
+ ],
+ "suggest": "player",
+ "sure": false,
+ "entry": 0
+}

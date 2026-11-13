@@ -1,0 +1,26 @@
+{
+ "id": "2a4fc59947",
+ "zips": [
+  "Object_0"
+ ],
+ "kind": "object",
+ "name": "base",
+ "prompt": "Object: Object 0 (Copy) (Copy) (Copy) (unknown)",
+ "size": {
+  "width": 95,
+  "height": 105
+ },
+ "directions": [
+  "unknown"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   95,
+   105
+  ]
+ ],
+ "suggest": null,
+ "sure": false,
+ "entry": 0
+}

@@ -335,7 +335,7 @@ function refreshPanel() {
 
 // ---------------- minimap
 let mini;
-const TILE_COL = ['#68b24c', '#62aa48', '#78b85a', '#d8d0c4', '#4ec8e8', '#e8e0d0', '#7ec65c', '#5a4a3a', '#54963e', '#3a3428', '#96683c', '#7a5a34', '#70ba54', '#5a96e6', '#2a4a28'];
+const TILE_COL = ['#68b24c', '#62aa48', '#78b85a', '#d8d0c4', '#4ec8e8', '#e8e0d0', '#7ec65c', '#5a4a3a', '#54963e', '#3a3428', '#96683c', '#7a5a34', '#70ba54', '#5a96e6', '#2a4a28', '#8a6a48', '#4a4038', '#1a1814', '#b08a58'];
 function buildMinimap() {
   mini = document.createElement('canvas'); mini.width = S.W; mini.height = S.H; const g = mini.getContext('2d'), im = g.createImageData(S.W, S.H);
   for (let i = 0; i < S.tiles.length; i++) { const c = TILE_COL[S.tiles[i]] || '#000', o = i * 4; im.data[o] = parseInt(c.slice(1, 3), 16); im.data[o + 1] = parseInt(c.slice(3, 5), 16); im.data[o + 2] = parseInt(c.slice(5, 7), 16); im.data[o + 3] = 255; if (S.blocked.has(i)) { im.data[o] = 120; im.data[o + 1] = 60; im.data[o + 2] = 40; } }
@@ -397,6 +397,18 @@ function interpEntities() {
 const NODE_FRAME_OFF = { tree: 1, apple_tree: 2, boulder: 1, iron_node: 1, briar: 2, loot_chest: 1 };
 // nodes can list several sprite variants (tree families, ruin pieces, thickets); pick one per tile, stable across clients
 const hash2 = (x, y) => { let h = Math.imul(x, 374761393) + Math.imul(y, 668265263) | 0; h = Math.imul(h ^ h >>> 13, 1274126177); return (h ^ h >>> 16) >>> 0; };
+function playerSprite(heldId) {
+  if (heldId && /axe/.test(heldId) && MAN.sprites.player_axe) return 'player_axe';
+  return 'player';
+}
+function mobSprite(type, id) {
+  if ((type === 'goblin_red' || type === 'goblin_blue') && MAN) {
+    const vars = Object.keys(MAN.sprites).filter(k => k === type || k.startsWith(type + '_'));
+    if (vars.length) return vars[hash2(id, 0) % vars.length];
+  }
+  return type;
+}
+
 function isWaterTile(x, y) {
   if (!S.tiles) return false;
   if (x < 0 || y < 0 || x >= S.W || y >= S.H) return true;   // map rim is water
@@ -462,8 +474,18 @@ function render() {
       }
     }
   } else {
+    const bgRooms = [];
+    for (const [rid, I] of Object.entries(S.interiors || {})) {
+      if (!MAN.sprites['int_bg_' + rid] || I.y1 < y0 || I.y0 > y1 || I.x1 < x0 || I.x0 > x1) continue;
+      bgRooms.push(I);
+      const img = IMG['int_bg_' + rid], ww = (I.x1 - I.x0 + 1) * T, hh = (I.y1 - I.y0 + 1) * T;
+      if (img) ctx.drawImage(img, I.x0 * T, I.y0 * T, ww, hh);
+    }
+    const inBg = (x, y) => bgRooms.some(I => x >= I.x0 && x <= I.x1 && y >= I.y0 && y <= I.y1);
     for (let y = y0; y <= y1; y++) for (let x = x0; x <= x1; x++) {
-      const t = S.tiles[y * S.W + x], gs = groundSpr(t, x, y);   // imported sheets: hash variants, shore autotiles at river edges
+      const t = S.tiles[y * S.W + x];
+      if (inBg(x, y) && t === 15) continue;   // room pack already paints the floor
+      const gs = groundSpr(t, x, y);   // imported sheets: hash variants, shore autotiles at river edges
       if (gs) spr(gs.key, gs.col, 0, x * T, y * T); else ctx.drawImage(tsI, t * T, 0, T, T, x * T, y * T, T, T);
     }
     for (const d of S.dens) if (d.tx >= x0 - 1 && d.tx <= x1 + 1 && d.ty >= y0 - 1 && d.ty <= y1 + 1) spr(denSprite(d), 0, 0, (d.tx + 0.5) * T, (d.ty + 0.5) * T);
@@ -481,7 +503,7 @@ function render() {
   }
   const frame = (mv, id) => mv ? 1 + ((now / 140 + id) | 0) % 3 : 0;
   const drawPlayer = (x, y, ang, mv, name, hp, held, id, st, isMe) => {
-    drawChar('player', x, y, ang, mv, id);
+    drawChar(playerSprite(held), x, y, ang, mv, id);
     if (held && D.items[held]) { const ox = Math.cos(ang) * 9, oy = Math.sin(ang) * 4; ctx.drawImage(ICON[held], Math.round(x + ox - 6 + (dirRow(ang) === 1 ? -4 : 4)), Math.round(y - 18 + oy), 12, 12); }
     const top = spriteTop('player');
     label(x, y - top - 7, name, isMe ? '#ffd84a' : '#fff'); if (hp < 100) bar(x, y - top - 4, hp / 100, '#e04040');
@@ -496,7 +518,7 @@ function render() {
     if (m.state === 'windup' || m.state === 'honk') { if (hasAtk) { role = 'attack'; prog = Math.min(0.99, (now - ms.since) / 600); } else shake = Math.sin(now / 30) * 1.5; }
     else if (m.state === 'charge' && hasAtk) { role = 'attack'; prog = 0.7 + 0.2 * (((now / 120) | 0) % 2); }
     else if (bite && now - bite < 450 && hasAtk) { role = 'attack'; prog = (now - bite) / 450; }
-    drawChar(m.type, m.x + shake, m.y, m.ang, m.mv || m.state === 'charge', m.id, role, prog);
+    drawChar(mobSprite(m.type, m.id), m.x + shake, m.y, m.ang, m.mv || m.state === 'charge', m.id, role, prog);
     if (D.mobs[m.type]?.boss && Math.hypot(m.x - S.pos.x, m.y - S.pos.y) < 380) { S.bossSeen = { m, at: now }; label(m.x, m.y - spriteTop(m.type) - 8, D.mobs[m.type].name, '#ff9040'); }
     const mx = D.mobs[m.type]?.hp || 40; if (m.hp < mx) bar(m.x, m.y - spriteTop(m.type) - 4, m.hp / mx, m.type === 'sheeple_soldier' ? '#60c060' : '#e04040');
   } });

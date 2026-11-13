@@ -1,0 +1,33 @@
+{
+ "id": "e14f3ce2b4",
+ "zips": [
+  "a_redhead_girl_with_a"
+ ],
+ "kind": "character",
+ "name": "Idle",
+ "prompt": "a redhead girl with a braided pony tail  she has a pith helemt on and khaki shirt , white belt with pouches and khaki shorts  with white boots",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "east",
+  "north",
+  "north-east",
+  "north-west",
+  "south",
+  "south-east",
+  "south-west",
+  "west"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   48,
+   48
+  ]
+ ],
+ "suggest": null,
+ "sure": false,
+ "entry": 0
+}

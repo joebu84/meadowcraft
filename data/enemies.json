@@ -372,5 +372,67 @@
    ]
   ],
   "_doc": "Lair at a goose nest near the river. Goose charge + honk shockwave (hits and pushes everyone close) + summons geese below 60% hp. Respawns 15 min after death."
+ },
+ "thug": {
+  "name": "Thug",
+  "faction": "bandit",
+  "hp": 70,
+  "speed": 88,
+  "dmg": 15,
+  "armor": 2,
+  "ai": "chase",
+  "aggro": 230,
+  "attackRange": 28,
+  "cooldown": 900,
+  "coins": [
+   3,
+   8
+  ],
+  "drops": [
+   [
+    "raw_meat",
+    1,
+    1,
+    0.3
+   ],
+   [
+    "iron_bar",
+    1,
+    1,
+    0.08
+   ]
+  ]
+ },
+ "snake": {
+  "name": "Rattlesnake",
+  "faction": "wild",
+  "hp": 22,
+  "speed": 0,
+  "dmg": 10,
+  "ai": "stationary",
+  "aggro": 40,
+  "attackRange": 34,
+  "cooldown": 1400,
+  "leash": 80,
+  "coins": [
+   1,
+   2
+  ],
+  "drops": [
+   [
+    "snake_skin",
+    1,
+    2,
+    1
+   ],
+   [
+    "snake_meat",
+    1,
+    1,
+    0.8
+   ]
+  ],
+  "poison": 0.45,
+  "_doc": "Badlands ambush snake. Does not wander; bites anything that steps close and may inflict a brief poison."
  }
 }

@@ -1,0 +1,23 @@
+{
+ "id": "b74eb040fa",
+ "zips": [
+  "carpenter-s-shop-building-kit"
+ ],
+ "kind": "object",
+ "name": "carpenter-s-shop-kit.png",
+ "prompt": "",
+ "size": null,
+ "directions": [
+  "unknown"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   320,
+   320
+  ]
+ ],
+ "suggest": null,
+ "sure": false,
+ "entry": 0
+}

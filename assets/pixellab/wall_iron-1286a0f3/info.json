@@ -1,0 +1,26 @@
+{
+ "id": "1286a0f3a4",
+ "zips": [
+  "a_castle_wall_metal_and_ston (10)"
+ ],
+ "kind": "object",
+ "name": "base",
+ "prompt": "a castle wall ( metal and stone) wall with a door in it for interior crafting",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "unknown"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   48,
+   48
+  ]
+ ],
+ "suggest": "wall_iron",
+ "sure": false,
+ "entry": 0
+}

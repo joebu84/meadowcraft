@@ -1,0 +1,62 @@
+{
+ "id": "e484ae169e",
+ "zips": [
+  "a_little_boy_with_a (1)"
+ ],
+ "kind": "character",
+ "name": "Idle",
+ "prompt": "a little boy with a high forehead and long hair in a brown ponytail a white shirt with a truck on it blue jeans brown boots",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "east",
+  "north",
+  "north-east",
+  "north-west",
+  "south",
+  "south-east",
+  "south-west",
+  "west"
+ ],
+ "animations": {
+  "he_whines_while_talking_looking_sad_and_with_tears": {
+   "dirs": [
+    "south"
+   ],
+   "frames": 15
+  },
+  "he_talks_excited_as_he_gestures_back_and_forth_wit": {
+   "dirs": [
+    "south"
+   ],
+   "frames": 15
+  },
+  "he_sits_down_cross_legged": {
+   "dirs": [
+    "south"
+   ],
+   "frames": 15
+  },
+  "he_gestures_wildly_with_his_hands_and_arms_while_h": {
+   "dirs": [
+    "south"
+   ],
+   "frames": 15
+  }
+ },
+ "frame_sizes": [
+  [
+   48,
+   48
+  ],
+  [
+   68,
+   68
+  ]
+ ],
+ "suggest": null,
+ "sure": false,
+ "entry": 0
+}

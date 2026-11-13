@@ -36,51 +36,41 @@
   },
   "player": {
    "file": "sprites/player.png",
-   "fw": 48,
-   "fh": 48,
-   "cols": 1,
-   "rows": 8,
+   "fw": 68,
+   "fh": 68,
+   "cols": 15,
+   "rows": 16,
    "anchor": [
-    24,
-    45
+    34,
+    57
    ],
-   "top": 44,
+   "top": 47,
    "scale": 1,
    "character": true,
    "dirs8": true,
-   "walkFrames": 1,
-   "anims": {},
-   "source": "pixellab:1b1804681d"
-  },
-  "sheeple_npc": {
-   "file": "sprites/sheeple_npc.png",
-   "fw": 52,
-   "fh": 52,
-   "cols": 9,
-   "rows": 12,
-   "anchor": [
-    26,
-    43
-   ],
-   "top": 35,
-   "scale": 1,
-   "character": true,
-   "dirs8": true,
-   "walkFrames": 1,
+   "walkFrames": 8,
    "anims": {
-    "emote": {
+    "attack": {
      "row": 8,
-     "frames": 9,
-     "name": "she_puts_her_hands_up_in_the_air_and_spins_her_dre",
+     "frames": 15,
+     "name": "full_axe_chop_swing_simple_wood_handle_grey_metal",
      "dirs": [
-      "south"
+      "east"
+     ]
+    },
+    "emote": {
+     "row": 12,
+     "frames": 15,
+     "name": "sh_gestures_wildly_with_her_arms_as_ehe_talks",
+     "dirs": [
+      "north"
      ]
     }
    },
-   "source": "pixellab:0a500c7424"
+   "source": "pixellab:6f13b1612a"
   },
-  "sheeple_smith": {
-   "file": "sprites/sheeple_smith.png",
+  "sheeple_npc": {
+   "file": "sprites/sheeple_npc.png",
    "fw": 48,
    "fh": 48,
    "cols": 1,
@@ -95,7 +85,25 @@
    "dirs8": true,
    "walkFrames": 1,
    "anims": {},
-   "source": "pixellab:c7809fa1c8"
+   "source": "pixellab:0a01f6d0a9"
+  },
+  "sheeple_smith": {
+   "file": "sprites/npc_sergeant.png",
+   "fw": 48,
+   "fh": 48,
+   "cols": 1,
+   "rows": 8,
+   "anchor": [
+    24,
+    46
+   ],
+   "top": 45,
+   "scale": 1,
+   "character": true,
+   "dirs8": true,
+   "walkFrames": 1,
+   "anims": {},
+   "source": "pixellab:fd61aaabfe"
   },
   "trader": {
    "file": "sprites/trader.png",
@@ -105,7 +113,7 @@
    "rows": 8,
    "anchor": [
     24,
-    45
+    46
    ],
    "top": 44,
    "scale": 1,
@@ -113,7 +121,7 @@
    "dirs8": true,
    "walkFrames": 1,
    "anims": {},
-   "source": "pixellab:556a506c2f"
+   "source": "pixellab:5bf48f815d"
   },
   "sheeple_veteran": {
    "file": "sprites/sheeple_veteran.png",
@@ -131,7 +139,7 @@
    "dirs8": true,
    "walkFrames": 1,
    "anims": {},
-   "source": "pixellab:a4ffb25eb9"
+   "source": "pixellab:1b1804681d"
   },
   "sheeple_soldier": {
    "file": "sprites/sheeple_soldier.png",
@@ -141,54 +149,97 @@
    "rows": 8,
    "anchor": [
     24,
-    46
+    45
+   ],
+   "top": 44,
+   "scale": 1,
+   "character": true,
+   "dirs8": true,
+   "walkFrames": 1,
+   "anims": {},
+   "source": "pixellab:c00afa8960"
+  },
+  "bandit": {
+   "file": "sprites/bandit.png",
+   "fw": 68,
+   "fh": 68,
+   "cols": 9,
+   "rows": 12,
+   "anchor": [
+    34,
+    56
    ],
    "top": 45,
    "scale": 1,
    "character": true,
    "dirs8": true,
    "walkFrames": 1,
-   "anims": {},
-   "source": "pixellab:fd61aaabfe"
-  },
-  "bandit": {
-   "file": "sprites/bandit.png",
-   "fw": 32,
-   "fh": 32,
-   "cols": 4,
-   "rows": 4,
-   "anchor": [
-    16,
-    29
-   ],
-   "scale": 1,
-   "character": true
+   "anims": {
+    "attack": {
+     "row": 8,
+     "frames": 9,
+     "name": "he_yells_and_slashes_with_his_weapon",
+     "dirs": [
+      "south"
+     ]
+    }
+   },
+   "source": "pixellab:fab1466980"
   },
   "goblin_red": {
    "file": "sprites/goblin_red.png",
-   "fw": 32,
-   "fh": 32,
-   "cols": 4,
-   "rows": 4,
+   "fw": 68,
+   "fh": 68,
+   "cols": 15,
+   "rows": 12,
    "anchor": [
-    16,
-    29
+    34,
+    56
    ],
+   "top": 45,
    "scale": 1,
-   "character": true
+   "character": true,
+   "dirs8": true,
+   "walkFrames": 1,
+   "anims": {
+    "attack": {
+     "row": 8,
+     "frames": 15,
+     "name": "he_lifts_a_chunky_black_pistol_up_and_shoots_at_th",
+     "dirs": [
+      "north",
+      "south"
+     ]
+    }
+   },
+   "source": "pixellab:3028b62982"
   },
   "goblin_blue": {
    "file": "sprites/goblin_blue.png",
-   "fw": 32,
-   "fh": 32,
-   "cols": 4,
-   "rows": 4,
+   "fw": 68,
+   "fh": 68,
+   "cols": 15,
+   "rows": 12,
    "anchor": [
-    16,
-    29
+    34,
+    56
    ],
+   "top": 45,
    "scale": 1,
-   "character": true
+   "character": true,
+   "dirs8": true,
+   "walkFrames": 1,
+   "anims": {
+    "emote": {
+     "row": 8,
+     "frames": 15,
+     "name": "he_laughs_maniacally_while_lifting_his_pistol_up_a",
+     "dirs": [
+      "south"
+     ]
+    }
+   },
+   "source": "pixellab:cbb311d668"
   },
   "wolf": {
    "file": "sprites/wolf.png",
@@ -310,18 +361,18 @@
    "scale": 1
   },
   "apple_tree": {
-   "file": "sprites/apple_tree.png",
-   "fw": 43,
+   "file": "sprites/tree_blossom_1.png",
+   "fw": 45,
    "fh": 45,
    "cols": 1,
    "rows": 1,
    "anchor": [
-    21,
+    22,
     44
    ],
    "scale": 1,
    "top": 45,
-   "source": "pixellab:1345cc54e6"
+   "source": "pixellab:b146e945b7"
   },
   "boulder": {
    "file": "sprites/boulder.png",
@@ -385,55 +436,59 @@
   },
   "loot_chest": {
    "file": "sprites/loot_chest.png",
-   "fw": 41,
-   "fh": 38,
-   "cols": 1,
-   "rows": 1,
-   "anchor": [
-    20,
-    37
-   ],
-   "scale": 1,
-   "top": 38,
-   "source": "pixellab:cbe53694cf"
-  },
-  "den": {
-   "file": "sprites/den.png",
-   "fw": 32,
-   "fh": 32,
-   "cols": 1,
-   "rows": 1,
-   "anchor": [
-    16,
-    16
-   ],
-   "scale": 1
-  },
-  "wall_wood": {
-   "file": "sprites/wall_wood.png",
-   "fw": 32,
+   "fw": 44,
    "fh": 40,
    "cols": 1,
    "rows": 1,
    "anchor": [
-    16,
+    22,
     39
    ],
-   "scale": 1
+   "scale": 1,
+   "top": 40,
+   "source": "pixellab:f1ea626419"
   },
-  "wall_stone": {
-   "file": "sprites/wall_stone.png",
-   "fw": 46,
-   "fh": 24,
+  "den": {
+   "file": "sprites/den.png",
+   "fw": 44,
+   "fh": 39,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    22,
+    38
+   ],
+   "scale": 1,
+   "top": 39,
+   "source": "pixellab:79c9533e22"
+  },
+  "wall_wood": {
+   "file": "sprites/wall_wood.png",
+   "fw": 47,
+   "fh": 46,
    "cols": 1,
    "rows": 1,
    "anchor": [
     23,
-    23
+    45
    ],
    "scale": 1,
-   "top": 24,
-   "source": "pixellab:9c0359596a"
+   "top": 46,
+   "source": "pixellab:1858733836"
+  },
+  "wall_stone": {
+   "file": "sprites/wall_stone.png",
+   "fw": 42,
+   "fh": 42,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    21,
+    41
+   ],
+   "scale": 1,
+   "top": 42,
+   "source": "pixellab:304d60e17c"
   },
   "wall_iron": {
    "file": "sprites/wall_iron.png",
@@ -451,15 +506,17 @@
   },
   "door_wood": {
    "file": "sprites/door_wood.png",
-   "fw": 32,
-   "fh": 40,
+   "fw": 43,
+   "fh": 45,
    "cols": 1,
    "rows": 1,
    "anchor": [
-    16,
-    39
+    21,
+    44
    ],
-   "scale": 1
+   "scale": 1,
+   "top": 45,
+   "source": "pixellab:69ae1aef80"
   },
   "floor_wood": {
    "file": "sprites/floor_wood.png",
@@ -487,52 +544,66 @@
    ],
    "scale": 1,
    "top": 32,
-   "source": "pixellab:ab7f424196"
+   "source": "pixellab:e66a7955c1"
   },
   "bed": {
    "file": "sprites/bed.png",
-   "fw": 35,
-   "fh": 41,
-   "cols": 1,
-   "rows": 1,
-   "anchor": [
-    17,
-    40
-   ],
-   "scale": 1,
-   "top": 41,
-   "source": "pixellab:2b12002aaa"
-  },
-  "chest": {
-   "file": "sprites/chest.png",
-   "fw": 43,
-   "fh": 38,
-   "cols": 1,
-   "rows": 1,
-   "anchor": [
-    21,
-    37
-   ],
-   "scale": 1,
-   "top": 38,
-   "source": "pixellab:70a98a5463"
-  },
-  "table": {
-   "file": "sprites/table.png",
    "fw": 41,
-   "fh": 41,
+   "fh": 45,
    "cols": 1,
    "rows": 1,
    "anchor": [
     20,
-    40
+    44
    ],
    "scale": 1,
-   "top": 41,
-   "source": "pixellab:1f1856edf7"
+   "top": 45,
+   "source": "pixellab:a8b011cc35"
+  },
+  "chest": {
+   "file": "sprites/chest.png",
+   "fw": 44,
+   "fh": 38,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    22,
+    37
+   ],
+   "scale": 1,
+   "top": 38,
+   "source": "pixellab:8bf20abf1e"
+  },
+  "table": {
+   "file": "sprites/table.png",
+   "fw": 42,
+   "fh": 39,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    21,
+    38
+   ],
+   "scale": 1,
+   "top": 39,
+   "source": "pixellab:e19bac8683"
   },
   "furnace": {
    "file": "sprites/furnace.png",
+   "fw": 38,
+   "fh": 45,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    19,
+    44
+   ],
+   "scale": 1,
+   "top": 45,
+   "source": "pixellab:44b3136256"
+  },
+  "forge": {
+   "file": "sprites/forge.png",
    "fw": 38,
    "fh": 44,
    "cols": 1,
@@ -544,20 +615,6 @@
    "scale": 1,
    "top": 44,
    "source": "pixellab:21890ed3e2"
-  },
-  "forge": {
-   "file": "sprites/forge.png",
-   "fw": 37,
-   "fh": 43,
-   "cols": 1,
-   "rows": 1,
-   "anchor": [
-    18,
-    42
-   ],
-   "scale": 1,
-   "top": 43,
-   "source": "pixellab:4f5f79d58e"
   },
   "tinker_table": {
    "file": "sprites/tinker_table.png",
@@ -590,6 +647,20 @@
   "bld_blacksmith": {
    "file": "sprites/bld_blacksmith.png",
    "fw": 192,
+   "fh": 192,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    96,
+    191
+   ],
+   "scale": 1,
+   "top": 192,
+   "source": "pixellab:2df363d2f3"
+  },
+  "bld_carpenter": {
+   "file": "sprites/bld_carpenter.png",
+   "fw": 192,
    "fh": 159,
    "cols": 1,
    "rows": 1,
@@ -601,33 +672,19 @@
    "top": 159,
    "source": "pixellab:a3a3dc9a90"
   },
-  "bld_carpenter": {
-   "file": "sprites/bld_carpenter.png",
-   "fw": 192,
-   "fh": 174,
-   "cols": 1,
-   "rows": 1,
-   "anchor": [
-    96,
-    173
-   ],
-   "scale": 1,
-   "top": 174,
-   "source": "pixellab:20bc12089d"
-  },
   "bld_stall": {
    "file": "sprites/bld_stall.png",
    "fw": 160,
-   "fh": 156,
+   "fh": 139,
    "cols": 1,
    "rows": 1,
    "anchor": [
     80,
-    155
+    138
    ],
    "scale": 1,
-   "top": 156,
-   "source": "pixellab:9d72a3939a"
+   "top": 139,
+   "source": "pixellab:d6214bd528"
   },
   "projectiles": {
    "file": "sprites/projectiles.png",
@@ -694,16 +751,16 @@
   "loot_chest_2": {
    "file": "sprites/loot_chest_2.png",
    "fw": 45,
-   "fh": 39,
+   "fh": 40,
    "cols": 1,
    "rows": 1,
    "anchor": [
     22,
-    38
+    39
    ],
    "scale": 1,
-   "top": 39,
-   "source": "pixellab:2030023141"
+   "top": 40,
+   "source": "pixellab:567a598d71"
   },
   "loot_chest_3": {
    "file": "sprites/loot_chest_3.png",
@@ -1117,17 +1174,17 @@
   },
   "tree_oak_1": {
    "file": "sprites/tree_oak_1.png",
-   "fw": 46,
+   "fw": 44,
    "fh": 45,
    "cols": 1,
    "rows": 1,
    "anchor": [
-    23,
+    22,
     44
    ],
    "scale": 1,
    "top": 45,
-   "source": "pixellab:2f1a1739eb"
+   "source": "pixellab:bd64f8da95"
   },
   "tree_mystic_1": {
    "file": "sprites/tree_mystic_1.png",
@@ -1159,17 +1216,17 @@
   },
   "tree_willow_1": {
    "file": "sprites/tree_willow_1.png",
-   "fw": 40,
-   "fh": 46,
+   "fw": 42,
+   "fh": 45,
    "cols": 1,
    "rows": 1,
    "anchor": [
-    20,
-    45
+    21,
+    44
    ],
    "scale": 1,
-   "top": 46,
-   "source": "pixellab:9f410f2559"
+   "top": 45,
+   "source": "pixellab:c81e0c46d9"
   },
   "tree_blossom_1": {
    "file": "sprites/tree_blossom_1.png",
@@ -1187,35 +1244,7 @@
   },
   "tree_pine_1": {
    "file": "sprites/tree_pine_1.png",
-   "fw": 32,
-   "fh": 44,
-   "cols": 1,
-   "rows": 1,
-   "anchor": [
-    16,
-    43
-   ],
-   "scale": 1,
-   "top": 44,
-   "source": "pixellab:b894ffa71f"
-  },
-  "tree_gnarled_2": {
-   "file": "sprites/tree_gnarled_2.png",
-   "fw": 44,
-   "fh": 45,
-   "cols": 1,
-   "rows": 1,
-   "anchor": [
-    22,
-    44
-   ],
-   "scale": 1,
-   "top": 45,
-   "source": "pixellab:bd64f8da95"
-  },
-  "tree_birch_2": {
-   "file": "sprites/tree_birch_2.png",
-   "fw": 42,
+   "fw": 43,
    "fh": 45,
    "cols": 1,
    "rows": 1,
@@ -1225,24 +1254,38 @@
    ],
    "scale": 1,
    "top": 45,
-   "source": "pixellab:c81e0c46d9"
+   "source": "pixellab:1345cc54e6"
   },
-  "tree_oak_2": {
-   "file": "sprites/tree_oak_2.png",
-   "fw": 44,
+  "tree_gnarled_2": {
+   "file": "sprites/tree_gnarled_2.png",
+   "fw": 46,
    "fh": 45,
    "cols": 1,
    "rows": 1,
    "anchor": [
-    22,
+    23,
     44
    ],
    "scale": 1,
    "top": 45,
-   "source": "pixellab:eda6e8303f"
+   "source": "pixellab:2f1a1739eb"
   },
-  "tree_birch_1": {
-   "file": "sprites/tree_birch_1.png",
+  "tree_birch_2": {
+   "file": "sprites/tree_birch_2.png",
+   "fw": 40,
+   "fh": 46,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    20,
+    45
+   ],
+   "scale": 1,
+   "top": 46,
+   "source": "pixellab:9f410f2559"
+  },
+  "tree_oak_2": {
+   "file": "sprites/tree_oak_2.png",
    "fw": 42,
    "fh": 45,
    "cols": 1,
@@ -1254,6 +1297,20 @@
    "scale": 1,
    "top": 45,
    "source": "pixellab:f045e6fbd8"
+  },
+  "tree_birch_1": {
+   "file": "sprites/tree_birch_1.png",
+   "fw": 32,
+   "fh": 44,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    16,
+    43
+   ],
+   "scale": 1,
+   "top": 44,
+   "source": "pixellab:b894ffa71f"
   },
   "tree_autumn_2": {
    "file": "sprites/tree_autumn_2.png",
@@ -1271,44 +1328,44 @@
   },
   "ruin_wall_stone_1": {
    "file": "sprites/ruin_wall_stone_1.png",
-   "fw": 46,
-   "fh": 24,
+   "fw": 42,
+   "fh": 42,
    "cols": 1,
    "rows": 1,
    "anchor": [
-    23,
-    23
+    21,
+    41
    ],
    "scale": 1,
-   "top": 24,
+   "top": 42,
    "source": "derived:wall_stone"
   },
   "ruin_wall_stone_2": {
    "file": "sprites/ruin_wall_stone_2.png",
-   "fw": 46,
-   "fh": 24,
+   "fw": 42,
+   "fh": 41,
    "cols": 1,
    "rows": 1,
    "anchor": [
-    23,
-    23
+    21,
+    40
    ],
    "scale": 1,
-   "top": 24,
+   "top": 41,
    "source": "derived:wall_stone"
   },
   "ruin_wall_stone_3": {
    "file": "sprites/ruin_wall_stone_3.png",
-   "fw": 46,
-   "fh": 16,
+   "fw": 42,
+   "fh": 27,
    "cols": 1,
    "rows": 1,
    "anchor": [
-    23,
-    15
+    21,
+    26
    ],
    "scale": 1,
-   "top": 16,
+   "top": 27,
    "source": "derived:wall_stone"
   },
   "ruin_rubble_stone": {
@@ -1383,44 +1440,44 @@
   },
   "ruin_wall_wood_1": {
    "file": "sprites/ruin_wall_wood_1.png",
-   "fw": 32,
-   "fh": 40,
+   "fw": 47,
+   "fh": 46,
    "cols": 1,
    "rows": 1,
    "anchor": [
-    16,
-    39
+    23,
+    45
    ],
    "scale": 1,
-   "top": 40,
+   "top": 46,
    "source": "derived:wall_wood"
   },
   "ruin_wall_wood_2": {
    "file": "sprites/ruin_wall_wood_2.png",
-   "fw": 32,
-   "fh": 36,
+   "fw": 47,
+   "fh": 41,
    "cols": 1,
    "rows": 1,
    "anchor": [
-    16,
-    35
+    23,
+    40
    ],
    "scale": 1,
-   "top": 36,
+   "top": 41,
    "source": "derived:wall_wood"
   },
   "ruin_wall_wood_3": {
    "file": "sprites/ruin_wall_wood_3.png",
-   "fw": 32,
-   "fh": 24,
+   "fw": 47,
+   "fh": 28,
    "cols": 1,
    "rows": 1,
    "anchor": [
-    16,
-    23
+    23,
+    27
    ],
    "scale": 1,
-   "top": 24,
+   "top": 28,
    "source": "derived:wall_wood"
   },
   "ruin_rubble_wood": {
@@ -1453,90 +1510,118 @@
   },
   "thicket_1": {
    "file": "sprites/thicket_1.png",
-   "fw": 34,
-   "fh": 40,
+   "fw": 44,
+   "fh": 44,
    "cols": 1,
    "rows": 1,
    "anchor": [
-    17,
-    38
+    22,
+    43
    ],
    "scale": 1,
-   "top": 40,
-   "source": "derived:placeholder"
+   "top": 44,
+   "source": "pixellab:5310037cea"
   },
   "thicket_2": {
    "file": "sprites/thicket_2.png",
-   "fw": 34,
-   "fh": 40,
+   "fw": 42,
+   "fh": 39,
    "cols": 1,
    "rows": 1,
    "anchor": [
-    17,
+    21,
     38
    ],
    "scale": 1,
-   "top": 40,
-   "source": "derived:placeholder"
+   "top": 39,
+   "source": "pixellab:67d2315eec"
   },
   "thicket_3": {
    "file": "sprites/thicket_3.png",
-   "fw": 34,
-   "fh": 40,
+   "fw": 38,
+   "fh": 35,
    "cols": 1,
    "rows": 1,
    "anchor": [
-    17,
-    38
+    19,
+    34
    ],
    "scale": 1,
-   "top": 40,
-   "source": "derived:placeholder"
+   "top": 35,
+   "source": "pixellab:86f448d19f"
   },
   "thicket_4": {
    "file": "sprites/thicket_4.png",
-   "fw": 34,
-   "fh": 40,
+   "fw": 44,
+   "fh": 46,
    "cols": 1,
    "rows": 1,
    "anchor": [
-    17,
-    38
+    22,
+    45
    ],
    "scale": 1,
-   "top": 40,
-   "source": "derived:placeholder"
+   "top": 46,
+   "source": "pixellab:fa9fcf19da"
   },
   "thicket_5": {
    "file": "sprites/thicket_5.png",
-   "fw": 34,
-   "fh": 40,
+   "fw": 44,
+   "fh": 34,
    "cols": 1,
    "rows": 1,
    "anchor": [
-    17,
-    38
+    22,
+    33
    ],
    "scale": 1,
-   "top": 40,
-   "source": "derived:placeholder"
+   "top": 34,
+   "source": "pixellab:88f9249b3f"
   },
   "bld_home_1": {
    "file": "sprites/bld_home_1.png",
    "fw": 112,
-   "fh": 111,
+   "fh": 105,
    "cols": 1,
    "rows": 1,
    "anchor": [
     56,
-    110
+    104
    ],
    "scale": 1,
-   "top": 111,
-   "source": "pixellab:40c8654d75"
+   "top": 105,
+   "source": "pixellab:bc2bd15a24"
   },
   "bld_home_2": {
    "file": "sprites/bld_home_2.png",
+   "fw": 112,
+   "fh": 109,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    56,
+    108
+   ],
+   "scale": 1,
+   "top": 109,
+   "source": "pixellab:9d72a3939a"
+  },
+  "bld_home_5": {
+   "file": "sprites/bld_home_5.png",
+   "fw": 112,
+   "fh": 112,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    56,
+    111
+   ],
+   "scale": 1,
+   "top": 112,
+   "source": "pixellab:ee6cda8404"
+  },
+  "bld_home_6": {
+   "file": "sprites/bld_home_6.png",
    "fw": 112,
    "fh": 94,
    "cols": 1,
@@ -1548,34 +1633,6 @@
    "scale": 1,
    "top": 94,
    "source": "pixellab:66899f0b72"
-  },
-  "bld_home_5": {
-   "file": "sprites/bld_home_5.png",
-   "fw": 112,
-   "fh": 108,
-   "cols": 1,
-   "rows": 1,
-   "anchor": [
-    56,
-    107
-   ],
-   "scale": 1,
-   "top": 108,
-   "source": "pixellab:73f0b0cbb5"
-  },
-  "bld_home_6": {
-   "file": "sprites/bld_home_6.png",
-   "fw": 112,
-   "fh": 133,
-   "cols": 1,
-   "rows": 1,
-   "anchor": [
-    56,
-    132
-   ],
-   "scale": 1,
-   "top": 133,
-   "source": "pixellab:8ac4863db2"
   },
   "bld_fountain": {
    "file": "sprites/bld_fountain.png",
@@ -1594,30 +1651,30 @@
   "bld_home_7": {
    "file": "sprites/bld_home_7.png",
    "fw": 112,
-   "fh": 105,
+   "fh": 133,
    "cols": 1,
    "rows": 1,
    "anchor": [
     56,
-    104
+    132
    ],
    "scale": 1,
-   "top": 105,
-   "source": "pixellab:bc2bd15a24"
+   "top": 133,
+   "source": "pixellab:8ac4863db2"
   },
   "bld_home_4": {
    "file": "sprites/bld_home_4.png",
    "fw": 112,
-   "fh": 98,
+   "fh": 108,
    "cols": 1,
    "rows": 1,
    "anchor": [
     56,
-    97
+    107
    ],
    "scale": 1,
-   "top": 98,
-   "source": "pixellab:d6214bd528"
+   "top": 108,
+   "source": "pixellab:73f0b0cbb5"
   },
   "bld_home_8": {
    "file": "sprites/bld_home_8.png",
@@ -1636,30 +1693,30 @@
   "bld_home_3": {
    "file": "sprites/bld_home_3.png",
    "fw": 112,
-   "fh": 112,
+   "fh": 111,
    "cols": 1,
    "rows": 1,
    "anchor": [
     56,
-    111
+    110
    ],
    "scale": 1,
-   "top": 112,
-   "source": "pixellab:ee6cda8404"
+   "top": 111,
+   "source": "pixellab:40c8654d75"
   },
   "stairs_wood": {
-   "file": "sprites/ruin_stairs_wood.png",
-   "fw": 36,
+   "file": "sprites/stairs_wood.png",
+   "fw": 42,
    "fh": 44,
    "cols": 1,
    "rows": 1,
    "anchor": [
-    18,
+    21,
     43
    ],
    "scale": 1,
    "top": 44,
-   "source": "pixellab:7927626cfc"
+   "source": "pixellab:e9e30d7e05"
   },
   "ground_meadow": {
    "file": "sprites/ground_meadow.png",
@@ -1751,6 +1808,1239 @@
    ],
    "scale": 1,
    "source": "pixellab-tiles:shore.png"
+  },
+  "bed_2": {
+   "file": "sprites/bed_2.png",
+   "fw": 36,
+   "fh": 41,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    18,
+    40
+   ],
+   "scale": 1,
+   "top": 41,
+   "source": "pixellab:eab7b01ec2"
+  },
+  "campfire": {
+   "file": "sprites/campfire.png",
+   "fw": 43,
+   "fh": 42,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    21,
+    41
+   ],
+   "scale": 1,
+   "top": 42,
+   "source": "pixellab:5cbf4d11f4"
+  },
+  "campfire_2": {
+   "file": "sprites/campfire_2.png",
+   "fw": 42,
+   "fh": 43,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    21,
+    42
+   ],
+   "scale": 1,
+   "top": 43,
+   "source": "pixellab:b42273cb22"
+  },
+  "dresser_2": {
+   "file": "sprites/dresser_2.png",
+   "fw": 37,
+   "fh": 38,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    18,
+    37
+   ],
+   "scale": 1,
+   "top": 38,
+   "source": "pixellab:655d652fb9"
+  },
+  "dresser": {
+   "file": "sprites/dresser.png",
+   "fw": 39,
+   "fh": 41,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    19,
+    40
+   ],
+   "scale": 1,
+   "top": 41,
+   "source": "pixellab:c9f0dd36d5"
+  },
+  "fence_wood": {
+   "file": "sprites/fence_wood.png",
+   "fw": 46,
+   "fh": 33,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    23,
+    32
+   ],
+   "scale": 1,
+   "top": 33,
+   "source": "pixellab:20748271ba"
+  },
+  "stairs_castle": {
+   "file": "sprites/stairs_castle.png",
+   "fw": 45,
+   "fh": 46,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    22,
+    45
+   ],
+   "scale": 1,
+   "top": 46,
+   "source": "pixellab:254c4bb5e1"
+  },
+  "stairs_castle_2": {
+   "file": "sprites/stairs_castle_2.png",
+   "fw": 42,
+   "fh": 45,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    21,
+    44
+   ],
+   "scale": 1,
+   "top": 45,
+   "source": "pixellab:81a78c7489"
+  },
+  "stairs_stone": {
+   "file": "sprites/stairs_stone.png",
+   "fw": 42,
+   "fh": 44,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    21,
+    43
+   ],
+   "scale": 1,
+   "top": 44,
+   "source": "pixellab:04ec22c10c"
+  },
+  "stairs_stone_2": {
+   "file": "sprites/stairs_stone_2.png",
+   "fw": 44,
+   "fh": 44,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    22,
+    43
+   ],
+   "scale": 1,
+   "top": 44,
+   "source": "pixellab:6301f04c18"
+  },
+  "stairs_wood_2": {
+   "file": "sprites/stairs_wood_2.png",
+   "fw": 38,
+   "fh": 43,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    19,
+    42
+   ],
+   "scale": 1,
+   "top": 43,
+   "source": "pixellab:3e0c628748"
+  },
+  "den_v3": {
+   "file": "sprites/den_v3.png",
+   "fw": 44,
+   "fh": 41,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    22,
+    40
+   ],
+   "scale": 1,
+   "top": 41,
+   "source": "pixellab:869b020870"
+  },
+  "den_v2": {
+   "file": "sprites/den_v2.png",
+   "fw": 44,
+   "fh": 37,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    22,
+    36
+   ],
+   "scale": 1,
+   "top": 37,
+   "source": "pixellab:93c290be9b"
+  },
+  "den_v4": {
+   "file": "sprites/den_v4.png",
+   "fw": 45,
+   "fh": 43,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    22,
+    42
+   ],
+   "scale": 1,
+   "top": 43,
+   "source": "pixellab:c95b6d6ccb"
+  },
+  "floor_castle": {
+   "file": "sprites/floor_castle.png",
+   "fw": 32,
+   "fh": 32,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    0,
+    0
+   ],
+   "scale": 1,
+   "top": 32,
+   "source": "pixellab:092b088b7a"
+  },
+  "floor_castle_2": {
+   "file": "sprites/floor_castle_2.png",
+   "fw": 32,
+   "fh": 32,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    0,
+    0
+   ],
+   "scale": 1,
+   "top": 32,
+   "source": "pixellab:e19c2415d3"
+  },
+  "floor_stone_2": {
+   "file": "sprites/floor_stone_2.png",
+   "fw": 32,
+   "fh": 32,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    0,
+    0
+   ],
+   "scale": 1,
+   "top": 32,
+   "source": "pixellab:5d513f6f66"
+  },
+  "floor_wood_2": {
+   "file": "sprites/floor_wood_2.png",
+   "fw": 32,
+   "fh": 32,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    0,
+    0
+   ],
+   "scale": 1,
+   "top": 32,
+   "source": "pixellab:80d75ee736"
+  },
+  "goblin_blue_2": {
+   "file": "sprites/goblin_blue_2.png",
+   "fw": 68,
+   "fh": 68,
+   "cols": 9,
+   "rows": 12,
+   "anchor": [
+    34,
+    57
+   ],
+   "top": 47,
+   "scale": 1,
+   "character": true,
+   "dirs8": true,
+   "walkFrames": 1,
+   "anims": {
+    "emote": {
+     "row": 8,
+     "frames": 9,
+     "name": "he_raises_an_glock_in_each_hand_with_a_drum_magazi",
+     "dirs": [
+      "south"
+     ]
+    }
+   },
+   "source": "pixellab:4585cc5b86"
+  },
+  "goblin_blue_3": {
+   "file": "sprites/goblin_blue_3.png",
+   "fw": 68,
+   "fh": 68,
+   "cols": 15,
+   "rows": 12,
+   "anchor": [
+    34,
+    57
+   ],
+   "top": 47,
+   "scale": 1,
+   "character": true,
+   "dirs8": true,
+   "walkFrames": 1,
+   "anims": {
+    "emote": {
+     "row": 8,
+     "frames": 15,
+     "name": "he_aims_both_pistols_firing_full_auto_wildly_smoke",
+     "dirs": [
+      "south"
+     ]
+    }
+   },
+   "source": "pixellab:94acd4f25c"
+  },
+  "goblin_red_4": {
+   "file": "sprites/goblin_red_4.png",
+   "fw": 68,
+   "fh": 68,
+   "cols": 15,
+   "rows": 12,
+   "anchor": [
+    34,
+    56
+   ],
+   "top": 45,
+   "scale": 1,
+   "character": true,
+   "dirs8": true,
+   "walkFrames": 1,
+   "anims": {
+    "emote": {
+     "row": 8,
+     "frames": 15,
+     "name": "he_aims_a_shotgun_fires_a_puffs_of_smoke_and_muzze",
+     "dirs": [
+      "south"
+     ]
+    }
+   },
+   "source": "pixellab:b2feff8c3b"
+  },
+  "goblin_red_3": {
+   "file": "sprites/goblin_red_3.png",
+   "fw": 68,
+   "fh": 68,
+   "cols": 15,
+   "rows": 12,
+   "anchor": [
+    34,
+    57
+   ],
+   "top": 46,
+   "scale": 1,
+   "character": true,
+   "dirs8": true,
+   "walkFrames": 1,
+   "anims": {
+    "emote": {
+     "row": 8,
+     "frames": 15,
+     "name": "he_pumps_the_shotgun_and_a_red_shell_pops_out_and",
+     "dirs": [
+      "south"
+     ]
+    }
+   },
+   "source": "pixellab:fec53bfd3f"
+  },
+  "goblin_red_2": {
+   "file": "sprites/goblin_red_2.png",
+   "fw": 48,
+   "fh": 48,
+   "cols": 1,
+   "rows": 8,
+   "anchor": [
+    24,
+    47
+   ],
+   "top": 46,
+   "scale": 1,
+   "character": true,
+   "dirs8": true,
+   "walkFrames": 1,
+   "anims": {},
+   "source": "pixellab:c755ff93ba"
+  },
+  "npc_youth": {
+   "file": "sprites/npc_youth.png",
+   "fw": 48,
+   "fh": 48,
+   "cols": 1,
+   "rows": 8,
+   "anchor": [
+    24,
+    46
+   ],
+   "top": 46,
+   "scale": 1,
+   "character": true,
+   "dirs8": true,
+   "walkFrames": 1,
+   "anims": {},
+   "source": "pixellab:081f5c1b42"
+  },
+  "npc_farmer": {
+   "file": "sprites/npc_farmer.png",
+   "fw": 48,
+   "fh": 48,
+   "cols": 1,
+   "rows": 8,
+   "anchor": [
+    24,
+    45
+   ],
+   "top": 44,
+   "scale": 1,
+   "character": true,
+   "dirs8": true,
+   "walkFrames": 1,
+   "anims": {},
+   "source": "pixellab:0fc1db6149"
+  },
+  "npc_girl": {
+   "file": "sprites/npc_girl.png",
+   "fw": 48,
+   "fh": 48,
+   "cols": 1,
+   "rows": 8,
+   "anchor": [
+    24,
+    45
+   ],
+   "top": 44,
+   "scale": 1,
+   "character": true,
+   "dirs8": true,
+   "walkFrames": 1,
+   "anims": {},
+   "source": "pixellab:556a506c2f"
+  },
+  "npc_guard": {
+   "file": "sprites/npc_guard.png",
+   "fw": 68,
+   "fh": 68,
+   "cols": 9,
+   "rows": 12,
+   "anchor": [
+    34,
+    55
+   ],
+   "top": 44,
+   "scale": 1,
+   "character": true,
+   "dirs8": true,
+   "walkFrames": 1,
+   "anims": {
+    "attack": {
+     "row": 8,
+     "frames": 9,
+     "name": "lifts_sheild_up_in_guard_and_swings_weapon",
+     "dirs": [
+      "south"
+     ]
+    }
+   },
+   "source": "pixellab:8598c100ee"
+  },
+  "npc_carpenter": {
+   "file": "sprites/npc_carpenter.png",
+   "fw": 48,
+   "fh": 48,
+   "cols": 1,
+   "rows": 8,
+   "anchor": [
+    24,
+    45
+   ],
+   "top": 44,
+   "scale": 1,
+   "character": true,
+   "dirs8": true,
+   "walkFrames": 1,
+   "anims": {},
+   "source": "pixellab:9f060adbfc"
+  },
+  "npc_police": {
+   "file": "sprites/npc_police.png",
+   "fw": 48,
+   "fh": 48,
+   "cols": 1,
+   "rows": 8,
+   "anchor": [
+    24,
+    45
+   ],
+   "top": 44,
+   "scale": 1,
+   "character": true,
+   "dirs8": true,
+   "walkFrames": 1,
+   "anims": {},
+   "source": "pixellab:a4ffb25eb9"
+  },
+  "thug": {
+   "file": "sprites/thug.png",
+   "fw": 48,
+   "fh": 48,
+   "cols": 1,
+   "rows": 8,
+   "anchor": [
+    24,
+    45
+   ],
+   "top": 44,
+   "scale": 1,
+   "character": true,
+   "dirs8": true,
+   "walkFrames": 1,
+   "anims": {},
+   "source": "pixellab:c7809fa1c8"
+  },
+  "npc_barman": {
+   "file": "sprites/npc_barman.png",
+   "fw": 80,
+   "fh": 80,
+   "cols": 6,
+   "rows": 12,
+   "anchor": [
+    40,
+    61
+   ],
+   "top": 42,
+   "scale": 1,
+   "character": true,
+   "dirs8": true,
+   "walkFrames": 1,
+   "anims": {
+    "emote": {
+     "row": 8,
+     "frames": 6,
+     "name": "Drinking",
+     "dirs": [
+      "south"
+     ]
+    }
+   },
+   "source": "pixellab:e17d0ce649"
+  },
+  "npc_elder": {
+   "file": "sprites/npc_elder.png",
+   "fw": 48,
+   "fh": 48,
+   "cols": 1,
+   "rows": 8,
+   "anchor": [
+    24,
+    45
+   ],
+   "top": 44,
+   "scale": 1,
+   "character": true,
+   "dirs8": true,
+   "walkFrames": 1,
+   "anims": {},
+   "source": "pixellab:f2aabdd1fc"
+  },
+  "npc_sergeant": {
+   "file": "sprites/npc_sergeant.png",
+   "fw": 48,
+   "fh": 48,
+   "cols": 1,
+   "rows": 8,
+   "anchor": [
+    24,
+    46
+   ],
+   "top": 45,
+   "scale": 1,
+   "character": true,
+   "dirs8": true,
+   "walkFrames": 1,
+   "anims": {},
+   "source": "pixellab:fd61aaabfe"
+  },
+  "npc_sheeple_dancer": {
+   "file": "sprites/npc_sheeple_dancer.png",
+   "fw": 52,
+   "fh": 52,
+   "cols": 9,
+   "rows": 12,
+   "anchor": [
+    26,
+    43
+   ],
+   "top": 35,
+   "scale": 1,
+   "character": true,
+   "dirs8": true,
+   "walkFrames": 1,
+   "anims": {
+    "emote": {
+     "row": 8,
+     "frames": 9,
+     "name": "she_puts_her_hands_up_in_the_air_and_spins_her_dre",
+     "dirs": [
+      "south"
+     ]
+    }
+   },
+   "source": "pixellab:0a500c7424"
+  },
+  "npc_sheeple_dancer_6": {
+   "file": "sprites/npc_sheeple_dancer_6.png",
+   "fw": 48,
+   "fh": 48,
+   "cols": 1,
+   "rows": 8,
+   "anchor": [
+    24,
+    41
+   ],
+   "top": 35,
+   "scale": 1,
+   "character": true,
+   "dirs8": true,
+   "walkFrames": 1,
+   "anims": {},
+   "source": "pixellab:2576b440e5"
+  },
+  "npc_sheeple_dancer_4": {
+   "file": "sprites/npc_sheeple_dancer_4.png",
+   "fw": 48,
+   "fh": 48,
+   "cols": 1,
+   "rows": 8,
+   "anchor": [
+    24,
+    41
+   ],
+   "top": 35,
+   "scale": 1,
+   "character": true,
+   "dirs8": true,
+   "walkFrames": 1,
+   "anims": {},
+   "source": "pixellab:66f54da5e4"
+  },
+  "npc_sheeple_dancer_3": {
+   "file": "sprites/npc_sheeple_dancer_3.png",
+   "fw": 52,
+   "fh": 52,
+   "cols": 9,
+   "rows": 12,
+   "anchor": [
+    26,
+    43
+   ],
+   "top": 35,
+   "scale": 1,
+   "character": true,
+   "dirs8": true,
+   "walkFrames": 1,
+   "anims": {
+    "emote": {
+     "row": 8,
+     "frames": 9,
+     "name": "she_waves_and_turns_around_and_shakes_her_butt",
+     "dirs": [
+      "south"
+     ]
+    }
+   },
+   "source": "pixellab:8bbb8a5ddc"
+  },
+  "npc_sheeple_dancer_5": {
+   "file": "sprites/npc_sheeple_dancer_5.png",
+   "fw": 48,
+   "fh": 48,
+   "cols": 1,
+   "rows": 8,
+   "anchor": [
+    24,
+    41
+   ],
+   "top": 35,
+   "scale": 1,
+   "character": true,
+   "dirs8": true,
+   "walkFrames": 1,
+   "anims": {},
+   "source": "pixellab:a01c5d70b3"
+  },
+  "npc_sheeple_dancer_2": {
+   "file": "sprites/npc_sheeple_dancer_2.png",
+   "fw": 48,
+   "fh": 48,
+   "cols": 1,
+   "rows": 8,
+   "anchor": [
+    24,
+    41
+   ],
+   "top": 35,
+   "scale": 1,
+   "character": true,
+   "dirs8": true,
+   "walkFrames": 1,
+   "anims": {},
+   "source": "pixellab:b28a76e9ec"
+  },
+  "bld_carpenter_2": {
+   "file": "sprites/bld_carpenter_2.png",
+   "fw": 192,
+   "fh": 174,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    96,
+    173
+   ],
+   "scale": 1,
+   "top": 174,
+   "source": "pixellab:20bc12089d"
+  },
+  "workbench_2": {
+   "file": "sprites/workbench_2.png",
+   "fw": 41,
+   "fh": 34,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    20,
+    33
+   ],
+   "scale": 1,
+   "top": 34,
+   "source": "pixellab:4c7343bc32"
+  },
+  "workbench": {
+   "file": "sprites/workbench.png",
+   "fw": 41,
+   "fh": 34,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    20,
+    33
+   ],
+   "scale": 1,
+   "top": 34,
+   "source": "pixellab:973b6d1858"
+  },
+  "tinker_table_2": {
+   "file": "sprites/tinker_table_2.png",
+   "fw": 40,
+   "fh": 41,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    20,
+    40
+   ],
+   "scale": 1,
+   "top": 41,
+   "source": "pixellab:8efb0c2e35"
+  },
+  "wall_iron_door": {
+   "file": "sprites/wall_iron_door.png",
+   "fw": 45,
+   "fh": 41,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    22,
+    40
+   ],
+   "scale": 1,
+   "top": 41,
+   "source": "pixellab:2bb4d2895d"
+  },
+  "wall_stone_int": {
+   "file": "sprites/wall_stone_int.png",
+   "fw": 45,
+   "fh": 35,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    22,
+    34
+   ],
+   "scale": 1,
+   "top": 35,
+   "source": "pixellab:1f88449233"
+  },
+  "door_stone": {
+   "file": "sprites/door_stone.png",
+   "fw": 42,
+   "fh": 42,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    21,
+    41
+   ],
+   "scale": 1,
+   "top": 42,
+   "source": "pixellab:4531d4b2d4"
+  },
+  "wall_stone_2": {
+   "file": "sprites/wall_stone_2.png",
+   "fw": 46,
+   "fh": 24,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    23,
+    23
+   ],
+   "scale": 1,
+   "top": 24,
+   "source": "pixellab:9c0359596a"
+  },
+  "door_stone_2": {
+   "file": "sprites/door_stone_2.png",
+   "fw": 43,
+   "fh": 42,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    21,
+    41
+   ],
+   "scale": 1,
+   "top": 42,
+   "source": "pixellab:d87b5107dc"
+  },
+  "door_wood_2": {
+   "file": "sprites/door_wood_2.png",
+   "fw": 42,
+   "fh": 41,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    21,
+    40
+   ],
+   "scale": 1,
+   "top": 41,
+   "source": "pixellab:fecfa62995"
+  },
+  "npc_dancer": {
+   "file": "sprites/npc_dancer.png",
+   "fw": 48,
+   "fh": 48,
+   "cols": 1,
+   "rows": 8,
+   "anchor": [
+    24,
+    47
+   ],
+   "top": 47,
+   "scale": 1,
+   "character": true,
+   "dirs8": true,
+   "walkFrames": 1,
+   "anims": {},
+   "source": "pixellab:042314689f"
+  },
+  "decor_ram_statue": {
+   "file": "sprites/decor_ram_statue.png",
+   "fw": 64,
+   "fh": 133,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    32,
+    132
+   ],
+   "scale": 1,
+   "top": 133,
+   "source": "pixellab:16b755c9a1"
+  },
+  "npc_toddler": {
+   "file": "sprites/npc_toddler.png",
+   "fw": 80,
+   "fh": 80,
+   "cols": 8,
+   "rows": 8,
+   "anchor": [
+    40,
+    62
+   ],
+   "top": 38,
+   "scale": 1,
+   "character": true,
+   "dirs8": true,
+   "walkFrames": 8,
+   "anims": {},
+   "source": "pixellab:1c01963fe6"
+  },
+  "decor_ram_statue_2": {
+   "file": "sprites/decor_ram_statue_2.png",
+   "fw": 64,
+   "fh": 71,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    32,
+    70
+   ],
+   "scale": 1,
+   "top": 71,
+   "source": "pixellab:2a4fc59947"
+  },
+  "barrel": {
+   "file": "sprites/barrel.png",
+   "fw": 33,
+   "fh": 46,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    16,
+    45
+   ],
+   "scale": 1,
+   "top": 46,
+   "source": "pixellab:2a80da34bf"
+  },
+  "int_bg_carpenter": {
+   "file": "sprites/int_bg_carpenter.png",
+   "fw": 320,
+   "fh": 320,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    0,
+    0
+   ],
+   "scale": 1,
+   "top": 320,
+   "source": "drive-room-pack:carpenter-s-shop.png"
+  },
+  "decor_berries": {
+   "file": "sprites/decor_berries.png",
+   "fw": 42,
+   "fh": 42,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    21,
+    41
+   ],
+   "scale": 1,
+   "top": 42,
+   "source": "pixellab:53de5429a3"
+  },
+  "npc_priest": {
+   "file": "sprites/npc_priest.png",
+   "fw": 68,
+   "fh": 68,
+   "cols": 15,
+   "rows": 16,
+   "anchor": [
+    34,
+    55
+   ],
+   "top": 44,
+   "scale": 1,
+   "character": true,
+   "dirs8": true,
+   "walkFrames": 1,
+   "anims": {
+    "emote": {
+     "row": 8,
+     "frames": 15,
+     "name": "he_magical_ignites_a_sword_of_fire_in_his_hand_and",
+     "dirs": [
+      "south"
+     ]
+    },
+    "yelling_and_pointing": {
+     "row": 12,
+     "frames": 15,
+     "name": "yelling_and_pointing",
+     "dirs": [
+      "south"
+     ]
+    }
+   },
+   "source": "pixellab:59415cf066"
+  },
+  "int_bg_blacksmith": {
+   "file": "sprites/int_bg_blacksmith.png",
+   "fw": 320,
+   "fh": 320,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    0,
+    0
+   ],
+   "scale": 1,
+   "top": 320,
+   "source": "drive-room-pack:blacksmith-s-workshop.png"
+  },
+  "player_axe": {
+   "file": "sprites/player_axe.png",
+   "fw": 68,
+   "fh": 68,
+   "cols": 15,
+   "rows": 12,
+   "anchor": [
+    34,
+    57
+   ],
+   "top": 47,
+   "scale": 1,
+   "character": true,
+   "dirs8": true,
+   "walkFrames": 1,
+   "anims": {
+    "attack": {
+     "row": 8,
+     "frames": 15,
+     "name": "swings_axe",
+     "dirs": [
+      "north"
+     ]
+    }
+   },
+   "source": "pixellab:6f13b1612a_1"
+  },
+  "bld_fountain_2": {
+   "file": "sprites/bld_fountain_2.png",
+   "fw": 72,
+   "fh": 76,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    36,
+    75
+   ],
+   "scale": 1,
+   "top": 76,
+   "source": "pixellab:736af16399"
+  },
+  "decor_ram_statue_3": {
+   "file": "sprites/decor_ram_statue_3.png",
+   "fw": 64,
+   "fh": 107,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    32,
+    106
+   ],
+   "scale": 1,
+   "top": 107,
+   "source": "pixellab:7414d14ab9"
+  },
+  "table_2": {
+   "file": "sprites/table_2.png",
+   "fw": 42,
+   "fh": 40,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    21,
+    39
+   ],
+   "scale": 1,
+   "top": 40,
+   "source": "pixellab:a850400db4"
+  },
+  "decor_mug": {
+   "file": "sprites/decor_mug.png",
+   "fw": 36,
+   "fh": 41,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    18,
+    40
+   ],
+   "scale": 1,
+   "top": 41,
+   "source": "pixellab:dd70c76838"
+  },
+  "npc_explorer": {
+   "file": "sprites/npc_explorer.png",
+   "fw": 48,
+   "fh": 48,
+   "cols": 1,
+   "rows": 8,
+   "anchor": [
+    24,
+    44
+   ],
+   "top": 41,
+   "scale": 1,
+   "character": true,
+   "dirs8": true,
+   "walkFrames": 1,
+   "anims": {},
+   "source": "pixellab:e14f3ce2b4"
+  },
+  "npc_kid": {
+   "file": "sprites/npc_kid.png",
+   "fw": 68,
+   "fh": 68,
+   "cols": 15,
+   "rows": 24,
+   "anchor": [
+    34,
+    56
+   ],
+   "top": 45,
+   "scale": 1,
+   "character": true,
+   "dirs8": true,
+   "walkFrames": 1,
+   "anims": {
+    "emote": {
+     "row": 8,
+     "frames": 15,
+     "name": "he_whines_while_talking_looking_sad_and_with_tears",
+     "dirs": [
+      "south"
+     ]
+    },
+    "he_talks_excited_as_he_gestures_back_and": {
+     "row": 12,
+     "frames": 15,
+     "name": "he_talks_excited_as_he_gestures_back_and_forth_wit",
+     "dirs": [
+      "south"
+     ]
+    },
+    "he_sits_down_cross_legged": {
+     "row": 16,
+     "frames": 15,
+     "name": "he_sits_down_cross_legged",
+     "dirs": [
+      "south"
+     ]
+    },
+    "he_gestures_wildly_with_his_hands_and_ar": {
+     "row": 20,
+     "frames": 15,
+     "name": "he_gestures_wildly_with_his_hands_and_arms_while_h",
+     "dirs": [
+      "south"
+     ]
+    }
+   },
+   "source": "pixellab:e484ae169e"
+  },
+  "npc_sailor": {
+   "file": "sprites/npc_sailor.png",
+   "fw": 64,
+   "fh": 64,
+   "cols": 17,
+   "rows": 12,
+   "anchor": [
+    32,
+    53
+   ],
+   "top": 43,
+   "scale": 1,
+   "character": true,
+   "dirs8": true,
+   "walkFrames": 1,
+   "anims": {
+    "emote": {
+     "row": 8,
+     "frames": 17,
+     "name": "he_talks_and_shakes_his_head_while_gesturing_with",
+     "dirs": [
+      "south"
+     ]
+    }
+   },
+   "source": "pixellab:e74bea829c"
+  },
+  "tree_pine_2": {
+   "file": "sprites/tree_pine_2.png",
+   "fw": 44,
+   "fh": 45,
+   "cols": 1,
+   "rows": 1,
+   "anchor": [
+    22,
+    44
+   ],
+   "scale": 1,
+   "top": 45,
+   "source": "pixellab:eda6e8303f"
+  },
+  "ground_badlands": {
+   "file": "sprites/ground_badlands.png",
+   "fw": 32,
+   "fh": 32,
+   "cols": 16,
+   "rows": 1,
+   "anchor": [
+    0,
+    0
+   ],
+   "scale": 1,
+   "source": "placeholder-badlands"
+  },
+  "snake": {
+   "file": "sprites/snake.png",
+   "fw": 48,
+   "fh": 48,
+   "cols": 3,
+   "rows": 8,
+   "anchor": [
+    24,
+    44
+   ],
+   "top": 28,
+   "scale": 1,
+   "character": true,
+   "dirs8": false,
+   "walkFrames": 1,
+   "anims": {
+    "attack": {
+     "row": 4,
+     "frames": 3,
+     "name": "strike",
+     "dirs": [
+      "south",
+      "west",
+      "east",
+      "north"
+     ]
+    }
+   },
+   "source": "placeholder-snake"
   }
  },
  "items": {
@@ -1812,7 +3102,18 @@
   "rat_tail": "items/rat_tail.png",
   "golden_egg": "items/golden_egg.png",
   "thornfeather_mantle": "items/thornfeather_mantle.png",
-  "stairs_wood": "items/stairs_wood.png"
+  "stairs_wood": "items/stairs_wood.png",
+  "snake_skin": "items/snake_skin.png",
+  "snake_meat": "items/snake_meat.png",
+  "stairs_stone": "items/stairs_stone.png",
+  "stairs_castle": "items/stairs_castle.png",
+  "fence_wood": "items/fence_wood.png",
+  "dresser": "items/dresser.png",
+  "barrel": "items/barrel.png",
+  "campfire": "items/campfire.png",
+  "door_stone": "items/door_stone.png",
+  "floor_castle": "items/floor_castle.png",
+  "workbench": "items/workbench.png"
  },
  "custom": "List files in assets/custom.txt to stop this generator overwriting them.",
  "ground": {
@@ -1827,7 +3128,8 @@
   "7": "ground_briar",
   "4": "ground_water",
   "3": "ground_path",
-  "5": "ground_sand"
+  "5": "ground_sand",
+  "18": "ground_badlands"
  },
  "groundVariants": {
   "2": [

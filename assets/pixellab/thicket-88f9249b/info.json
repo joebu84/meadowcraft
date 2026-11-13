@@ -1,0 +1,26 @@
+{
+ "id": "88f9249b3f",
+ "zips": [
+  "a_thicket_of_briars_with_big_t (2)"
+ ],
+ "kind": "object",
+ "name": "base",
+ "prompt": "a thicket of briars with big thorns and red berries",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "unknown"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   48,
+   48
+  ]
+ ],
+ "suggest": "thicket",
+ "sure": true,
+ "entry": 0
+}

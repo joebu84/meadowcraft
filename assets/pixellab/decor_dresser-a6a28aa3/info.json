@@ -1,0 +1,26 @@
+{
+ "id": "a6a28aa3da",
+ "zips": [
+  "simple_wood_dresser_facing_the (9)"
+ ],
+ "kind": "object",
+ "name": "base",
+ "prompt": "simple wood dresser facing the player",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "unknown"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   48,
+   48
+  ]
+ ],
+ "suggest": "decor_dresser",
+ "sure": true,
+ "entry": 0
+}

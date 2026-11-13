@@ -1,0 +1,26 @@
+{
+ "id": "7414d14ab9",
+ "zips": [
+  "Object_0_copy"
+ ],
+ "kind": "object",
+ "name": "base",
+ "prompt": "Object: Object 0 (unknown)",
+ "size": {
+  "width": 84,
+  "height": 141
+ },
+ "directions": [
+  "unknown"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   84,
+   141
+  ]
+ ],
+ "suggest": null,
+ "sure": false,
+ "entry": 0
+}

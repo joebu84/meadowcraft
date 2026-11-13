@@ -118,7 +118,8 @@
   "respawn": 90000,
   "family": "pine",
   "sprites": [
-   "tree_pine_1"
+   "tree_pine_1",
+   "tree_pine_2"
   ],
   "mapColor": "#1d4a2a",
   "_doc": "tall pine: more wood per tree"
@@ -440,7 +441,7 @@
   "hp": 1,
   "solid": true,
   "sprites": [
-   "ruin_table_round"
+   "table"
   ],
   "interior": true
  },
@@ -448,8 +449,7 @@
   "hp": 1,
   "solid": true,
   "sprites": [
-   "ruin_desk_1",
-   "ruin_desk_2"
+   "workbench"
   ],
   "interior": true
  },
@@ -457,7 +457,7 @@
   "hp": 1,
   "solid": true,
   "sprites": [
-   "ruin_barrel"
+   "barrel"
   ],
   "interior": true
  },
@@ -465,8 +465,7 @@
   "hp": 1,
   "solid": true,
   "sprites": [
-   "bed",
-   "ruin_bed"
+   "bed"
   ],
   "interior": true
  },
@@ -474,8 +473,7 @@
   "hp": 1,
   "solid": true,
   "sprites": [
-   "ruin_dresser_1",
-   "ruin_dresser_2"
+   "dresser"
   ],
   "interior": true
  },
@@ -483,7 +481,7 @@
   "hp": 1,
   "solid": true,
   "sprites": [
-   "ruin_campfire"
+   "campfire"
   ],
   "interior": true
  },
@@ -491,7 +489,7 @@
   "hp": 1,
   "solid": true,
   "sprites": [
-   "table"
+   "workbench"
   ],
   "interior": true
  },
@@ -499,8 +497,7 @@
   "hp": 1,
   "solid": true,
   "sprites": [
-   "chest",
-   "loot_chest_2"
+   "chest"
   ],
   "interior": true
  },
@@ -508,7 +505,7 @@
   "hp": 1,
   "solid": false,
   "sprites": [
-   "ruin_stairs_wood"
+   "stairs_wood"
   ],
   "interior": true
  },

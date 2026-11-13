@@ -155,7 +155,7 @@
   {
    "id": "tavern_keeper",
    "name": "Old Mutton",
-   "sprite": "sheeple_npc",
+   "sprite": "npc_barman",
    "x": 6,
    "y": 6.8,
    "shop": "tavern"
@@ -171,7 +171,7 @@
   {
    "id": "carpenter",
    "name": "Hazel",
-   "sprite": "sheeple_npc",
+   "sprite": "npc_carpenter",
    "x": 5,
    "y": 17.8,
    "shop": "carpenter"
@@ -187,7 +187,7 @@
   {
    "id": "elder",
    "name": "Elder Woolsworth",
-   "sprite": "sheeple_npc",
+   "sprite": "npc_elder",
    "x": 10,
    "y": 12.5,
    "line": "Baa! Welcome to Woolhaven. Punch trees for wood, grab loose rocks, and craft a stone pick."
@@ -195,7 +195,7 @@
   {
    "id": "guard",
    "name": "Guard Fleece",
-   "sprite": "sheeple_soldier",
+   "sprite": "npc_guard",
    "x": 14.5,
    "y": 1.6,
    "line": "Dens are black holes in the meadow. Build anything over one and it stops spawning."
@@ -203,10 +203,26 @@
   {
    "id": "kid",
    "name": "Lamb Pip",
-   "sprite": "sheeple_npc",
+   "sprite": "npc_kid",
    "x": 16,
    "y": 8,
    "line": "The red and blue goblin gangs shoot each other all day. Let them!"
+  },
+  {
+   "id": "farmer",
+   "name": "Farmer Tup",
+   "sprite": "npc_farmer",
+   "x": 8,
+   "y": 16.8,
+   "line": "Best wool grows on the south meadow. Watch the river snakes though \u2014 they bite if you wander into the cracked dirt."
+  },
+  {
+   "id": "officer",
+   "name": "Officer Lambton",
+   "sprite": "npc_police",
+   "x": 17.5,
+   "y": 11.5,
+   "line": "Keep the peace. The red and blue gangs can shoot each other all they like, just not in town."
   }
  ],
  "spawn": {

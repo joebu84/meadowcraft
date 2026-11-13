@@ -1,0 +1,44 @@
+{
+ "id": "e14f3ce2b4_1",
+ "zips": [
+  "a_redhead_girl_with_a"
+ ],
+ "kind": "character",
+ "name": "holding a big black",
+ "prompt": "a redhead girl with a braided pony tail  she has a pith helemt on and khaki shirt , white belt with pouches and khaki shorts  with white boots",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "east",
+  "north",
+  "north-east",
+  "north-west",
+  "south",
+  "south-east",
+  "south-west",
+  "west"
+ ],
+ "animations": {
+  "she_looks_down_at_the_book_and_back_up_while_talki": {
+   "dirs": [
+    "south"
+   ],
+   "frames": 15
+  }
+ },
+ "frame_sizes": [
+  [
+   48,
+   48
+  ],
+  [
+   60,
+   60
+  ]
+ ],
+ "suggest": null,
+ "sure": false,
+ "entry": 1
+}

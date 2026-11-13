@@ -1,0 +1,26 @@
+{
+ "id": "79c9533e22",
+ "zips": [
+  "an_animal_den_in_a_thicket_of"
+ ],
+ "kind": "object",
+ "name": "base",
+ "prompt": "an animal den in a thicket of dark thorny briars with little red poisonous berries",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "unknown"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   48,
+   48
+  ]
+ ],
+ "suggest": "den_briar",
+ "sure": true,
+ "entry": 0
+}

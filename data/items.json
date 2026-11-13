@@ -478,5 +478,75 @@
   "stack": 10,
   "buy": 12,
   "_doc": "Place inside a fully enclosed, floored room to add a floor above (max 3 floors)."
+ },
+ "snake_skin": {
+  "name": "Snake Skin",
+  "kind": "material",
+  "stack": 50,
+  "sell": 4,
+  "_doc": "Dropped by badlands snakes."
+ },
+ "snake_meat": {
+  "name": "Snake Meat",
+  "kind": "food",
+  "stack": 20,
+  "heal": 8,
+  "_doc": "Raw snake meat. A bit gamey."
+ },
+ "stairs_stone": {
+  "name": "Stone Staircase",
+  "kind": "placeable",
+  "stack": 10,
+  "buy": 20,
+  "_doc": "Upgraded staircase. Place in an enclosed, floored room (max 3 floors)."
+ },
+ "stairs_castle": {
+  "name": "Castle Staircase",
+  "kind": "placeable",
+  "stack": 10,
+  "buy": 36,
+  "_doc": "Top-tier staircase. Place in an enclosed, floored room (max 3 floors)."
+ },
+ "fence_wood": {
+  "name": "Wooden Fence",
+  "kind": "placeable",
+  "stack": 50,
+  "buy": 4
+ },
+ "dresser": {
+  "name": "Dresser",
+  "kind": "placeable",
+  "stack": 5,
+  "buy": 12
+ },
+ "barrel": {
+  "name": "Barrel",
+  "kind": "placeable",
+  "stack": 10,
+  "buy": 8
+ },
+ "campfire": {
+  "name": "Campfire",
+  "kind": "placeable",
+  "stack": 5,
+  "buy": 6
+ },
+ "door_stone": {
+  "name": "Stone Door",
+  "kind": "placeable",
+  "stack": 20,
+  "buy": 16
+ },
+ "floor_castle": {
+  "name": "Castle Floor",
+  "kind": "placeable",
+  "stack": 99,
+  "buy": 6
+ },
+ "workbench": {
+  "name": "Workbench",
+  "kind": "placeable",
+  "stack": 5,
+  "buy": 11
  }
 }

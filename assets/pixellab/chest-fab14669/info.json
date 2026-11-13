@@ -1,0 +1,44 @@
+{
+ "id": "fab1466980",
+ "zips": [
+  "Baa-ndit"
+ ],
+ "kind": "character",
+ "name": "his weapon  has a wo",
+ "prompt": "a sheep man with a human face.  he has grey wool hair and brown sheeps rams horns and sheep ears he has sheep hands and sheep legs hes wearing a brown leather chest plate and a black belt with pouches, he has a green cloak with patches on it, he has a verdigris copper axe in his hands which has a head shaped like a daisy",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "east",
+  "north",
+  "north-east",
+  "north-west",
+  "south",
+  "south-east",
+  "south-west",
+  "west"
+ ],
+ "animations": {
+  "he_yells_and_slashes_with_his_weapon": {
+   "dirs": [
+    "south"
+   ],
+   "frames": 9
+  }
+ },
+ "frame_sizes": [
+  [
+   48,
+   48
+  ],
+  [
+   68,
+   68
+  ]
+ ],
+ "suggest": "chest",
+ "sure": true,
+ "entry": 0
+}

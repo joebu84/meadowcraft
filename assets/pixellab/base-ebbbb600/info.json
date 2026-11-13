@@ -1,0 +1,26 @@
+{
+ "id": "ebbbb6001c",
+ "zips": [
+  "a_wood_plate_with_berries_on_i (1)"
+ ],
+ "kind": "object",
+ "name": "base",
+ "prompt": "a wood plate with berries on it and a fork",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "unknown"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   48,
+   48
+  ]
+ ],
+ "suggest": null,
+ "sure": false,
+ "entry": 0
+}

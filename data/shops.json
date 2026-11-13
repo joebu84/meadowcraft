@@ -32,7 +32,17 @@
    "chest",
    "table",
    "bed",
-   "bow"
+   "bow",
+   "fence_wood",
+   "dresser",
+   "barrel",
+   "campfire",
+   "stairs_wood",
+   "stairs_stone",
+   "door_stone",
+   "floor_stone",
+   "floor_castle",
+   "workbench"
   ],
   "buys": [
    "rat_tail",

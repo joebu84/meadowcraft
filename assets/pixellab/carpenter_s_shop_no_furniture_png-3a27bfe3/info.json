@@ -1,0 +1,23 @@
+{
+ "id": "3a27bfe3a1",
+ "zips": [
+  "carpenter-s-shop-room-pack"
+ ],
+ "kind": "object",
+ "name": "carpenter-s-shop-no-furniture.png",
+ "prompt": "",
+ "size": null,
+ "directions": [
+  "unknown"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   256,
+   256
+  ]
+ ],
+ "suggest": null,
+ "sure": false,
+ "entry": 0
+}

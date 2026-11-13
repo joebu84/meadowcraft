@@ -1,0 +1,33 @@
+{
+ "id": "c755ff93ba_1",
+ "zips": [
+  "a_blue_goblin_with_big_copy_3"
+ ],
+ "kind": "character",
+ "name": "he has a big burning",
+ "prompt": "a blue goblin with big eyes a wide big mouth and no nose.    hes smiling big teeth  hes wearing black army pants and khaki boots",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "east",
+  "north",
+  "north-east",
+  "north-west",
+  "south",
+  "south-east",
+  "south-west",
+  "west"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   48,
+   48
+  ]
+ ],
+ "suggest": "goblin_blue",
+ "sure": true,
+ "entry": 1
+}

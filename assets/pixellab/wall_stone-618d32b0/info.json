@@ -1,0 +1,27 @@
+{
+ "id": "618d32b03d",
+ "zips": [
+  "a_stone_wall_with_a_door_in_it (8) - Copy",
+  "a_stone_wall_with_a_door_in_it (8)"
+ ],
+ "kind": "object",
+ "name": "base",
+ "prompt": "a stone wall with a door in it for interior crafting",
+ "size": {
+  "width": 48,
+  "height": 48
+ },
+ "directions": [
+  "unknown"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   48,
+   48
+  ]
+ ],
+ "suggest": "wall_stone",
+ "sure": true,
+ "entry": 0
+}

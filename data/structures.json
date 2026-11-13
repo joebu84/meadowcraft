@@ -91,5 +91,58 @@
   "hp": 100,
   "solid": false,
   "stair": true
+ },
+ "stairs_stone": {
+  "layer": "object",
+  "hp": 160,
+  "solid": false,
+  "stair": true,
+  "tier": 2
+ },
+ "stairs_castle": {
+  "layer": "object",
+  "hp": 240,
+  "solid": false,
+  "stair": true,
+  "tier": 3
+ },
+ "fence_wood": {
+  "layer": "object",
+  "hp": 80,
+  "solid": true,
+  "tier": 1
+ },
+ "dresser": {
+  "layer": "object",
+  "hp": 70,
+  "solid": false
+ },
+ "barrel": {
+  "layer": "object",
+  "hp": 60,
+  "solid": false
+ },
+ "campfire": {
+  "layer": "object",
+  "hp": 50,
+  "solid": false
+ },
+ "door_stone": {
+  "layer": "object",
+  "hp": 200,
+  "solid": false,
+  "enemySolid": true,
+  "tier": 2
+ },
+ "floor_castle": {
+  "layer": "floor",
+  "hp": 140,
+  "tier": 3
+ },
+ "workbench": {
+  "layer": "object",
+  "hp": 90,
+  "solid": true,
+  "station": "table"
  }
 }

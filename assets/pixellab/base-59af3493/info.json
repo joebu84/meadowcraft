@@ -1,0 +1,26 @@
+{
+ "id": "59af34938c",
+ "zips": [
+  "cozy_tiny_stone_cottage_red_c"
+ ],
+ "kind": "object",
+ "name": "base",
+ "prompt": "cozy tiny stone cottage, red clay tile roof, chimney, blue shutters, ivy, top-down view",
+ "size": {
+  "width": 96,
+  "height": 96
+ },
+ "directions": [
+  "unknown"
+ ],
+ "animations": {},
+ "frame_sizes": [
+  [
+   96,
+   96
+  ]
+ ],
+ "suggest": null,
+ "sure": false,
+ "entry": 0
+}
